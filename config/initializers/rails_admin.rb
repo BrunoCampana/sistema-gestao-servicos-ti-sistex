@@ -255,3 +255,4 @@ RailsAdmin.config do |config|
     # history_show
   end
 end
+#I added a teste comment
