@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  modalidade: 1
+  carga_horaria: 1
+  descricao: MyText
+  inicio: 2018-07-22
+  termino: 2018-07-22
+  certificado_conclusao: MyString
+  curso_concluido: 1
+  conclusao_checada: 1
+  custo: 1.5
+  org_aplicadora: MyString
+
+two:
+  nome: MyString
+  modalidade: 1
+  carga_horaria: 1
+  descricao: MyText
+  inicio: 2018-07-22
+  termino: 2018-07-22
+  certificado_conclusao: MyString
+  curso_concluido: 1
+  conclusao_checada: 1
+  custo: 1.5
+  org_aplicadora: MyString

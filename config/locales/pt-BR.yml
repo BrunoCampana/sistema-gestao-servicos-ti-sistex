@@ -1,0 +1,314 @@
+pt-BR:
+  datetime:
+    distance_in_words:
+      x_days:
+        one: "1 dias"
+        other: "%{count} dias"
+  activerecord:
+    models:
+      parado:
+        one: 'Elemento afetado por indisponibilidade'
+        other: 'Elementos afetados indisponibilidade'
+      curso_externo:
+        one: 'Curso externo ao CTA'
+        other: 'Cursos externos ao CTA'
+      curso_ministrado:
+        one: 'Estágio minitrado pelo CTA'
+        other: 'Estágios ministrados pelo CTA'
+      habilidade_adquirida:
+        one: 'Habilidade adquirida por usuário'
+        other: 'Habilidades adquiridas por usuário'
+      perfil_profissional:
+        one: 'Perfil profissional'
+        other: 'Perfis profissionais'
+      capacidade:
+        one: 'Capacidade do Sv TI'
+        other: 'Capacidade dos Sv TI'
+      cargo:
+        one: 'Cargo do CTA'
+        other: 'Cargos do CTA'
+      cidade:
+        one: 'Cidade da OM cliente'
+        other: 'Cidades das OMs clientes'
+      cliente:
+        one: 'OM Cliente'
+        other: 'OMs Clientes'
+      encargo:
+        one: 'Encargo técnico do CTA'
+        other: 'Encargos técnicos do CTA'
+      fornecedor:
+        one: 'Fornecedor'
+        other: 'Fornecedores'
+      habilidade:
+        one: 'Habilidade técnica do pessoal'
+        other: 'Habilidades técnicas do pessoal'
+      indisponibilidade:
+        one: 'Registro de Indisponibilidade de Sv TI'
+        other: 'Registro de Indisponibilidades de Sv TI'
+      motivo:
+        one: 'Motivo de indisponibilidade'
+        other: 'Motivos de indisponibilidade'
+      pacotes_servico:
+        one: 'Pacote de Serviços de TI'
+        other: 'Pacotes de Serviços de TI'
+      requisicao_link_proprio:
+        one: 'Requisição de link próprio de cliente'
+        other: 'Requicições de link próprio de clientes'
+      usuario:
+        one: 'Usuário'
+        other: 'Usuários'
+      vot:
+        one: 'VALTI'
+        other: 'VALTIs'
+    attributes:
+      parado:
+        nome: 'Elemento afetado por indisponibilidade'
+      curso_externo:
+        nome: 'Nome do curso'
+        modalidade: 'Modalidade'
+        carga_horaria: 'Carga horária (em hs)'
+        certificado_conclusao: 'Certificado de conclusão'
+        descricao: 'Descrição do curso'
+        inicio: 'Início'
+        termino: 'Término'
+        curso_concluido: 'Curso foi concluído?'
+        conclusao_checada: 'Certificado de conclusão checado?'
+        custo: 'Custo (R$)'
+        org_aplicadora: 'Organização aplicadora'
+      curso_ministrado:
+        nome: 'Nome do curso'
+        modalidade: 'Modalidade'
+        carga_horaria: 'Carga horária (em hs)'
+        area_conhecimento: 'Área de conhecimento'
+        descricao_conhecimento: 'Descrição do curso'
+        inicio: 'Início'
+        termino: 'Término'
+        pladis: 'Pladis'
+      habilidade_adquirida:
+        curso_realizado: 'Curso realizado'
+        data_adquiriu_habilidade: 'Quando adquiriu a habilidade'
+        descricao_habilidade: 'Descrição da habilidade'
+      cidade:
+        nome: 'Nome da cidade'
+      cargo:
+        nome: 'Nome do cargo'
+      encargo:
+        nome: 'Nome do encargo'
+      habilidade:
+        nome: 'Nome da habilidade'
+      usuario:
+        nome: 'Nome'
+        status: 'Status'
+        tipo: 'tipo'
+        observacoes: 'Observações'
+        telefone: 'Telefone'
+      cliente:
+        nome: 'Nome'
+        endereco: 'Endereço'
+        subordinacao: 'Subordinação'
+        uasg: 'UASG'
+        possui_od: 'OM possui OD?'
+        missao_fim_om: 'Missão fim da OM'
+        efetivo: 'Efetivo de Of e Sgts'
+        nome_ch_sec_info: 'Nome Ch Seç Info'
+        telefone_ctt_om: 'Telefone da Seç Info'
+        celular_ctt: 'Celular do Ch Seç Info'
+        email: 'Email Seç Info'
+        nome_adj_sec_info: 'Nome Adj 1 Seç Info'
+        celular_ctt_adj: 'Celular do Adj 1 Seç Info'
+        anotacoes: 'Anotações'
+        inventario: 'Inventário de TI da OM'
+      requisicao_link_proprio:
+        cliente_id: 'OM requerente'
+        parecer_cta: 'Parecer do 4º CTA'
+        parecer_citex: 'Parecer do CITEx'
+        status: 'status'
+        possui_link_proprio: 'OM possui atualmente link próprio?'
+        velocidade: 'Caso positivo, velocidade (Mbps)'
+        prestador_sv: 'Empresa que presta o Sv'
+        enlace: 'Enlace'
+        data_inicio_contrato: 'Data início do contrato'
+        data_termino_contrato: 'Data término do contrato'
+        valor_mensal: 'Valor mensal (R$)'
+        parecer: 'Pareceres Técnicos emitidos'
+      fornecedor:
+        nome_fornecedor: 'Nome do fornecedor'
+        descricao_recurso: 'Descrição do recurso fornecido'
+        codigo_contrato: 'Código do contrato'
+        inicio_contrato: 'Início do contrato'
+        termino_contrato: 'Término do contrato'
+        contrato: 'Contrato vigente'
+      capacidade:
+        nome_recurso: 'Nome do recurso'
+        total_recurso: 'Total do recurso'
+        empregado: 'Qtd empregada'
+      indisponibilidade:
+        inicio: 'Início'
+        termino: 'Término'
+        observacoes: 'Observações'
+        tipo: 'Tipo'
+      motivo:
+        nome: 'Motivo da indisponibilidade'
+      vot:
+        cliente_id: 'OM cliente apoiada'
+        data_inicio: 'Data de início'
+        data_termino: 'Data de término'
+        modo_transporte: 'Meio de transporte'
+        descricao: 'Descrição'
+        remuneracao: 'Remuneração'
+        pagamentos_realizados: 'Pagamentos já realizados?'
+        relatorio: 'Relatório da VALTI'
+      pacotes_servico:
+        intranet: 'Intranet'
+        internet: 'Internet'
+        velocidade_intranet: 'Velocidade Lote 1 (Mbps)'
+        velocidade_internet: 'Velocidade Lote 2 (Mbps)'
+        tipo_banda: 'Tipo de banda'
+        meio_de_acesso: 'Meio de acesso'
+        tipo_link: 'Tipo de link'
+        link_proprio: 'OM possui link proprio?'
+        latencia: 'Latência (ms)'
+        jitter: 'Jitter (ms)'
+        disponibilidade: 'Disponibilidade (%)'
+      errors:
+        models:
+          usuario:
+            attributes:
+              cliente:
+                required: "Selecione sua OM"
+              email:
+                blank: "Este campo é de preenchimento obrigatório"
+              password:
+                blank: "Redija seu password entre 6 a 128 caracteres"
+  views:
+  admin:
+    home:
+      name: Home
+    pagination:
+      previous: "« Anterior"
+      next: "Próximo »"
+      truncate: "…"
+    misc:
+      search: "Procurar"
+      filter: "Filtrar"
+      refresh: "Atualizar"
+      show_all: "Mostrar tudo"
+      add_filter: "Novo Filtro..."
+      bulk_menu_title: "Itens selecionados..."
+      remove: "Remover"
+      add_new: "Criar Novo"
+      chosen: "%{name} escolhido"
+      chose_all: "Escolher tudo"
+      clear_all: "Limpar tudo"
+      up: "Cima"
+      down: "Baixo"
+      navigation: "Navegação"
+      log_out: "Terminar Sessão"
+      ago: "atrás"
+    flash:
+      successful: "%{name} %{action} com sucesso"
+      error: "%{name} %{action} sem sucesso"
+      noaction: "Nenhuma ação executada"
+      model_not_found: "Modelo '%{model}' não encontrado "
+      object_not_found: "%{model} com identificador '%{id}' não encontrado"
+    table_headers:
+      model_name: "Nome do modelo"
+      last_used: "Última vez usado em"
+      last_created: "Última vez criado em"
+      records: "Registros"
+      username: "Usuário"
+      changes: "Alterações"
+      created_at: "Data/Hora"
+      item: "Item"
+      message: "Mensagem"
+    actions:
+      charts:
+        menu: "Gráfico"
+        breadcrumb: "Gráfico"
+      dashboard:
+        title: "Administração do Site"
+        menu: "Dashboard"
+        breadcrumb: "Dashboard"
+      index:
+        title: "Lista de %{model_label_plural}"
+        menu: "Lista"
+        breadcrumb: "%{model_label_plural}"
+      show:
+        title: "Detalhes para %{model_label} '%{object_label}'"
+        menu: "Mostrar"
+        breadcrumb: "%{object_label}"
+      show_in_app:
+        menu: "Mostrar na aplicação"
+      new:
+        title: "Novo %{model_label}"
+        menu: "Criar novo"
+        breadcrumb: "Novo"
+        link: "Criar um novo %{model_label}"
+        done: "criado"
+      edit:
+        title: "Editar %{model_label} '%{object_label}'"
+        menu: "Editar"
+        breadcrumb: "Editar"
+        link: "Editar este %{model_label}"
+        done: "atualizado"
+      delete:
+        title: "Remover %{model_label} '%{object_label}'"
+        menu: "Remover"
+        breadcrumb: "Remover"
+        link: "Remover '%{object_label}'"
+        done: "removido"
+      bulk_delete:
+        title: "Remover %{model_label_plural}"
+        menu: "Remover vários"
+        breadcrumb: "Remover vários"
+        bulk_link: "Remover selecionados %{model_label_plural}"
+      export:
+        title: "Exportar %{model_label}"
+        menu: "Exportar"
+        breadcrumb: "Exportar"
+        link: "Exportar %{model_label_plural} encontrados"
+        bulk_link: "Exportar %{model_label_plural} selecionados"
+        done: "exportados"
+      history_index:
+        title: "Histórico para %{model_label_plural}"
+        menu: "Histórico"
+        breadcrumb: "Histórico"
+      history_show:
+        title: "Histórico para %{model_label} '%{object_label}'"
+        menu: "Histórico"
+        breadcrumb: "Histórico"
+    form:
+      cancel: "Cancelar"
+      basic_info: "Informação Básica"
+      required: "Obrigatórios"
+      optional: "Opcional"
+      one_char: "caracter"
+      char_length_up_to: "comprimento até"
+      char_length_of: "comprimento de"
+      save: "Gravar"
+      save_and_add_another: "Gravar e criar outro"
+      save_and_edit: "Gravar e editar"
+      all_of_the_following_related_items_will_be_deleted: "? Os seguintes item serão apagados ou deixados orfãos:"
+      are_you_sure_you_want_to_delete_the_object: "Tem a certeza que quer apagar este %{model_name}"
+      confirmation: "Sim, tenho a certeza"
+      delete_confirmation: "Confirmar apagar"
+      bulk_delete: "Os seguintes objetos serão apagados, o que pode apagar ou deixar orfãos as dependências relacionadas"
+    export:
+      confirmation: "Exportar para %{name}"
+      select: "Selecionar campos para exportar"
+      fields_from: "Campos de %{name}"
+      fields_from_associated: "Campos associados com %{name}"
+      display: "Mostrar %{name}: %{type}"
+      options_for: "Opções para %{name}"
+      empty_value_for_associated_objects: ""
+      click_to_reverse_selection: 'Click para inverter selecção'
+      csv:
+        header_for_root_methods: "%{name}" # 'model' is available
+        header_for_association_methods: "%{name} [%{association}]"
+        encoding_to: "Codificar para"
+        encoding_to_help: "Escolha a codificação. Deixe em branco para manter a codificação original: (%{name})"
+        skip_header: "Sem cabeçalho"
+        skip_header_help: "Não gerar cabeçalhos para (Campos sem cabeçalho)"
+        default_col_sep: ","
+        col_sep: "Separador de colunas"
+        col_sep_help: "Deixar em branco para usar omissão ('%{value}')" # value is default_col_sep

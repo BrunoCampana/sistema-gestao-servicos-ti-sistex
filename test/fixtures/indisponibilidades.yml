@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  inicio: 2018-07-11 10:13:57
+  termino: 2018-07-11 10:13:57
+  tipo: 1
+  observacoes: MyText
+
+two:
+  inicio: 2018-07-11 10:13:57
+  termino: 2018-07-11 10:13:57
+  tipo: 1
+  observacoes: MyText

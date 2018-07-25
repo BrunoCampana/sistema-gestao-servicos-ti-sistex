@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  intranet: 1
+  internet: 1
+  velocidade_intranet: MyString
+  velocidade_internet: 1
+  tipo_banda: 1
+  meio_de_acesso: 1
+  tipo_link: 1
+  latencia: MyString
+  jitter: MyString
+  disponibilidade: MyString
+  link_proprio: 1
+
+two:
+  intranet: 1
+  internet: 1
+  velocidade_intranet: MyString
+  velocidade_internet: 1
+  tipo_banda: 1
+  meio_de_acesso: 1
+  tipo_link: 1
+  latencia: MyString
+  jitter: MyString
+  disponibilidade: MyString
+  link_proprio: 1

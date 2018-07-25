@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  modalidade: 1
+  carga_horaria: 1
+  area_conhecimento: MyString
+  descricao_conhecimento: MyText
+  inicio: 2018-07-20
+  termino: 2018-07-20
+  pladis: MyString
+
+two:
+  modalidade: 1
+  carga_horaria: 1
+  area_conhecimento: MyString
+  descricao_conhecimento: MyText
+  inicio: 2018-07-20
+  termino: 2018-07-20
+  pladis: MyString

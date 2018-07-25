@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome_fornecedor: MyString
+  descricao_recurso: MyText
+  codigo_contrato: MyString
+  inicio_contrato: 2018-07-10
+  termino_contrato: 2018-07-10
+
+two:
+  nome_fornecedor: MyString
+  descricao_recurso: MyText
+  codigo_contrato: MyString
+  inicio_contrato: 2018-07-10
+  termino_contrato: 2018-07-10

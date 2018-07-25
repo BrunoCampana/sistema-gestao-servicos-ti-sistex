@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  data_inicio: 2018-07-10
+  data_termino: 2018-07-10
+  modo_transporte: 1
+  descricao: MyText
+  remuneracao: MyText
+  pagamentos_realizados: 1
+
+two:
+  data_inicio: 2018-07-10
+  data_termino: 2018-07-10
+  modo_transporte: 1
+  descricao: MyText
+  remuneracao: MyText
+  pagamentos_realizados: 1

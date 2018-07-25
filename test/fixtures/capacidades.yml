@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome_recurso: MyString
+  total_recurso: MyString
+  empregado: MyString
+
+two:
+  nome_recurso: MyString
+  total_recurso: MyString
+  empregado: MyString
