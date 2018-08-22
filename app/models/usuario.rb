@@ -3,7 +3,7 @@ class Usuario < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  has_one :cargo
+  #has_one :cargo
   has_one :perfil_profissional
   enum status: [:inativo, :ativo]
   enum tipo: [:SecInfo, :Nivel1, :Nivel2, :Administrador]
