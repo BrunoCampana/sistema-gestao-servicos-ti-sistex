@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_22_192557) do
+ActiveRecord::Schema.define(version: 2018_09_03_132509) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -33,12 +33,28 @@ ActiveRecord::Schema.define(version: 2018_08_22_192557) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "ans_tis", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "cliente_id"
+    t.integer "servico_id"
+    t.index ["cliente_id"], name: "index_ans_tis_on_cliente_id"
+    t.index ["servico_id"], name: "index_ans_tis_on_servico_id"
+  end
+
   create_table "capacidades", force: :cascade do |t|
     t.string "nome_recurso"
     t.string "total_recurso"
     t.string "empregado"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "capacidades_servicos", id: false, force: :cascade do |t|
+    t.integer "servico_id", null: false
+    t.integer "capacidade_id", null: false
+    t.index ["capacidade_id"], name: "index_capacidades_servicos_on_capacidade_id"
+    t.index ["servico_id"], name: "index_capacidades_servicos_on_servico_id"
   end
 
   create_table "cargos", force: :cascade do |t|
@@ -92,6 +108,7 @@ ActiveRecord::Schema.define(version: 2018_08_22_192557) do
     t.string "org_aplicadora"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "tipo_cpc"
   end
 
   create_table "curso_externos_usuarios", id: false, force: :cascade do |t|
@@ -112,6 +129,7 @@ ActiveRecord::Schema.define(version: 2018_08_22_192557) do
     t.string "pladis"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "tipo_cpc"
   end
 
   create_table "encargos", force: :cascade do |t|
@@ -136,6 +154,13 @@ ActiveRecord::Schema.define(version: 2018_08_22_192557) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "contrato"
+  end
+
+  create_table "fornecedors_servicos", id: false, force: :cascade do |t|
+    t.integer "servico_id", null: false
+    t.integer "fornecedor_id", null: false
+    t.index ["fornecedor_id"], name: "index_fornecedors_servicos_on_fornecedor_id"
+    t.index ["servico_id"], name: "index_fornecedors_servicos_on_servico_id"
   end
 
   create_table "habilidade_adquiridas", force: :cascade do |t|
@@ -165,6 +190,12 @@ ActiveRecord::Schema.define(version: 2018_08_22_192557) do
     t.index ["usuario_id"], name: "index_habilidades_usuarios_on_usuario_id"
   end
 
+  create_table "hierarqs", force: :cascade do |t|
+    t.string "nome"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "indisponibilidades", force: :cascade do |t|
     t.datetime "inicio"
     t.datetime "termino"
@@ -186,6 +217,13 @@ ActiveRecord::Schema.define(version: 2018_08_22_192557) do
     t.integer "parado_id", null: false
     t.index ["indisponibilidade_id"], name: "index_indisponibilidades_parados_on_indisponibilidade_id"
     t.index ["parado_id"], name: "index_indisponibilidades_parados_on_parado_id"
+  end
+
+  create_table "indisponibilidades_servicos", id: false, force: :cascade do |t|
+    t.integer "servico_id", null: false
+    t.integer "indisponibilidade_id", null: false
+    t.index ["indisponibilidade_id"], name: "index_indisponibilidades_servicos_on_indisponibilidade_id"
+    t.index ["servico_id"], name: "index_indisponibilidades_servicos_on_servico_id"
   end
 
   create_table "instruendos_curso_ministrados", force: :cascade do |t|
@@ -226,6 +264,13 @@ ActiveRecord::Schema.define(version: 2018_08_22_192557) do
     t.index ["cliente_id"], name: "index_pacotes_servicos_on_cliente_id"
   end
 
+  create_table "pacotes_servicos_servicos", id: false, force: :cascade do |t|
+    t.integer "servico_id", null: false
+    t.integer "pacotes_servico_id", null: false
+    t.index ["pacotes_servico_id"], name: "index_pacotes_servicos_servicos_on_pacotes_servico_id"
+    t.index ["servico_id"], name: "index_pacotes_servicos_servicos_on_servico_id"
+  end
+
   create_table "parados", force: :cascade do |t|
     t.string "nome"
     t.datetime "created_at", null: false
@@ -259,6 +304,12 @@ ActiveRecord::Schema.define(version: 2018_08_22_192557) do
     t.index ["cliente_id"], name: "index_requisicao_link_proprios_on_cliente_id"
   end
 
+  create_table "servicos", force: :cascade do |t|
+    t.string "nome"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "usuarios", force: :cascade do |t|
     t.string "nome"
     t.integer "status"
@@ -278,8 +329,11 @@ ActiveRecord::Schema.define(version: 2018_08_22_192557) do
     t.string "current_sign_in_ip"
     t.string "last_sign_in_ip"
     t.integer "cliente_id"
+    t.integer "associado"
+    t.integer "hierarq_id"
     t.index ["cliente_id"], name: "index_usuarios_on_cliente_id"
     t.index ["email"], name: "index_usuarios_on_email", unique: true
+    t.index ["hierarq_id"], name: "index_usuarios_on_hierarq_id"
     t.index ["reset_password_token"], name: "index_usuarios_on_reset_password_token", unique: true
   end
 

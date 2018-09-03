@@ -5,6 +5,7 @@ class CursoMinistrado < ApplicationRecord
    class_name: 'Usuario'
   enum modalidade: [:Distância, :Presencial]
   mount_uploader :pladis, ArquivoUploader
+  enum tipo_cpc: [:Estágio, :Curso, :Instrução_de_Quadros, :Visitação, :Conferência, :Congresso]
   def name
     nome
   end

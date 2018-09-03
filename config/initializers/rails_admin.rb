@@ -24,6 +24,22 @@ RailsAdmin.config do |config|
       configure :current_sign_in_ip do
         hide
       end
+      configure :sign_in_count do
+        hide
+      end
+    end
+  end
+
+  config.model Hierarq do
+    parent Usuario
+    weight (-14.9)
+    list do
+      configure :created_at do
+        hide
+      end
+      configure :updated_at do
+        hide
+      end
     end
   end
 
@@ -56,6 +72,14 @@ RailsAdmin.config do |config|
   config.model Habilidade do
     parent Usuario
     weight (-12)
+    list do
+      configure :created_at do
+        hide
+      end
+      configure :updated_at do
+        hide
+      end
+    end
   end
 
   config.model HabilidadeAdquirida do
@@ -113,19 +137,54 @@ RailsAdmin.config do |config|
   end
 
   config.model Vot do
+    parent Cliente
     weight (-7)
     list do
       include_fields :cliente_id, :data_inicio, :data_termino, :modo_transporte, :descricao, :remuneracao, :pagamentos_realizados, :relatorio
     end
   end
 
-  config.model Indisponibilidade do
+  config.model Servico do
     weight (-6)
+    list do
+      configure :created_at do
+        hide
+      end
+      configure :updated_at do
+        hide
+      end
+    end
+  end
+
+  config.model AnsTi do
+    parent Servico
+    weight (-5)
+    list do
+      configure :created_at do
+        hide
+      end
+      configure :updated_at do
+        hide
+      end
+    end
+  end
+
+  config.model Indisponibilidade do
+    parent Servico
+    weight (-4)
+    list do
+      configure :created_at do
+        hide
+      end
+      configure :updated_at do
+        hide
+      end
+    end
   end
 
   config.model Parado do
-    parent Indisponibilidade
-    weight (-5.5)
+    parent Servico
+    weight (-3)
 
     list do
       configure :created_at do
@@ -138,8 +197,8 @@ RailsAdmin.config do |config|
   end
 
   config.model Motivo do
-    parent Indisponibilidade
-    weight (-5)
+    parent Servico
+    weight (-2.9)
 
     list do
       configure :created_at do
@@ -152,11 +211,21 @@ RailsAdmin.config do |config|
   end
 
   config.model Capacidade do
-    weight (-4)
+    parent Servico
+    weight (-2.8)
+    list do
+      configure :created_at do
+        hide
+      end
+      configure :updated_at do
+        hide
+      end
+    end
   end
 
   config.model Fornecedor do
-    weight (-3)
+    parent Servico
+    weight (-2.7)
   end
 
   config.model CursoMinistrado do

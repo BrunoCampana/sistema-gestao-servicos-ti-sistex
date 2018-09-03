@@ -2,19 +2,31 @@ pt-BR:
   datetime:
     distance_in_words:
       x_days:
-        one: "1 dias"
+        one: "1 dia"
         other: "%{count} dias"
+      x_minutes:
+        one: "1 min"
+        other: "%{count} minutos"
+      x_seconds:
+        one: "1 seg"
+        other: "%{count} segundos"
   activerecord:
     models:
+      ans_ti:
+        one: 'ANS'
+        other:  'ANSs'
+      servico:
+        one: 'Serviço de TI prestado'
+        other: 'Serviços de TI prestados'
       parado:
         one: 'Elemento afetado por indisponibilidade'
         other: 'Elementos afetados indisponibilidade'
       curso_externo:
-        one: 'Curso externo ao CTA'
-        other: 'Cursos externos ao CTA'
+        one: 'Atividade Capacitação Externa'
+        other: 'Atividades Capacitação Externa'
       curso_ministrado:
-        one: 'Estágio minitrado pelo CTA'
-        other: 'Estágios ministrados pelo CTA'
+        one: 'Atividades Capacitação Interna CTA'
+        other: 'Atividades Capacitação Interna CTA'
       habilidade_adquirida:
         one: 'Habilidade adquirida por usuário'
         other: 'Habilidades adquiridas por usuário'
@@ -60,11 +72,19 @@ pt-BR:
       vot:
         one: 'VALTI'
         other: 'VALTIs'
+      hierarq:
+        one: 'Grau hierárquico'
+        other: 'Graus hierárquicos'
     attributes:
+      hierarq:
+        nome: 'Nome'
+      servico:
+        nome: 'Nome'
       parado:
         nome: 'Elemento afetado por indisponibilidade'
       curso_externo:
         nome: 'Nome do curso'
+        tipo_cpc: 'Tipo de capacitação'
         modalidade: 'Modalidade'
         carga_horaria: 'Carga horária (em hs)'
         certificado_conclusao: 'Certificado de conclusão'
@@ -77,6 +97,7 @@ pt-BR:
         org_aplicadora: 'Organização aplicadora'
       curso_ministrado:
         nome: 'Nome do curso'
+        tipo_cpc: 'Tipo de capacitação'
         modalidade: 'Modalidade'
         carga_horaria: 'Carga horária (em hs)'
         area_conhecimento: 'Área de conhecimento'

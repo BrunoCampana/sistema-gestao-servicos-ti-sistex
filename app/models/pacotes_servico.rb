@@ -1,5 +1,6 @@
 class PacotesServico < ApplicationRecord
   belongs_to :cliente
+  has_and_belongs_to_many :servicos
   enum intranet: [:Não_recebe, :Recebe]
   enum internet: [:Não, :Sim]
   enum link_proprio: [:Não_possui, :Possui]
