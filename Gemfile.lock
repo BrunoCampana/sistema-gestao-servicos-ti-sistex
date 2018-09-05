@@ -169,7 +169,6 @@ GEM
     prawn-table (0.2.2)
       prawn (>= 1.3.0, < 3.0.0)
     public_suffix (3.0.2)
-    puma (3.11.4)
     rack (2.0.5)
     rack-pjax (1.0.0)
       nokogiri (~> 1.5)
@@ -298,7 +297,6 @@ DEPENDENCIES
   paper_trail
   passenger
   prawn-rails
-  puma (~> 3.11)
   rails (~> 5.2.0)
   rails_admin
   rails_admin_charts
