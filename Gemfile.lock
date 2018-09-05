@@ -155,6 +155,9 @@ GEM
       paper_trail-association_tracking (< 2)
       request_store (~> 1.1)
     paper_trail-association_tracking (1.0.0)
+    passenger (5.3.4)
+      rack
+      rake (>= 0.8.1)
     pdf-core (0.7.0)
     prawn (2.2.2)
       pdf-core (~> 0.7.0)
@@ -293,6 +296,7 @@ DEPENDENCIES
   duktape
   jbuilder (~> 2.5)
   paper_trail
+  passenger
   prawn-rails
   puma (~> 3.11)
   rails (~> 5.2.0)
