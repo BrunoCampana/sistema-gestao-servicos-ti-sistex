@@ -50,7 +50,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'puma', '~> 3.11'
+  #gem 'puma', '~> 3.11'
+  gem 'passenger'
 end
 
 group :development do
