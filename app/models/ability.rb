@@ -3,38 +3,37 @@ class Ability
 
   def initialize(usuario)
     if usuario
-      if usuario.tipo == 'Administrador'
+      if usuario.tipo == 'Admin'
         can :manage, :all
         can :export, :all
-      elsif usuario.tipo == 'Nivel1'
+      elsif usuario.tipo == 'SecGer'
         can :access, :rails_admin
         can :dashboard
-        can :read, Capacidade
-        can :read, Cargo
-        can :read, Cidade
-        can :read, Cliente
-        can :read, Encargo
-        can :read, Fornecedor
-        can :read, Indisponibilidade
-        can :read, PacotesServico
-        can :read, RequisicaoLinkProprio
-        can :read, Usuario
-        can :read, Vot
-      elsif usuario.tipo == 'Nivel2'
-        can :access, :rails_admin
-        can :dashboard
-        can :manage, Capacidade
-        can :manage, Cargo
-        can :manage, Cidade
-        can :manage, Cliente
-        can :manage, Encargo
-        can :manage, Fornecedor
-        can :manage, Indisponibilidade
+        can :read, :all
         can :manage, PacotesServico
         can :manage, RequisicaoLinkProprio
-        can :manage, Usuario
+        can :manage, AnsTi
+        can :manage, Capacidade
+        can :manage, Fornecedor
         can :manage, Vot
-      elsif usuario.tipo == 'SecInfo'
+        can :manage, Indisponibilidade
+      elsif usuario.tipo == 'SecCpc'
+        can :access, :rails_admin
+        can :dashboard
+        can :read, :all
+        can :manage, PerfilProfissional
+        can :manage, HabilidadeAdquirida
+        can :manage, CursoExterno
+        can :manage, CursoMinistrado
+        can :manage, Vot
+        can :manage, Indisponibilidade
+      elsif usuario.tipo == 'DTDO'
+        can :access, :rails_admin
+        can :dashboard
+        can :read, :all
+        can :manage, Vot
+        can :manage, Indisponibilidade
+      elsif usuario.tipo == 'SecTICliente'
         can :read, Cidade
         can :read, Cliente, nome_ch_sec_info: usuario.nome
         can :update, Cliente, nome_ch_sec_info: usuario.nome

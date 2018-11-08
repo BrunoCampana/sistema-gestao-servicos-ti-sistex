@@ -2,8 +2,8 @@ class RequisicaoLinkProprio < ApplicationRecord
   include RailsAdminCharts
   mount_uploader :parecer, ArquivoUploader
   belongs_to :cliente
-  enum parecer_cta: [:Nao_precisa_link_proprio, :Precisa_link_proprio]
-  enum parecer_citex: [:Desfavorável, :Favorável]
+  enum parecer_cta: [:Não_precisa_link_proprio, :Precisa_link_proprio, :Não_avaliado]
+  enum parecer_citex: [:Desfavorável, :Favorável, :Não_analisado]
   enum possui_link_proprio: [:Não, :Sim]
   enum enlace: [:Satelital, :Optico]
 

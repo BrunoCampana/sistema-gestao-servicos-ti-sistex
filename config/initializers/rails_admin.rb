@@ -259,7 +259,11 @@ RailsAdmin.config do |config|
 
   'Vá para o SPED' => 'http://sped.4cta.eb.mil.br/sped/administracao/sessao/eb/logon.jsp',
 
-  'Vá para a Intranet' => 'http://intranet.4cta.eb.mil.br/'
+  'Vá para a Intranet' => 'http://intranet.4cta.eb.mil.br/',
+
+  'Vá para Wiki do CTA' => 'http://10.78.4.233:8081',
+
+  'Vá para Pesquisas de Satisfação' => 'http://10.78.4.233:80'
   }
 
   config.navigation_static_label = "Links Úteis"

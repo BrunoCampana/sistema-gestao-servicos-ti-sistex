@@ -6,7 +6,7 @@ class Usuario < ApplicationRecord
   #has_many :cargo
   has_one :perfil_profissional
   enum status: [:inativo, :ativo]
-  enum tipo: [:SecInfo, :Nivel1, :Nivel2, :Administrador]
+  enum tipo: [:Admin, :SecGer, :SecCpc, :DTDO, :SecTICliente]
   enum associado: [:CIRMAM, :ASA, :Nenhum]
   belongs_to :cliente
   belongs_to :hierarq
