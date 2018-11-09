@@ -1,29 +1,46 @@
-<h1>Sistema de Gestão de Serviços de TI do 4º CTA<h1>
+<link href="//app/assets/stylesheets/bootstrap.css" rel="stylesheet" id="bootstrap-css">
+<link href="//app/assets/stylesheets/logincss.css" rel="stylesheet" id="bootstrap-css">
 
-<img src="C:\Users\bruno\bruno_ruby_projects\gsti4cta\app\views\devise\sessions\teste.png">
-<h2>Log in</h2>
+<script src="//app/assets/javascript/jscript1.js"></script>
+<script src="//app/assets/javascript/jscript2.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+<div class="login-popup-wrap new_login_popup">
+                        <div class="login-popup-heading text-center">
+                          <div class='p-3 mb-2 bg-success text-white'>
+                          <h2> Sistema de Gestão de Serviços de TI do 4º CTA<h2>
+                          </div>
+                            <h4><i class="fa fa-lock" aria-hidden="true"></i> Login </h4>
+                        </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end -%>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+                                                <!--<form accept-charset="utf-8" method="post" action="">-->
+                        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                        <!--<form id="loginMember" role="form" action="" method="post">-->
+                            <div class="form-group">
+                              <%= f.label :email, :class => 'form-control'%><!--<br />-->
+                              <%= f.email_field :email, autofocus: true, autocomplete: "email", :class =>'form-control input-lg'%>
+                                <!--<input type="text" class="form-control" id="user_id" placeholder="e-mail / Mobile no" name="user_id">-->
+                            </div>
+                            <div class="form-group">
+                              <%= f.label :senha, :class => 'form-control' %><!--<br />-->
+                              <%= f.password_field :password, autocomplete: "off", :class =>'form-control input-lg' %>
+                                <!--<input type="password" class="form-control" id="password" placeholder="Password" name="password">-->
+                            </div>
+                            <div class="actions text-center" >
+                              <%= f.submit "Entrar", :class => 'btn btn-default login-popup-btn' %>
+                            </div>
+                            <!--<button type="submit" class="btn btn-default login-popup-btn" name="submit" value="1">Login</button>-->
+                        <!--</form>-->
+                        <% if devise_mapping.rememberable? -%>
+                          <div class="field text-center">
+                            <%= f.check_box :remember_me, :class => 'text-center' %>
+                            <%= f.label :quero_me_manter_conectado, :class => 'text-center' %>
+                          </div>
+                        <% end -%>
+                        <!--<div class="form-group text-center">
+                        <a class="pwd-forget" href="javascript:void(0)" id="open_forgotPassword">Forget Password</a>
+                        </div>
+                        <div class="text-center">Not registered yet?<a href="http://192.168.50.34/abcc/membership-application">click here</a></div>
+                        --><% end %>
+                    </div>
