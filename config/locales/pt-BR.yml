@@ -1,6 +1,12 @@
 pt-BR:
   datetime:
     distance_in_words:
+      x_years:
+        one: "1 ano"
+        other: "%{count} anos"
+      x_months:
+        one: "1 mês"
+        other: "%{count} meses"
       x_days:
         one: "1 dia"
         other: "%{count} dias"
@@ -19,8 +25,8 @@ pt-BR:
         one: 'Serviço de TI prestado'
         other: 'Serviços de TI prestados'
       parado:
-        one: 'Elemento afetado por indisponibilidade'
-        other: 'Elementos afetados indisponibilidade'
+        one: 'Elemento gerador de indisponibilidade'
+        other: 'Elementos gerador de indisponibilidade'
       curso_externo:
         one: 'Atividade Capacitação Externa'
         other: 'Atividades Capacitação Externa'
@@ -76,12 +82,21 @@ pt-BR:
         one: 'Grau hierárquico'
         other: 'Graus hierárquicos'
     attributes:
+      ans_ti:
+        cliente: 'Cliente'
+        servico: 'Serviço'
       hierarq:
         nome: 'Nome'
       servico:
         nome: 'Nome'
+        pacotes_servico: 'Serviço provido nos seguintes pacotes'
+        fornecedors: 'Fornecedores do CTA relacionados ao serviço'
+        indisponibilidades: 'Eventos de indisponibilidade do serviço'
+        capacidades: 'Capacidades do serviço'
+        ans_tis: 'ANSs relacionados ao serviço'
       parado:
-        nome: 'Elemento afetado por indisponibilidade'
+        nome: 'Elemento gerador de indisponibilidade'
+        indisponibilidades: 'Eventos em que o elemento falhou'
       curso_externo:
         nome: 'Nome do curso'
         tipo_cpc: 'Tipo de capacitação'
@@ -95,6 +110,7 @@ pt-BR:
         conclusao_checada: 'Certificado de conclusão checado?'
         custo: 'Custo (R$)'
         org_aplicadora: 'Organização aplicadora'
+        usuarios: 'Usuários'
       curso_ministrado:
         nome: 'Nome do curso'
         tipo_cpc: 'Tipo de capacitação'
@@ -105,24 +121,34 @@ pt-BR:
         inicio: 'Início'
         termino: 'Término'
         pladis: 'Pladis'
+        instrutors_curso_ministrados: 'Instrutores'
       habilidade_adquirida:
         curso_realizado: 'Curso realizado'
         data_adquiriu_habilidade: 'Quando adquiriu a habilidade'
         descricao_habilidade: 'Descrição da habilidade'
+        nivel_habilidade: 'Nível da habilidade'
+        habilidade: 'Nome da habilidade adquirida'
       cidade:
         nome: 'Nome da cidade'
+        clientes: 'OMs da guarnição'
       cargo:
         nome: 'Nome do cargo'
       encargo:
         nome: 'Nome do encargo'
+        usuarios: 'Usuários'
       habilidade:
         nome: 'Nome da habilidade'
+        descricao: 'Descrição'
+        habilidade_adquiridas: 'Cursos relacionados a esta habilidade'
       usuario:
         nome: 'Nome'
         status: 'Status'
         tipo: 'tipo'
         observacoes: 'Observações'
         telefone: 'Telefone'
+        hierarq: 'Grau hierárquico'
+        associado: 'Associado a(o)'
+        vots: 'VALTIs'
       cliente:
         nome: 'Nome'
         endereco: 'Endereço'
@@ -139,6 +165,10 @@ pt-BR:
         celular_ctt_adj: 'Celular do Adj 1 Seç Info'
         anotacoes: 'Anotações'
         inventario: 'Inventário de TI da OM'
+        vots: 'VALTIs recebidas'
+        usuarios: 'Usuários que possui'
+        requisicao_link_proprio: 'Requisição de link próprio realizada'
+        pacotes_servico: 'Pacote de serviços'
       requisicao_link_proprio:
         cliente_id: 'OM requerente'
         parecer_cta: 'Parecer do 4º CTA'
@@ -159,17 +189,24 @@ pt-BR:
         inicio_contrato: 'Início do contrato'
         termino_contrato: 'Término do contrato'
         contrato: 'Contrato vigente'
+        servicos: 'Serviços relacionados com fornecedor'
       capacidade:
         nome_recurso: 'Nome do recurso'
         total_recurso: 'Total do recurso'
         empregado: 'Qtd empregada'
+        servicos: 'Serviços que consomem o recurso'
       indisponibilidade:
         inicio: 'Início'
         termino: 'Término'
         observacoes: 'Observações'
         tipo: 'Tipo'
+        clientes: 'Clientes afetados pela indisponibilidade'
+        parados: 'Elemento(s) causador(es) da indisponibilidade'
+        motivos: 'Causa(s) da(s) falha(s) do(s) elemento(s)'
+        servicos: 'Serviços interrompidos'
       motivo:
         nome: 'Motivo da indisponibilidade'
+        indisponibilidades: 'Eventos de indisponibilidade causados por esse motivo'
       vot:
         cliente_id: 'OM cliente apoiada'
         data_inicio: 'Data de início'
@@ -179,6 +216,7 @@ pt-BR:
         remuneracao: 'Remuneração'
         pagamentos_realizados: 'Pagamentos já realizados?'
         relatorio: 'Relatório da VALTI'
+        usuarios: 'Usuários'
       pacotes_servico:
         intranet: 'Intranet'
         internet: 'Internet'
@@ -187,10 +225,18 @@ pt-BR:
         tipo_banda: 'Tipo de banda'
         meio_de_acesso: 'Meio de acesso'
         tipo_link: 'Tipo de link'
-        link_proprio: 'OM possui link proprio?'
+        link_proprio: 'OM possui link próprio?'
         latencia: 'Latência (ms)'
         jitter: 'Jitter (ms)'
         disponibilidade: 'Disponibilidade (%)'
+        servicos: 'Serviços incluídos no pacote'
+        contrato: 'Contrato de ANS relacionado ao pacote'
+      perfil_profissional:
+        usuario: 'Usuário'
+        cargo: 'Cargo ocupado pelo usuário'
+        dono_perfil: 'Título do perfil'
+        habilidade_adquiridas: 'Cursos que possui'
+
       errors:
         models:
           usuario:
