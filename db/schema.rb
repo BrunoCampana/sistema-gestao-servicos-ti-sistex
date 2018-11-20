@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_19_191233) do
+ActiveRecord::Schema.define(version: 2018_11_20_140351) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -61,6 +61,15 @@ ActiveRecord::Schema.define(version: 2018_11_19_191233) do
     t.string "nome"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "usuario_id"
+    t.index ["usuario_id"], name: "index_cargos_on_usuario_id"
+  end
+
+  create_table "cargos_habilidades", id: false, force: :cascade do |t|
+    t.integer "habilidade_id", null: false
+    t.integer "cargo_id", null: false
+    t.index ["habilidade_id"], name: "index_cargos_habilidades_on_habilidade_id"
+    t.index [nil], name: "index_cargos_habilidades_on_usuario_id"
   end
 
   create_table "cidades", force: :cascade do |t|
@@ -163,19 +172,6 @@ ActiveRecord::Schema.define(version: 2018_11_19_191233) do
     t.index ["servico_id"], name: "index_fornecedors_servicos_on_servico_id"
   end
 
-  create_table "habilidade_adquiridas", force: :cascade do |t|
-    t.integer "nivel_habilidade"
-    t.string "curso_realizado"
-    t.date "data_adquiriu_habilidade"
-    t.text "descricao_habilidade"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "perfil_profissional_id"
-    t.integer "habilidade_id"
-    t.index ["habilidade_id"], name: "index_habilidade_adquiridas_on_habilidade_id"
-    t.index ["perfil_profissional_id"], name: "index_habilidade_adquiridas_on_perfil_profissional_id"
-  end
-
   create_table "habilidades", force: :cascade do |t|
     t.string "nome"
     t.datetime "created_at", null: false
@@ -276,16 +272,6 @@ ActiveRecord::Schema.define(version: 2018_11_19_191233) do
     t.string "nome"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "perfil_profissionals", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "usuario_id"
-    t.integer "cargo_id"
-    t.string "dono_perfil"
-    t.index ["cargo_id"], name: "index_perfil_profissionals_on_cargo_id"
-    t.index ["usuario_id"], name: "index_perfil_profissionals_on_usuario_id"
   end
 
   create_table "requisicao_link_proprios", force: :cascade do |t|

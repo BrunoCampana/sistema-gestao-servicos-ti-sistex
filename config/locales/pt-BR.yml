@@ -10,6 +10,9 @@ pt-BR:
       x_days:
         one: "1 dia"
         other: "%{count} dias"
+      x_hours:
+        one: "1 hora"
+        other: "%{count} horas"
       x_minutes:
         one: "1 min"
         other: "%{count} minutos"
@@ -33,12 +36,6 @@ pt-BR:
       curso_ministrado:
         one: 'Atividades Capacitação Interna CTA'
         other: 'Atividades Capacitação Interna CTA'
-      habilidade_adquirida:
-        one: 'Habilidade adquirida por usuário'
-        other: 'Habilidades adquiridas por usuário'
-      perfil_profissional:
-        one: 'Perfil profissional'
-        other: 'Perfis profissionais'
       capacidade:
         one: 'Capacidade do Sv TI'
         other: 'Capacidade dos Sv TI'
@@ -87,6 +84,7 @@ pt-BR:
         servico: 'Serviço'
       hierarq:
         nome: 'Nome'
+        usuarios: 'Usuários que possuem o grau hierárquico'
       servico:
         nome: 'Nome'
         pacotes_servico: 'Serviço provido nos seguintes pacotes'
@@ -121,34 +119,36 @@ pt-BR:
         inicio: 'Início'
         termino: 'Término'
         pladis: 'Pladis'
-        instrutors_curso_ministrados: 'Instrutores'
-      habilidade_adquirida:
-        curso_realizado: 'Curso realizado'
-        data_adquiriu_habilidade: 'Quando adquiriu a habilidade'
-        descricao_habilidade: 'Descrição da habilidade'
-        nivel_habilidade: 'Nível da habilidade'
-        habilidade: 'Nome da habilidade adquirida'
       cidade:
         nome: 'Nome da cidade'
         clientes: 'OMs da guarnição'
       cargo:
         nome: 'Nome do cargo'
+        usuario: 'Usuário que ocupa o cargo'
+        habilidades: 'Habilidades e cursos exigidas(os) para o cargo'
       encargo:
         nome: 'Nome do encargo'
         usuarios: 'Usuários'
       habilidade:
-        nome: 'Nome da habilidade'
+        nome: 'Nome da habilidade ou curso'
         descricao: 'Descrição'
-        habilidade_adquiridas: 'Cursos relacionados a esta habilidade'
+        usuarios: 'Usuários que a possuem'
+        cargos: 'Cargos que exigem esta habilidade'
       usuario:
         nome: 'Nome'
-        status: 'Status'
-        tipo: 'tipo'
+        status: 'Status do usuário'
+        tipo: 'Perfil de acesso do usuário'
         observacoes: 'Observações'
         telefone: 'Telefone'
         hierarq: 'Grau hierárquico'
         associado: 'Associado a(o)'
-        vots: 'VALTIs'
+        vots: 'VALTIs que participou'
+        cargos: 'Cargos que ocupa'
+        habilidades: 'Habilidades e cursos que possui'
+        curso_externos: 'Atividades de capacitação externas que participou'
+        encargos: 'Encargos que possui'
+        instruendos: 'Estágios internos em que foi instruendo'
+        instrutores: 'Estágios internos em que foi instrutor'
       cliente:
         nome: 'Nome'
         endereco: 'Endereço'
@@ -231,11 +231,6 @@ pt-BR:
         disponibilidade: 'Disponibilidade (%)'
         servicos: 'Serviços incluídos no pacote'
         contrato: 'Contrato de ANS relacionado ao pacote'
-      perfil_profissional:
-        usuario: 'Usuário'
-        cargo: 'Cargo ocupado pelo usuário'
-        dono_perfil: 'Título do perfil'
-        habilidade_adquiridas: 'Cursos que possui'
 
       errors:
         models:

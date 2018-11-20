@@ -1,7 +1,8 @@
 class Habilidade < ApplicationRecord
   include RailsAdminCharts
-  
-  has_many :habilidade_adquiridas
+
+  has_and_belongs_to_many :usuarios
+  has_and_belongs_to_many :cargos
 
   def self.graph_data(since = 30.days.ago)
     Habilidade.group(:usuario_id).count.to_a

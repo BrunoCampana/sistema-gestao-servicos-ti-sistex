@@ -56,35 +56,9 @@ RailsAdmin.config do |config|
     end
   end
 
-  config.model PerfilProfissional do
-    parent Usuario
-    weight (-13)
-    list do
-      configure :created_at do
-        hide
-      end
-      configure :updated_at do
-        hide
-      end
-    end
-  end
-
   config.model Habilidade do
     parent Usuario
     weight (-12)
-    list do
-      configure :created_at do
-        hide
-      end
-      configure :updated_at do
-        hide
-      end
-    end
-  end
-
-  config.model HabilidadeAdquirida do
-    parent Usuario
-    weight (-11.96)
     list do
       configure :created_at do
         hide

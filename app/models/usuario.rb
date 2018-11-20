@@ -3,8 +3,8 @@ class Usuario < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  #has_many :cargo
-  has_one :perfil_profissional
+  has_many :cargos
+  has_and_belongs_to_many :habilidades
   enum status: [:inativo, :ativo]
   enum tipo: [:Admin, :SecGer, :SecCpc, :DTDO, :SecTICliente]
   enum associado: [:CIRMAM, :ASA, :Nenhum]

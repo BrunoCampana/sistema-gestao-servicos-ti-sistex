@@ -1,0 +1,308 @@
+I, [2018-11-20T08:10:52.632959 #7454]  INFO -- : [cc1192ea-e6ea-410a-80f8-371011c039bf] Started GET "/" for 127.0.0.1 at 2018-11-20 08:10:52 -0400
+I, [2018-11-20T08:10:52.642614 #7454]  INFO -- : [cc1192ea-e6ea-410a-80f8-371011c039bf] Processing by RailsAdmin::MainController#dashboard as HTML
+I, [2018-11-20T08:10:52.661286 #7454]  INFO -- : [cc1192ea-e6ea-410a-80f8-371011c039bf] Completed 401 Unauthorized in 18ms
+I, [2018-11-20T08:10:52.717905 #7454]  INFO -- : [bd64410d-8d36-4d10-915b-7b069510c97e] Started GET "/usuarios/sign_in" for 127.0.0.1 at 2018-11-20 08:10:52 -0400
+I, [2018-11-20T08:10:52.719936 #7454]  INFO -- : [bd64410d-8d36-4d10-915b-7b069510c97e] Processing by Devise::SessionsController#new as HTML
+I, [2018-11-20T08:10:52.772185 #7454]  INFO -- : [bd64410d-8d36-4d10-915b-7b069510c97e]   Rendering devise/sessions/new.html.erb within layouts/application
+I, [2018-11-20T08:10:52.776960 #7454]  INFO -- : [bd64410d-8d36-4d10-915b-7b069510c97e]   Rendered devise/sessions/new.html.erb within layouts/application (4.6ms)
+I, [2018-11-20T08:10:52.777863 #7454]  INFO -- : [bd64410d-8d36-4d10-915b-7b069510c97e] Completed 200 OK in 58ms (Views: 13.3ms | ActiveRecord: 3.4ms)
+I, [2018-11-20T08:10:52.800902 #7454]  INFO -- : [ba1784bd-d885-4f40-a181-a8b9397d4017] Started GET "/assets/application-cf0ced8c571de49e43d7b4b829dfeb68578ab8583af4a3f53d42ab292cadd58f.css" for 127.0.0.1 at 2018-11-20 08:10:52 -0400
+I, [2018-11-20T08:10:52.804523 #7454]  INFO -- : [ba1784bd-d885-4f40-a181-a8b9397d4017] Processing by RailsAdmin::MainController#show as CSS
+I, [2018-11-20T08:10:52.807572 #7454]  INFO -- : [ba1784bd-d885-4f40-a181-a8b9397d4017]   Parameters: {"model_name"=>"assets", "id"=>"application-cf0ced8c571de49e43d7b4b829dfeb68578ab8583af4a3f53d42ab292cadd58f"}
+I, [2018-11-20T08:10:52.810892 #7454]  INFO -- : [ba1784bd-d885-4f40-a181-a8b9397d4017] Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+I, [2018-11-20T08:10:52.806012 #7454]  INFO -- : [44d7f852-f691-4cae-9ce8-e8f262f601b7] Started GET "/assets/application-f444a30148da66444491840d309ac4017c200226c7aea447fb5d48dabb566cfe.js" for 127.0.0.1 at 2018-11-20 08:10:52 -0400
+I, [2018-11-20T08:10:52.813192 #7454]  INFO -- : [44d7f852-f691-4cae-9ce8-e8f262f601b7] Processing by RailsAdmin::MainController#show as JS
+I, [2018-11-20T08:10:52.813454 #7454]  INFO -- : [44d7f852-f691-4cae-9ce8-e8f262f601b7]   Parameters: {"model_name"=>"assets", "id"=>"application-f444a30148da66444491840d309ac4017c200226c7aea447fb5d48dabb566cfe"}
+I, [2018-11-20T08:10:52.814323 #7454]  INFO -- : [44d7f852-f691-4cae-9ce8-e8f262f601b7] Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+I, [2018-11-20T08:11:00.033739 #7454]  INFO -- : [efeef817-1f3e-42c6-8b80-c66092e06fd0] Started POST "/usuarios/sign_in" for 127.0.0.1 at 2018-11-20 08:11:00 -0400
+I, [2018-11-20T08:11:00.035194 #7454]  INFO -- : [efeef817-1f3e-42c6-8b80-c66092e06fd0] Processing by Devise::SessionsController#create as HTML
+I, [2018-11-20T08:11:00.035320 #7454]  INFO -- : [efeef817-1f3e-42c6-8b80-c66092e06fd0]   Parameters: {"utf8"=>"✓", "authenticity_token"=>"4mz1Ai7vxM/vyBawo2rHv0E4sJbxLyyP6Ofwq+/vLa58QvVRImGRe56x7/8lh7HEa3usKSCF5eR5+wPUu8m9fw==", "usuario"=>{"email"=>"campana@4cta.eb.mil.br", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Entrar"}
+D, [2018-11-20T08:11:00.049149 #7454] DEBUG -- : [efeef817-1f3e-42c6-8b80-c66092e06fd0]   [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["email", "campana@4cta.eb.mil.br"], ["LIMIT", 1]]
+D, [2018-11-20T08:11:00.187810 #7454] DEBUG -- : [efeef817-1f3e-42c6-8b80-c66092e06fd0]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+D, [2018-11-20T08:11:00.189000 #7454] DEBUG -- : [efeef817-1f3e-42c6-8b80-c66092e06fd0]   [1m[36mUsuario Update (0.3ms)[0m  [1m[33mUPDATE "usuarios" SET "updated_at" = ?, "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ? WHERE "usuarios"."id" = ?[0m  [["updated_at", "2018-11-20 12:11:00.188048"], ["sign_in_count", 19], ["current_sign_in_at", "2018-11-20 12:11:00.187405"], ["last_sign_in_at", "2018-11-19 19:31:21.624058"], ["id", 1]]
+D, [2018-11-20T08:11:00.199815 #7454] DEBUG -- : [efeef817-1f3e-42c6-8b80-c66092e06fd0]   [1m[35m (10.4ms)[0m  [1m[36mcommit transaction[0m
+I, [2018-11-20T08:11:00.207004 #7454]  INFO -- : [efeef817-1f3e-42c6-8b80-c66092e06fd0] Redirected to http://localhost:3000/
+I, [2018-11-20T08:11:00.207778 #7454]  INFO -- : [efeef817-1f3e-42c6-8b80-c66092e06fd0] Completed 302 Found in 172ms (ActiveRecord: 11.0ms)
+I, [2018-11-20T08:11:00.210865 #7454]  INFO -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f] Started GET "/" for 127.0.0.1 at 2018-11-20 08:11:00 -0400
+I, [2018-11-20T08:11:00.212070 #7454]  INFO -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f] Processing by RailsAdmin::MainController#dashboard as HTML
+D, [2018-11-20T08:11:00.215592 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[36mUsuario Load (0.6ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2018-11-20T08:11:00.702006 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "usuarios"[0m
+D, [2018-11-20T08:11:00.702578 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[36mUsuario Load (0.1ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" ORDER BY "usuarios"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2018-11-20T08:11:00.703186 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "hierarqs"[0m
+D, [2018-11-20T08:11:00.703843 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[36mHierarq Load (0.1ms)[0m  [1m[34mSELECT  "hierarqs".* FROM "hierarqs" ORDER BY "hierarqs"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2018-11-20T08:11:00.707512 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "cargos"[0m
+D, [2018-11-20T08:11:00.709139 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[36mCargo Load (0.1ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" ORDER BY "cargos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2018-11-20T08:11:00.713899 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "perfil_profissionals"[0m
+D, [2018-11-20T08:11:00.716122 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[36mPerfilProfissional Load (0.3ms)[0m  [1m[34mSELECT  "perfil_profissionals".* FROM "perfil_profissionals" ORDER BY "perfil_profissionals"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2018-11-20T08:11:00.722135 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "habilidades"[0m
+D, [2018-11-20T08:11:00.722894 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[36mHabilidade Load (0.1ms)[0m  [1m[34mSELECT  "habilidades".* FROM "habilidades" ORDER BY "habilidades"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2018-11-20T08:11:00.728597 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "habilidade_adquiridas"[0m
+D, [2018-11-20T08:11:00.730460 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[36mHabilidadeAdquirida Load (0.2ms)[0m  [1m[34mSELECT  "habilidade_adquiridas".* FROM "habilidade_adquiridas" ORDER BY "habilidade_adquiridas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2018-11-20T08:11:00.737563 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "encargos"[0m
+D, [2018-11-20T08:11:00.738326 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[36mEncargo Load (0.1ms)[0m  [1m[34mSELECT  "encargos".* FROM "encargos" ORDER BY "encargos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2018-11-20T08:11:00.742119 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "clientes"[0m
+D, [2018-11-20T08:11:00.742928 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[36mCliente Load (0.1ms)[0m  [1m[34mSELECT  "clientes".* FROM "clientes" ORDER BY "clientes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2018-11-20T08:11:00.751976 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "cidades"[0m
+D, [2018-11-20T08:11:00.752775 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[36mCidade Load (0.1ms)[0m  [1m[34mSELECT  "cidades".* FROM "cidades" ORDER BY "cidades"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2018-11-20T08:11:00.756212 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "requisicao_link_proprios"[0m
+D, [2018-11-20T08:11:00.757035 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[36mRequisicaoLinkProprio Load (0.1ms)[0m  [1m[34mSELECT  "requisicao_link_proprios".* FROM "requisicao_link_proprios" ORDER BY "requisicao_link_proprios"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2018-11-20T08:11:00.767859 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pacotes_servicos"[0m
+D, [2018-11-20T08:11:00.768828 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[36mPacotesServico Load (0.1ms)[0m  [1m[34mSELECT  "pacotes_servicos".* FROM "pacotes_servicos" ORDER BY "pacotes_servicos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2018-11-20T08:11:00.781923 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "vots"[0m
+D, [2018-11-20T08:11:00.783999 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[36mVot Load (0.2ms)[0m  [1m[34mSELECT  "vots".* FROM "vots" ORDER BY "vots"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2018-11-20T08:11:00.799387 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "servicos"[0m
+D, [2018-11-20T08:11:00.801115 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[36mServico Load (0.2ms)[0m  [1m[34mSELECT  "servicos".* FROM "servicos" ORDER BY "servicos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2018-11-20T08:11:00.804473 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ans_tis"[0m
+D, [2018-11-20T08:11:00.805281 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[36mAnsTi Load (0.1ms)[0m  [1m[34mSELECT  "ans_tis".* FROM "ans_tis" ORDER BY "ans_tis"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2018-11-20T08:11:00.817232 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "indisponibilidades"[0m
+D, [2018-11-20T08:11:00.818225 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[36mIndisponibilidade Load (0.1ms)[0m  [1m[34mSELECT  "indisponibilidades".* FROM "indisponibilidades" ORDER BY "indisponibilidades"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2018-11-20T08:11:00.822763 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "parados"[0m
+D, [2018-11-20T08:11:00.824927 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[36mParado Load (0.5ms)[0m  [1m[34mSELECT  "parados".* FROM "parados" ORDER BY "parados"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2018-11-20T08:11:00.829626 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "motivos"[0m
+D, [2018-11-20T08:11:00.831423 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[36mMotivo Load (0.2ms)[0m  [1m[34mSELECT  "motivos".* FROM "motivos" ORDER BY "motivos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2018-11-20T08:11:00.835804 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "capacidades"[0m
+D, [2018-11-20T08:11:00.836631 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[36mCapacidade Load (0.1ms)[0m  [1m[34mSELECT  "capacidades".* FROM "capacidades" ORDER BY "capacidades"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2018-11-20T08:11:00.837773 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "fornecedors"[0m
+D, [2018-11-20T08:11:00.839139 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[36mFornecedor Load (0.2ms)[0m  [1m[34mSELECT  "fornecedors".* FROM "fornecedors" ORDER BY "fornecedors"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2018-11-20T08:11:00.849877 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "curso_ministrados"[0m
+D, [2018-11-20T08:11:00.851401 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[36mCursoMinistrado Load (0.1ms)[0m  [1m[34mSELECT  "curso_ministrados".* FROM "curso_ministrados" ORDER BY "curso_ministrados"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2018-11-20T08:11:00.858833 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "curso_externos"[0m
+D, [2018-11-20T08:11:00.859728 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[36mCursoExterno Load (0.1ms)[0m  [1m[34mSELECT  "curso_externos".* FROM "curso_externos" ORDER BY "curso_externos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2018-11-20T08:11:00.869218 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_storage_attachments"[0m
+D, [2018-11-20T08:11:00.869986 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" ORDER BY "active_storage_attachments"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2018-11-20T08:11:00.871013 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_storage_blobs"[0m
+D, [2018-11-20T08:11:00.871702 #7454] DEBUG -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" ORDER BY "active_storage_blobs"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+I, [2018-11-20T08:11:00.878547 #7454]  INFO -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   Rendering /home/campana/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.3.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+I, [2018-11-20T08:11:00.939181 #7454]  INFO -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   Rendered /home/campana/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.3.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (60.5ms)
+I, [2018-11-20T08:11:00.960489 #7454]  INFO -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   Rendered /home/campana/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.3.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (5.2ms)
+I, [2018-11-20T08:11:00.960600 #7454]  INFO -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   Rendered /home/campana/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.3.0/app/views/layouts/rails_admin/_navigation.html.haml (11.4ms)
+I, [2018-11-20T08:11:00.996977 #7454]  INFO -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   Rendered /home/campana/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.3.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (32.8ms)
+I, [2018-11-20T08:11:00.999046 #7454]  INFO -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   Rendering /home/campana/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.3.0/app/views/layouts/rails_admin/pjax.html.haml
+I, [2018-11-20T08:11:01.002834 #7454]  INFO -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f]   Rendered /home/campana/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.3.0/app/views/layouts/rails_admin/pjax.html.haml (3.7ms)
+I, [2018-11-20T08:11:01.003102 #7454]  INFO -- : [4d94c268-c3e4-4223-b1a4-964de57d0a3f] Completed 200 OK in 791ms (Views: 131.1ms | ActiveRecord: 20.1ms)
+I, [2018-11-20T08:11:01.022343 #7454]  INFO -- : [5179ed2d-4264-4288-87c4-eef71485a14e] Started GET "/assets/rails_admin/rails_admin-edd50aa3b1d2259cac49be927725262ee4095b0d39d20144a9d8270bfed12846.css" for 127.0.0.1 at 2018-11-20 08:11:01 -0400
+F, [2018-11-20T08:11:01.023350 #7454] FATAL -- : [5179ed2d-4264-4288-87c4-eef71485a14e]   
+F, [2018-11-20T08:11:01.023479 #7454] FATAL -- : [5179ed2d-4264-4288-87c4-eef71485a14e] ActionController::RoutingError (No route matches [GET] "/assets/rails_admin/rails_admin-edd50aa3b1d2259cac49be927725262ee4095b0d39d20144a9d8270bfed12846.css"):
+F, [2018-11-20T08:11:01.023519 #7454] FATAL -- : [5179ed2d-4264-4288-87c4-eef71485a14e]   
+F, [2018-11-20T08:11:01.023580 #7454] FATAL -- : [5179ed2d-4264-4288-87c4-eef71485a14e] actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+[5179ed2d-4264-4288-87c4-eef71485a14e] actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+[5179ed2d-4264-4288-87c4-eef71485a14e] railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+[5179ed2d-4264-4288-87c4-eef71485a14e] railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+[5179ed2d-4264-4288-87c4-eef71485a14e] activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+[5179ed2d-4264-4288-87c4-eef71485a14e] activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+[5179ed2d-4264-4288-87c4-eef71485a14e] activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+[5179ed2d-4264-4288-87c4-eef71485a14e] railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+[5179ed2d-4264-4288-87c4-eef71485a14e] actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+[5179ed2d-4264-4288-87c4-eef71485a14e] request_store (1.4.1) lib/request_store/middleware.rb:19:in `call'
+[5179ed2d-4264-4288-87c4-eef71485a14e] actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+[5179ed2d-4264-4288-87c4-eef71485a14e] rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+[5179ed2d-4264-4288-87c4-eef71485a14e] rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+[5179ed2d-4264-4288-87c4-eef71485a14e] activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+[5179ed2d-4264-4288-87c4-eef71485a14e] actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+[5179ed2d-4264-4288-87c4-eef71485a14e] rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+[5179ed2d-4264-4288-87c4-eef71485a14e] railties (5.2.1) lib/rails/engine.rb:524:in `call'
+[5179ed2d-4264-4288-87c4-eef71485a14e] puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+[5179ed2d-4264-4288-87c4-eef71485a14e] puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+[5179ed2d-4264-4288-87c4-eef71485a14e] puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+[5179ed2d-4264-4288-87c4-eef71485a14e] puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+[5179ed2d-4264-4288-87c4-eef71485a14e] puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+I, [2018-11-20T08:11:01.027385 #7454]  INFO -- : [d5370c24-c234-4656-a4fb-74989ee35444] Started GET "/assets/rails_admin/rails_admin-f760d5050306d25d6bb06f39c90ff03c16ab339ad7c87fd771f556fc3cd0235a.js" for 127.0.0.1 at 2018-11-20 08:11:01 -0400
+F, [2018-11-20T08:11:01.028588 #7454] FATAL -- : [d5370c24-c234-4656-a4fb-74989ee35444]   
+F, [2018-11-20T08:11:01.028877 #7454] FATAL -- : [d5370c24-c234-4656-a4fb-74989ee35444] ActionController::RoutingError (No route matches [GET] "/assets/rails_admin/rails_admin-f760d5050306d25d6bb06f39c90ff03c16ab339ad7c87fd771f556fc3cd0235a.js"):
+F, [2018-11-20T08:11:01.028965 #7454] FATAL -- : [d5370c24-c234-4656-a4fb-74989ee35444]   
+F, [2018-11-20T08:11:01.029039 #7454] FATAL -- : [d5370c24-c234-4656-a4fb-74989ee35444] actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+[d5370c24-c234-4656-a4fb-74989ee35444] actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+[d5370c24-c234-4656-a4fb-74989ee35444] railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+[d5370c24-c234-4656-a4fb-74989ee35444] railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+[d5370c24-c234-4656-a4fb-74989ee35444] activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+[d5370c24-c234-4656-a4fb-74989ee35444] activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+[d5370c24-c234-4656-a4fb-74989ee35444] activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+[d5370c24-c234-4656-a4fb-74989ee35444] railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+[d5370c24-c234-4656-a4fb-74989ee35444] actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+[d5370c24-c234-4656-a4fb-74989ee35444] request_store (1.4.1) lib/request_store/middleware.rb:19:in `call'
+[d5370c24-c234-4656-a4fb-74989ee35444] actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+[d5370c24-c234-4656-a4fb-74989ee35444] rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+[d5370c24-c234-4656-a4fb-74989ee35444] rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+[d5370c24-c234-4656-a4fb-74989ee35444] activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+[d5370c24-c234-4656-a4fb-74989ee35444] actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+[d5370c24-c234-4656-a4fb-74989ee35444] rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+[d5370c24-c234-4656-a4fb-74989ee35444] railties (5.2.1) lib/rails/engine.rb:524:in `call'
+[d5370c24-c234-4656-a4fb-74989ee35444] puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+[d5370c24-c234-4656-a4fb-74989ee35444] puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+[d5370c24-c234-4656-a4fb-74989ee35444] puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+[d5370c24-c234-4656-a4fb-74989ee35444] puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+[d5370c24-c234-4656-a4fb-74989ee35444] puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+I, [2018-11-20T08:11:11.751913 #7454]  INFO -- : [bb9d4d96-3c92-4128-b27b-6f2179830245] Started GET "/vot" for 127.0.0.1 at 2018-11-20 08:11:11 -0400
+I, [2018-11-20T08:11:11.752575 #7454]  INFO -- : [bb9d4d96-3c92-4128-b27b-6f2179830245] Processing by RailsAdmin::MainController#index as HTML
+I, [2018-11-20T08:11:11.752647 #7454]  INFO -- : [bb9d4d96-3c92-4128-b27b-6f2179830245]   Parameters: {"model_name"=>"vot"}
+D, [2018-11-20T08:11:11.753944 #7454] DEBUG -- : [bb9d4d96-3c92-4128-b27b-6f2179830245]   [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+I, [2018-11-20T08:11:11.777332 #7454]  INFO -- : [bb9d4d96-3c92-4128-b27b-6f2179830245]   Rendering /home/campana/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.3.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+D, [2018-11-20T08:11:11.814578 #7454] DEBUG -- : [bb9d4d96-3c92-4128-b27b-6f2179830245]   [1m[36mVot Load (0.4ms)[0m  [1m[34mSELECT  "vots".* FROM "vots" ORDER BY vots.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+I, [2018-11-20T08:11:11.851592 #7454]  INFO -- : [bb9d4d96-3c92-4128-b27b-6f2179830245]   Rendered /home/campana/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.3.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (74.0ms)
+I, [2018-11-20T08:11:11.854403 #7454]  INFO -- : [bb9d4d96-3c92-4128-b27b-6f2179830245]   Rendered /home/campana/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.3.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (1.3ms)
+I, [2018-11-20T08:11:11.854516 #7454]  INFO -- : [bb9d4d96-3c92-4128-b27b-6f2179830245]   Rendered /home/campana/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.3.0/app/views/layouts/rails_admin/_navigation.html.haml (1.7ms)
+I, [2018-11-20T08:11:11.876080 #7454]  INFO -- : [bb9d4d96-3c92-4128-b27b-6f2179830245]   Rendered /home/campana/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.3.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (21.4ms)
+I, [2018-11-20T08:11:11.876634 #7454]  INFO -- : [bb9d4d96-3c92-4128-b27b-6f2179830245]   Rendering /home/campana/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.3.0/app/views/layouts/rails_admin/pjax.html.haml
+I, [2018-11-20T08:11:11.888981 #7454]  INFO -- : [bb9d4d96-3c92-4128-b27b-6f2179830245]   Rendered /home/campana/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.3.0/app/views/layouts/rails_admin/pjax.html.haml (12.2ms)
+I, [2018-11-20T08:11:11.889254 #7454]  INFO -- : [bb9d4d96-3c92-4128-b27b-6f2179830245] Completed 200 OK in 137ms (Views: 117.1ms | ActiveRecord: 0.7ms)
+I, [2018-11-20T08:11:11.913264 #7454]  INFO -- : [fd515135-5bce-40f3-a13c-7846f1fbe199] Started GET "/assets/rails_admin/rails_admin-edd50aa3b1d2259cac49be927725262ee4095b0d39d20144a9d8270bfed12846.css" for 127.0.0.1 at 2018-11-20 08:11:11 -0400
+F, [2018-11-20T08:11:11.914637 #7454] FATAL -- : [fd515135-5bce-40f3-a13c-7846f1fbe199]   
+F, [2018-11-20T08:11:11.915022 #7454] FATAL -- : [fd515135-5bce-40f3-a13c-7846f1fbe199] ActionController::RoutingError (No route matches [GET] "/assets/rails_admin/rails_admin-edd50aa3b1d2259cac49be927725262ee4095b0d39d20144a9d8270bfed12846.css"):
+F, [2018-11-20T08:11:11.915212 #7454] FATAL -- : [fd515135-5bce-40f3-a13c-7846f1fbe199]   
+F, [2018-11-20T08:11:11.915359 #7454] FATAL -- : [fd515135-5bce-40f3-a13c-7846f1fbe199] actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+[fd515135-5bce-40f3-a13c-7846f1fbe199] actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+[fd515135-5bce-40f3-a13c-7846f1fbe199] railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+[fd515135-5bce-40f3-a13c-7846f1fbe199] railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+[fd515135-5bce-40f3-a13c-7846f1fbe199] activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+[fd515135-5bce-40f3-a13c-7846f1fbe199] activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+[fd515135-5bce-40f3-a13c-7846f1fbe199] activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+[fd515135-5bce-40f3-a13c-7846f1fbe199] railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+[fd515135-5bce-40f3-a13c-7846f1fbe199] actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+[fd515135-5bce-40f3-a13c-7846f1fbe199] request_store (1.4.1) lib/request_store/middleware.rb:19:in `call'
+[fd515135-5bce-40f3-a13c-7846f1fbe199] actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+[fd515135-5bce-40f3-a13c-7846f1fbe199] rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+[fd515135-5bce-40f3-a13c-7846f1fbe199] rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+[fd515135-5bce-40f3-a13c-7846f1fbe199] activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+[fd515135-5bce-40f3-a13c-7846f1fbe199] actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+[fd515135-5bce-40f3-a13c-7846f1fbe199] rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+[fd515135-5bce-40f3-a13c-7846f1fbe199] railties (5.2.1) lib/rails/engine.rb:524:in `call'
+[fd515135-5bce-40f3-a13c-7846f1fbe199] puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+[fd515135-5bce-40f3-a13c-7846f1fbe199] puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+[fd515135-5bce-40f3-a13c-7846f1fbe199] puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+[fd515135-5bce-40f3-a13c-7846f1fbe199] puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+[fd515135-5bce-40f3-a13c-7846f1fbe199] puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+I, [2018-11-20T08:11:11.920549 #7454]  INFO -- : [e6456c64-9ef8-4c1d-aa5e-c8a005fa5ffa] Started GET "/assets/rails_admin/rails_admin-f760d5050306d25d6bb06f39c90ff03c16ab339ad7c87fd771f556fc3cd0235a.js" for 127.0.0.1 at 2018-11-20 08:11:11 -0400
+F, [2018-11-20T08:11:11.921955 #7454] FATAL -- : [e6456c64-9ef8-4c1d-aa5e-c8a005fa5ffa]   
+F, [2018-11-20T08:11:11.922056 #7454] FATAL -- : [e6456c64-9ef8-4c1d-aa5e-c8a005fa5ffa] ActionController::RoutingError (No route matches [GET] "/assets/rails_admin/rails_admin-f760d5050306d25d6bb06f39c90ff03c16ab339ad7c87fd771f556fc3cd0235a.js"):
+F, [2018-11-20T08:11:11.922088 #7454] FATAL -- : [e6456c64-9ef8-4c1d-aa5e-c8a005fa5ffa]   
+F, [2018-11-20T08:11:11.922135 #7454] FATAL -- : [e6456c64-9ef8-4c1d-aa5e-c8a005fa5ffa] actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+[e6456c64-9ef8-4c1d-aa5e-c8a005fa5ffa] actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+[e6456c64-9ef8-4c1d-aa5e-c8a005fa5ffa] railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+[e6456c64-9ef8-4c1d-aa5e-c8a005fa5ffa] railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+[e6456c64-9ef8-4c1d-aa5e-c8a005fa5ffa] activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+[e6456c64-9ef8-4c1d-aa5e-c8a005fa5ffa] activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+[e6456c64-9ef8-4c1d-aa5e-c8a005fa5ffa] activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+[e6456c64-9ef8-4c1d-aa5e-c8a005fa5ffa] railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+[e6456c64-9ef8-4c1d-aa5e-c8a005fa5ffa] actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+[e6456c64-9ef8-4c1d-aa5e-c8a005fa5ffa] request_store (1.4.1) lib/request_store/middleware.rb:19:in `call'
+[e6456c64-9ef8-4c1d-aa5e-c8a005fa5ffa] actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+[e6456c64-9ef8-4c1d-aa5e-c8a005fa5ffa] rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+[e6456c64-9ef8-4c1d-aa5e-c8a005fa5ffa] rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+[e6456c64-9ef8-4c1d-aa5e-c8a005fa5ffa] activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+[e6456c64-9ef8-4c1d-aa5e-c8a005fa5ffa] actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+[e6456c64-9ef8-4c1d-aa5e-c8a005fa5ffa] rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+[e6456c64-9ef8-4c1d-aa5e-c8a005fa5ffa] railties (5.2.1) lib/rails/engine.rb:524:in `call'
+[e6456c64-9ef8-4c1d-aa5e-c8a005fa5ffa] puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+[e6456c64-9ef8-4c1d-aa5e-c8a005fa5ffa] puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+[e6456c64-9ef8-4c1d-aa5e-c8a005fa5ffa] puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+[e6456c64-9ef8-4c1d-aa5e-c8a005fa5ffa] puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+[e6456c64-9ef8-4c1d-aa5e-c8a005fa5ffa] puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+I, [2018-11-20T08:11:24.894842 #7454]  INFO -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d] Started GET "/" for 127.0.0.1 at 2018-11-20 08:11:24 -0400
+I, [2018-11-20T08:11:24.895892 #7454]  INFO -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d] Processing by RailsAdmin::MainController#dashboard as HTML
+D, [2018-11-20T08:11:24.897625 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? ORDER BY "usuarios"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2018-11-20T08:11:24.909147 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "usuarios"[0m
+D, [2018-11-20T08:11:24.909867 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" ORDER BY "usuarios"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2018-11-20T08:11:24.910491 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "hierarqs"[0m
+D, [2018-11-20T08:11:24.910908 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[36mHierarq Load (0.1ms)[0m  [1m[34mSELECT  "hierarqs".* FROM "hierarqs" ORDER BY "hierarqs"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2018-11-20T08:11:24.911433 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "cargos"[0m
+D, [2018-11-20T08:11:24.911848 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[36mCargo Load (0.1ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" ORDER BY "cargos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2018-11-20T08:11:24.912372 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "perfil_profissionals"[0m
+D, [2018-11-20T08:11:24.912784 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[36mPerfilProfissional Load (0.1ms)[0m  [1m[34mSELECT  "perfil_profissionals".* FROM "perfil_profissionals" ORDER BY "perfil_profissionals"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2018-11-20T08:11:24.913285 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "habilidades"[0m
+D, [2018-11-20T08:11:24.913670 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[36mHabilidade Load (0.1ms)[0m  [1m[34mSELECT  "habilidades".* FROM "habilidades" ORDER BY "habilidades"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2018-11-20T08:11:24.914157 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "habilidade_adquiridas"[0m
+D, [2018-11-20T08:11:24.914563 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[36mHabilidadeAdquirida Load (0.1ms)[0m  [1m[34mSELECT  "habilidade_adquiridas".* FROM "habilidade_adquiridas" ORDER BY "habilidade_adquiridas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2018-11-20T08:11:24.915055 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "encargos"[0m
+D, [2018-11-20T08:11:24.915426 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[36mEncargo Load (0.1ms)[0m  [1m[34mSELECT  "encargos".* FROM "encargos" ORDER BY "encargos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2018-11-20T08:11:24.915961 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "clientes"[0m
+D, [2018-11-20T08:11:24.916450 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[36mCliente Load (0.1ms)[0m  [1m[34mSELECT  "clientes".* FROM "clientes" ORDER BY "clientes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2018-11-20T08:11:24.917144 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "cidades"[0m
+D, [2018-11-20T08:11:24.917570 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[36mCidade Load (0.1ms)[0m  [1m[34mSELECT  "cidades".* FROM "cidades" ORDER BY "cidades"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2018-11-20T08:11:24.918145 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "requisicao_link_proprios"[0m
+D, [2018-11-20T08:11:24.918606 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[36mRequisicaoLinkProprio Load (0.1ms)[0m  [1m[34mSELECT  "requisicao_link_proprios".* FROM "requisicao_link_proprios" ORDER BY "requisicao_link_proprios"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2018-11-20T08:11:24.919269 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pacotes_servicos"[0m
+D, [2018-11-20T08:11:24.920130 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[36mPacotesServico Load (0.2ms)[0m  [1m[34mSELECT  "pacotes_servicos".* FROM "pacotes_servicos" ORDER BY "pacotes_servicos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2018-11-20T08:11:24.921244 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "vots"[0m
+D, [2018-11-20T08:11:24.921754 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[36mVot Load (0.1ms)[0m  [1m[34mSELECT  "vots".* FROM "vots" ORDER BY "vots"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2018-11-20T08:11:24.922292 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "servicos"[0m
+D, [2018-11-20T08:11:24.922702 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[36mServico Load (0.1ms)[0m  [1m[34mSELECT  "servicos".* FROM "servicos" ORDER BY "servicos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2018-11-20T08:11:24.923470 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "ans_tis"[0m
+D, [2018-11-20T08:11:24.925895 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[36mAnsTi Load (0.2ms)[0m  [1m[34mSELECT  "ans_tis".* FROM "ans_tis" ORDER BY "ans_tis"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2018-11-20T08:11:24.936763 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "indisponibilidades"[0m
+D, [2018-11-20T08:11:24.937236 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[36mIndisponibilidade Load (0.1ms)[0m  [1m[34mSELECT  "indisponibilidades".* FROM "indisponibilidades" ORDER BY "indisponibilidades"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2018-11-20T08:11:24.937760 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "parados"[0m
+D, [2018-11-20T08:11:24.938144 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[36mParado Load (0.1ms)[0m  [1m[34mSELECT  "parados".* FROM "parados" ORDER BY "parados"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2018-11-20T08:11:24.938612 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "motivos"[0m
+D, [2018-11-20T08:11:24.939008 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[36mMotivo Load (0.1ms)[0m  [1m[34mSELECT  "motivos".* FROM "motivos" ORDER BY "motivos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2018-11-20T08:11:24.939478 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "capacidades"[0m
+D, [2018-11-20T08:11:24.939971 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[36mCapacidade Load (0.2ms)[0m  [1m[34mSELECT  "capacidades".* FROM "capacidades" ORDER BY "capacidades"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2018-11-20T08:11:24.942433 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "fornecedors"[0m
+D, [2018-11-20T08:11:24.943517 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[36mFornecedor Load (0.3ms)[0m  [1m[34mSELECT  "fornecedors".* FROM "fornecedors" ORDER BY "fornecedors"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2018-11-20T08:11:24.945868 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "curso_ministrados"[0m
+D, [2018-11-20T08:11:24.947507 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[36mCursoMinistrado Load (0.3ms)[0m  [1m[34mSELECT  "curso_ministrados".* FROM "curso_ministrados" ORDER BY "curso_ministrados"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2018-11-20T08:11:24.948922 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "curso_externos"[0m
+D, [2018-11-20T08:11:24.949923 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[36mCursoExterno Load (0.3ms)[0m  [1m[34mSELECT  "curso_externos".* FROM "curso_externos" ORDER BY "curso_externos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2018-11-20T08:11:24.951653 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_storage_attachments"[0m
+D, [2018-11-20T08:11:24.952495 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" ORDER BY "active_storage_attachments"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2018-11-20T08:11:24.952958 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_storage_blobs"[0m
+D, [2018-11-20T08:11:24.953378 #7454] DEBUG -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" ORDER BY "active_storage_blobs"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+I, [2018-11-20T08:11:24.953861 #7454]  INFO -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   Rendering /home/campana/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.3.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+I, [2018-11-20T08:11:25.013802 #7454]  INFO -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   Rendered /home/campana/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.3.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (59.9ms)
+I, [2018-11-20T08:11:25.016166 #7454]  INFO -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   Rendered /home/campana/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.3.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (1.2ms)
+I, [2018-11-20T08:11:25.016261 #7454]  INFO -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   Rendered /home/campana/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.3.0/app/views/layouts/rails_admin/_navigation.html.haml (1.6ms)
+I, [2018-11-20T08:11:25.030855 #7454]  INFO -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   Rendered /home/campana/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.3.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (14.5ms)
+I, [2018-11-20T08:11:25.031251 #7454]  INFO -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   Rendering /home/campana/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.3.0/app/views/layouts/rails_admin/pjax.html.haml
+I, [2018-11-20T08:11:25.032035 #7454]  INFO -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d]   Rendered /home/campana/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rails_admin-1.3.0/app/views/layouts/rails_admin/pjax.html.haml (0.7ms)
+I, [2018-11-20T08:11:25.032252 #7454]  INFO -- : [1a7ed216-d9a7-45e7-90f3-a8a59b33864d] Completed 200 OK in 136ms (Views: 78.6ms | ActiveRecord: 6.0ms)
+I, [2018-11-20T08:11:25.055216 #7454]  INFO -- : [26c5dfb1-449f-4ddc-9e66-ae2a5be2e38b] Started GET "/assets/rails_admin/rails_admin-edd50aa3b1d2259cac49be927725262ee4095b0d39d20144a9d8270bfed12846.css" for 127.0.0.1 at 2018-11-20 08:11:25 -0400
+F, [2018-11-20T08:11:25.056108 #7454] FATAL -- : [26c5dfb1-449f-4ddc-9e66-ae2a5be2e38b]   
+F, [2018-11-20T08:11:25.056266 #7454] FATAL -- : [26c5dfb1-449f-4ddc-9e66-ae2a5be2e38b] ActionController::RoutingError (No route matches [GET] "/assets/rails_admin/rails_admin-edd50aa3b1d2259cac49be927725262ee4095b0d39d20144a9d8270bfed12846.css"):
+F, [2018-11-20T08:11:25.056312 #7454] FATAL -- : [26c5dfb1-449f-4ddc-9e66-ae2a5be2e38b]   
+F, [2018-11-20T08:11:25.056362 #7454] FATAL -- : [26c5dfb1-449f-4ddc-9e66-ae2a5be2e38b] actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+[26c5dfb1-449f-4ddc-9e66-ae2a5be2e38b] actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+[26c5dfb1-449f-4ddc-9e66-ae2a5be2e38b] railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+[26c5dfb1-449f-4ddc-9e66-ae2a5be2e38b] railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+[26c5dfb1-449f-4ddc-9e66-ae2a5be2e38b] activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+[26c5dfb1-449f-4ddc-9e66-ae2a5be2e38b] activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+[26c5dfb1-449f-4ddc-9e66-ae2a5be2e38b] activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+[26c5dfb1-449f-4ddc-9e66-ae2a5be2e38b] railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+[26c5dfb1-449f-4ddc-9e66-ae2a5be2e38b] actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+[26c5dfb1-449f-4ddc-9e66-ae2a5be2e38b] request_store (1.4.1) lib/request_store/middleware.rb:19:in `call'
+[26c5dfb1-449f-4ddc-9e66-ae2a5be2e38b] actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+[26c5dfb1-449f-4ddc-9e66-ae2a5be2e38b] rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+[26c5dfb1-449f-4ddc-9e66-ae2a5be2e38b] rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+[26c5dfb1-449f-4ddc-9e66-ae2a5be2e38b] activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+[26c5dfb1-449f-4ddc-9e66-ae2a5be2e38b] actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+[26c5dfb1-449f-4ddc-9e66-ae2a5be2e38b] rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+[26c5dfb1-449f-4ddc-9e66-ae2a5be2e38b] railties (5.2.1) lib/rails/engine.rb:524:in `call'
+[26c5dfb1-449f-4ddc-9e66-ae2a5be2e38b] puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+[26c5dfb1-449f-4ddc-9e66-ae2a5be2e38b] puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+[26c5dfb1-449f-4ddc-9e66-ae2a5be2e38b] puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+[26c5dfb1-449f-4ddc-9e66-ae2a5be2e38b] puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+[26c5dfb1-449f-4ddc-9e66-ae2a5be2e38b] puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+I, [2018-11-20T08:11:25.056867 #7454]  INFO -- : [5d39ed6b-5683-4592-9ba4-152764513bc9] Started GET "/assets/rails_admin/rails_admin-f760d5050306d25d6bb06f39c90ff03c16ab339ad7c87fd771f556fc3cd0235a.js" for 127.0.0.1 at 2018-11-20 08:11:25 -0400
+F, [2018-11-20T08:11:25.058524 #7454] FATAL -- : [5d39ed6b-5683-4592-9ba4-152764513bc9]   
+F, [2018-11-20T08:11:25.058815 #7454] FATAL -- : [5d39ed6b-5683-4592-9ba4-152764513bc9] ActionController::RoutingError (No route matches [GET] "/assets/rails_admin/rails_admin-f760d5050306d25d6bb06f39c90ff03c16ab339ad7c87fd771f556fc3cd0235a.js"):
+F, [2018-11-20T08:11:25.059386 #7454] FATAL -- : [5d39ed6b-5683-4592-9ba4-152764513bc9]   
+F, [2018-11-20T08:11:25.059496 #7454] FATAL -- : [5d39ed6b-5683-4592-9ba4-152764513bc9] actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+[5d39ed6b-5683-4592-9ba4-152764513bc9] actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+[5d39ed6b-5683-4592-9ba4-152764513bc9] railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+[5d39ed6b-5683-4592-9ba4-152764513bc9] railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+[5d39ed6b-5683-4592-9ba4-152764513bc9] activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+[5d39ed6b-5683-4592-9ba4-152764513bc9] activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+[5d39ed6b-5683-4592-9ba4-152764513bc9] activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+[5d39ed6b-5683-4592-9ba4-152764513bc9] railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+[5d39ed6b-5683-4592-9ba4-152764513bc9] actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+[5d39ed6b-5683-4592-9ba4-152764513bc9] request_store (1.4.1) lib/request_store/middleware.rb:19:in `call'
+[5d39ed6b-5683-4592-9ba4-152764513bc9] actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+[5d39ed6b-5683-4592-9ba4-152764513bc9] rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+[5d39ed6b-5683-4592-9ba4-152764513bc9] rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+[5d39ed6b-5683-4592-9ba4-152764513bc9] activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+[5d39ed6b-5683-4592-9ba4-152764513bc9] actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+[5d39ed6b-5683-4592-9ba4-152764513bc9] rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+[5d39ed6b-5683-4592-9ba4-152764513bc9] railties (5.2.1) lib/rails/engine.rb:524:in `call'
+[5d39ed6b-5683-4592-9ba4-152764513bc9] puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+[5d39ed6b-5683-4592-9ba4-152764513bc9] puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+[5d39ed6b-5683-4592-9ba4-152764513bc9] puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+[5d39ed6b-5683-4592-9ba4-152764513bc9] puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+[5d39ed6b-5683-4592-9ba4-152764513bc9] puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
