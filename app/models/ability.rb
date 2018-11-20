@@ -10,6 +10,7 @@ class Ability
         can :access, :rails_admin
         can :dashboard
         can :read, :all
+        #can :edit, Usuario, email: usuario.email
         can :manage, PacotesServico
         can :manage, RequisicaoLinkProprio
         can :manage, AnsTi
@@ -21,17 +22,21 @@ class Ability
         can :access, :rails_admin
         can :dashboard
         can :read, :all
+        #can :edit, Usuario, email: usuario.email
         can :manage, CursoExterno
         can :manage, CursoMinistrado
         can :manage, Vot
         can :manage, Indisponibilidade
+        can :manage, Habilidade
       elsif usuario.tipo == 'DTDO'
         can :access, :rails_admin
         can :dashboard
         can :read, :all
+        #can :edit, Usuario, email: usuario.email
         can :manage, Vot
         can :manage, Indisponibilidade
       elsif usuario.tipo == 'SecTICliente'
+        #can :edit, Usuario, email: usuario.email
         can :read, Cidade
         can :read, Cliente, nome_ch_sec_info: usuario.nome
         can :update, Cliente, nome_ch_sec_info: usuario.nome
