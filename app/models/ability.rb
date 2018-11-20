@@ -21,8 +21,6 @@ class Ability
         can :access, :rails_admin
         can :dashboard
         can :read, :all
-        can :manage, PerfilProfissional
-        can :manage, HabilidadeAdquirida
         can :manage, CursoExterno
         can :manage, CursoMinistrado
         can :manage, Vot
