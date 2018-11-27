@@ -22,7 +22,14 @@ class Ability
         can :access, :rails_admin
         can :dashboard
         can :read, :all
-        #can :edit, Usuario, email: usuario.email
+        can :manage, Usuario
+        can :manage, FormacaoMil
+        can :manage, FormacaoAcad
+        can :manage, CertTi
+        can :manage, Curso
+        can :manage, CargoExercido
+        can :manage, ParticipouProj
+        can :manage, Idioma
         can :manage, CursoExterno
         can :manage, CursoMinistrado
         can :manage, Vot

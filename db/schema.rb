@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_20_140351) do
+ActiveRecord::Schema.define(version: 2018_11_26_194814) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -57,6 +57,14 @@ ActiveRecord::Schema.define(version: 2018_11_20_140351) do
     t.index ["servico_id"], name: "index_capacidades_servicos_on_servico_id"
   end
 
+  create_table "cargo_exercidos", force: :cascade do |t|
+    t.string "nome"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "usuario_id"
+    t.index ["usuario_id"], name: "index_cargo_exercidos_on_usuario_id"
+  end
+
   create_table "cargos", force: :cascade do |t|
     t.string "nome"
     t.datetime "created_at", null: false
@@ -70,6 +78,19 @@ ActiveRecord::Schema.define(version: 2018_11_20_140351) do
     t.integer "cargo_id", null: false
     t.index ["habilidade_id"], name: "index_cargos_habilidades_on_habilidade_id"
     t.index [nil], name: "index_cargos_habilidades_on_usuario_id"
+  end
+
+  create_table "cert_tis", force: :cascade do |t|
+    t.string "nome"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "cert_tis_usuarios", id: false, force: :cascade do |t|
+    t.integer "usuario_id", null: false
+    t.integer "cert_ti_id", null: false
+    t.index ["cert_ti_id"], name: "index_cert_tis_usuarios_on_cert_ti_id"
+    t.index ["usuario_id"], name: "index_cert_tis_usuarios_on_usuario_id"
   end
 
   create_table "cidades", force: :cascade do |t|
@@ -141,6 +162,19 @@ ActiveRecord::Schema.define(version: 2018_11_20_140351) do
     t.integer "tipo_cpc"
   end
 
+  create_table "cursos", force: :cascade do |t|
+    t.string "nome"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "cursos_usuarios", id: false, force: :cascade do |t|
+    t.integer "usuario_id", null: false
+    t.integer "curso_id", null: false
+    t.index ["curso_id"], name: "index_cursos_usuarios_on_curso_id"
+    t.index ["usuario_id"], name: "index_cursos_usuarios_on_usuario_id"
+  end
+
   create_table "encargos", force: :cascade do |t|
     t.string "nome"
     t.datetime "created_at", null: false
@@ -152,6 +186,18 @@ ActiveRecord::Schema.define(version: 2018_11_20_140351) do
     t.integer "usuario_id", null: false
     t.index ["encargo_id"], name: "index_encargos_usuarios_on_encargo_id"
     t.index ["usuario_id"], name: "index_encargos_usuarios_on_usuario_id"
+  end
+
+  create_table "formacao_acads", force: :cascade do |t|
+    t.string "nome"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "formacao_mils", force: :cascade do |t|
+    t.string "nome"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "fornecedors", force: :cascade do |t|
@@ -190,6 +236,19 @@ ActiveRecord::Schema.define(version: 2018_11_20_140351) do
     t.string "nome"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "idiomas", force: :cascade do |t|
+    t.string "nome"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "idiomas_usuarios", id: false, force: :cascade do |t|
+    t.integer "usuario_id", null: false
+    t.integer "idioma_id", null: false
+    t.index ["idioma_id"], name: "index_idiomas_usuarios_on_idioma_id"
+    t.index ["usuario_id"], name: "index_idiomas_usuarios_on_usuario_id"
   end
 
   create_table "indisponibilidades", force: :cascade do |t|
@@ -274,6 +333,14 @@ ActiveRecord::Schema.define(version: 2018_11_20_140351) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "participou_projs", force: :cascade do |t|
+    t.string "nome"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "usuario_id"
+    t.index ["usuario_id"], name: "index_participou_projs_on_usuario_id"
+  end
+
   create_table "requisicao_link_proprios", force: :cascade do |t|
     t.integer "parecer_cta"
     t.integer "parecer_citex"
@@ -319,8 +386,12 @@ ActiveRecord::Schema.define(version: 2018_11_20_140351) do
     t.integer "cliente_id"
     t.integer "associado"
     t.integer "hierarq_id"
+    t.integer "formacao_mil_id"
+    t.integer "formacao_acad_id"
     t.index ["cliente_id"], name: "index_usuarios_on_cliente_id"
     t.index ["email"], name: "index_usuarios_on_email", unique: true
+    t.index ["formacao_acad_id"], name: "index_usuarios_on_formacao_acad_id"
+    t.index ["formacao_mil_id"], name: "index_usuarios_on_formacao_mil_id"
     t.index ["hierarq_id"], name: "index_usuarios_on_hierarq_id"
     t.index ["reset_password_token"], name: "index_usuarios_on_reset_password_token", unique: true
   end

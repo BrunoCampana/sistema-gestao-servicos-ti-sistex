@@ -4,9 +4,16 @@ class Usuario < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :cargos
+  has_many :CargoExercidos
+  has_many :ParticipouProjs
+  belongs_to :formacao_mil
+  belongs_to :formacao_acad
+  has_and_belongs_to_many :idiomas
+  has_and_belongs_to_many :cert_tis
+  has_and_belongs_to_many :cursos
   has_and_belongs_to_many :habilidades
   enum status: [:inativo, :ativo]
-  enum tipo: [:Admin, :SecGer, :SecCpc, :DTDO, :SecTICliente]
+  enum tipo: [:Admin, :SecGer, :SecCpc, :Default, :SecTICliente]
   enum associado: [:CIRMAM, :ASA, :Nenhum]
   belongs_to :cliente
   belongs_to :hierarq

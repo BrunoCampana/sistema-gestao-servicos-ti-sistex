@@ -19,6 +19,9 @@ pt-BR:
       x_seconds:
         one: "1 seg"
         other: "%{count} segundos"
+      about_x_hours:
+        one: "1 hora"
+        other: "%{count} horas"
   activerecord:
     models:
       ans_ti:
@@ -78,7 +81,42 @@ pt-BR:
       hierarq:
         one: 'Grau hierárquico'
         other: 'Graus hierárquicos'
+      formacao_mil:
+        one: 'Formação Militar'
+        other: 'Formações Militares'
+      formacao_acad:
+        one: 'Formação Acadêmica'
+        other: 'Formações Acadêmicas'
+      cert_ti:
+        one: 'Certificações de TI'
+        other: 'Certificações de TI'
+      curso:
+        one: 'Curso Realizado'
+        other: 'Cursos Realizados'
+      cargo_exercido:
+        one: 'Cargo Exercido'
+        other: 'Cargos Exercidos'
+      participou_proj:
+        one: 'Projeto que participou'
+        other: 'Projetos que participou'
+      idioma:
+        one: 'Idioma que fala'
+        other: 'Idiomas que fala'
     attributes:
+      idiomar:
+        nome: 'Descrição'
+      participou_proj:
+        nome: 'Descrição'
+      cargo_exercido:
+        nome: 'Nome'
+      curso:
+        nome: 'Nome'
+      cert_ti:
+        nome: 'Nome'
+      formacao_mil:
+        nome: 'Nome'
+      formacao_acad:
+        nome: 'Nome'
       ans_ti:
         cliente: 'Cliente'
         servico: 'Serviço'
@@ -143,12 +181,18 @@ pt-BR:
         hierarq: 'Grau hierárquico'
         associado: 'Associado a(o)'
         vots: 'VALTIs que participou'
-        cargos: 'Cargos que ocupa'
+        cargos: 'Cargo(s) que ocupa'
         habilidades: 'Habilidades e cursos que possui'
         curso_externos: 'Atividades de capacitação externas que participou'
         encargos: 'Encargos que possui'
         instruendos: 'Estágios internos em que foi instruendo'
         instrutores: 'Estágios internos em que foi instrutor'
+        CargoExercidos: 'Cargos de TI exercidos anteriormente'
+        cert_tis: 'Certificações de TI que possui'
+        formacao_acad: 'Formação Acadêmica'
+        formacao_mil: 'Formação Militar'
+        idiomas: 'Fluência em língua estrangeira'
+        ParticipouProjs: 'Projetos de engenharia e/ou TI que participou'
       cliente:
         nome: 'Nome'
         endereco: 'Endereço'
@@ -231,7 +275,6 @@ pt-BR:
         disponibilidade: 'Disponibilidade (%)'
         servicos: 'Serviços incluídos no pacote'
         contrato: 'Contrato de ANS relacionado ao pacote'
-
       errors:
         models:
           usuario:

@@ -43,6 +43,97 @@ RailsAdmin.config do |config|
     end
   end
 
+  config.model FormacaoMil do
+    parent Usuario
+    weight (-14.8)
+    list do
+      configure :created_at do
+        hide
+      end
+      configure :updated_at do
+        hide
+      end
+    end
+  end
+
+  config.model FormacaoAcad do
+    parent Usuario
+    weight (-14.7)
+    list do
+      configure :created_at do
+        hide
+      end
+      configure :updated_at do
+        hide
+      end
+    end
+  end
+
+  config.model CertTi do
+    parent Usuario
+    weight (-14.7)
+    list do
+      configure :created_at do
+        hide
+      end
+      configure :updated_at do
+        hide
+      end
+    end
+  end
+
+  config.model Curso do
+    parent Usuario
+    weight (-14.6)
+    list do
+      configure :created_at do
+        hide
+      end
+      configure :updated_at do
+        hide
+      end
+    end
+  end
+
+  config.model CargoExercido do
+    parent Usuario
+    weight (-14.5)
+    list do
+      configure :created_at do
+        hide
+      end
+      configure :updated_at do
+        hide
+      end
+    end
+  end
+
+  config.model ParticipouProj do
+    parent Usuario
+    weight (-14.4)
+    list do
+      configure :created_at do
+        hide
+      end
+      configure :updated_at do
+        hide
+      end
+    end
+  end
+
+  config.model Idioma do
+    parent Usuario
+    weight (-14.3)
+    list do
+      configure :created_at do
+        hide
+      end
+      configure :updated_at do
+        hide
+      end
+    end
+  end
+
   config.model Cargo do
     parent Usuario
     weight (-14)

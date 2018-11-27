@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 # Criando nossos Users --- OBS: Depois que adicionarmos o devise precisamos incluir o email e senha dos users
+
 a = Cidade.create!([{nome: 'Manaus'}])
 
 Cidade.create! nome: 'Assis Brasil - AC'
@@ -286,290 +287,287 @@ Cliente.create! nome: 'TG 12-002', endereco: 'ENDEREÇO: RUA DO AREAL - S/N', su
 Cliente.create! nome: 'TG 12-008', endereco: 'BAIRRO: DOMINGOS SÁVIO', subordinacao: '', uasg: '', cidade: c
 
 aaa = Hierarq.create! nome: 'Cap'
-Usuario.create!nome: 'Campana', status: 1, tipo: 3, email: 'campana@4cta.eb.mil.br',
-password: 'troqueestasenha', cliente: b.first, hierarq: aaa
+Usuario.create! nome: 'Campana', status: 1, tipo: 0, telefone: '(92)991138899',
+email: 'campana@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: aaa
 
 #Usuario.create! nome: 'Ten Keller', email: 'keller@4cta.eb.mil.br',
 #status: :ativo, tipo: :Nivel1, password: 'troqueestasenha'
 
 bbb = Hierarq.create! nome: 'TC'
-Usuario.create! nome: 'Júlio César', status: 0, tipo: 2, telefone: '(92)984169401',
+Usuario.create! nome: 'Júlio César', status: 1, tipo: 3, telefone: '(92)984169401',
 email: 'juliocesar@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: bbb
 
-Usuario.create! nome: 'Paulo Roberto ', status: 1, tipo: 2, telefone: '(92)984050677',
+Usuario.create! nome: 'Paulo Roberto ', status: 0, tipo: 3, telefone: '(92)984050677',
 email: 'pauloroberto@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: bbb
 
-Usuario.create! nome: 'Pietro', status: 1, tipo: 2, telefone: '(92)981020020',
+Usuario.create! nome: 'Pietro', status: 0, tipo: 3, telefone: '(92)981020020',
 email: 'pietro@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: bbb
 
 ccc = Hierarq.create! nome: 'Maj'
-Usuario.create! nome: 'Marcelo', status: 1, tipo: 2, telefone: '(92)981125490',
+Usuario.create! nome: 'Marcelo', status: 1, tipo: 3, telefone: '(92)981125490',
  email: 'marcelo@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: ccc
 
-Usuario.create!(nome: 'Borges Júnior', status: 1, tipo: 2, telefone: '(61)993099075',
+Usuario.create!(nome: 'Borges Júnior', status: 0, tipo: 3, telefone: '(61)993099075',
  email: 'borgesjunior@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: ccc)
 
-Usuario.create!(nome: 'Adilson', status: 1, tipo: 2, telefone: '(92)982120031',
+Usuario.create!(nome: 'Adilson', status: 0, tipo: 3, telefone: '(92)982120031',
 email: 'adilson@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: ccc)
 
-Usuario.create!(nome: 'Tsuruda', status: 1, tipo: 2, telefone: '(92)994488625',
+Usuario.create!(nome: 'Tsuruda', status: 0, tipo: 3, telefone: '(92)994488625',
  email: 'tsuruda@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: ccc)
 
-Usuario.create!(nome: 'Marco', status: 1, tipo: 2, telefone: '(32)991325858',
+Usuario.create!(nome: 'Marco', status: 0, tipo: 3, telefone: '(32)991325858',
  email: 'marco@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: ccc)
 
-Usuario.create!(nome: 'Luiz Carlos', status: 1, tipo: 2, telefone: '(32)984540608',
+Usuario.create!(nome: 'Luiz Carlos', status: 0, tipo: 3, telefone: '(32)984540608',
  email: 'luizcarlos@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: ccc)
 
-Usuario.create!(nome: 'Fidélis', status: 1, tipo: 2, telefone: '(92)992691623',
+Usuario.create!(nome: 'Fidélis', status: 0, tipo: 3, telefone: '(92)992691623',
  email: 'fidelis@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: ccc)
 
-Usuario.create!(nome: 'Xavier', status: 1, tipo: 2, telefone: '(92)981584709',
+Usuario.create!(nome: 'Xavier', status: 0, tipo: 3, telefone: '(92)981584709',
  email: 'xavier@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: aaa)
 
-Usuario.create!(nome: 'Tayar', status: 1, tipo: 2, telefone: '(92)92999300',
+Usuario.create!(nome: 'Tayar', status: 0, tipo: 3, telefone: '(92)92999300',
 email: 'tayar@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: aaa)
 
-Usuario.create!(nome: 'Wilson Alves', status: 1, tipo: 2, telefone: '(92)984170633',
+Usuario.create!(nome: 'Wilson Alves', status: 0, tipo: 3, telefone: '(92)984170633',
  email: 'wilsonalves@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: aaa)
 
-Usuario.create!(nome: 'André Mendes', status: 1, tipo: 2, telefone: '(11)982086835',
+Usuario.create!(nome: 'André Mendes', status: 0, tipo: 3, telefone: '(11)982086835',
  email: 'andremendes@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: aaa)
 
-#Usuario.create! nome: 'Campana', status: 1, tipo: 2, telefone: '(92)991138899',
-#email: 'campana@4cta.eb.mil.br', encrypted_password: 'troqueestasenha'
-
-Usuario.create!(nome: 'Trojaike', status: 1, tipo: 2, telefone: '(92)984091572',
+Usuario.create!(nome: 'Trojaike', status: 0, tipo: 3, telefone: '(92)984091572',
  email: 'trojaike@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: aaa)
 
-Usuario.create!(nome: 'Pablo', status: 1, tipo: 2, telefone: '(92)993447172',
+Usuario.create!(nome: 'Pablo', status: 0, tipo: 3, telefone: '(92)993447172',
  email: 'pablo@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: aaa)
 
 ddd = Hierarq.create! nome: '1º Ten'
-Usuario.create!(nome: 'Leandro Farias', status: 1, tipo: 2, telefone: '(92)92982812121',
+Usuario.create!(nome: 'Leandro Farias', status: 0, tipo: 3, telefone: '(92)92982812121',
  email: 'leandrofarias@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: ddd)
 
-Usuario.create!(nome: 'Maurício', status: 1, tipo: 2, telefone: '(92)995001496',
+Usuario.create!(nome: 'Maurício', status: 0, tipo: 3, telefone: '(92)995001496',
  email: 'mauricio@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: ddd)
 
-Usuario.create!(nome: 'De Felice', status: 1, tipo: 2, telefone: '(21)92446776',
+Usuario.create!(nome: 'De Felice', status: 0, tipo: 3, telefone: '(21)92446776',
  email: 'defelice@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: ddd)
 
-Usuario.create!(nome: 'Ingrid Silva', status: 1, tipo: 2, telefone: '(92)99253-0315',
+Usuario.create!(nome: 'Ingrid Silva', status: 0, tipo: 3, telefone: '(92)99253-0315',
  email: 'ingridsilva@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: ddd)
 
-Usuario.create!(nome: 'Cunha', status: 1, tipo: 2, telefone: '(92)984292922',
+Usuario.create!(nome: 'Cunha', status: 0, tipo: 3, telefone: '(92)984292922',
  email: 'cunha@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: ddd)
 
-Usuario.create!(nome: 'Lendel', status: 1, tipo: 2, telefone: '(92)981437456',
+Usuario.create!(nome: 'Lendel', status: 0, tipo: 3, telefone: '(92)981437456',
  email: 'lendel@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: ddd)
 
-Usuario.create!(nome: 'Isabella chapira', status: 1, tipo: 2, telefone: '(92)99253-0315',
+Usuario.create!(nome: 'Isabella chapira', status: 0, tipo: 3, telefone: '(92)99253-0315',
  email: 'isabellachapira@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: ddd)
 
-Usuario.create!(nome: 'Lucas Machado', status: 1, tipo: 2, telefone: '(92)992448445',
+Usuario.create!(nome: 'Lucas Machado', status: 0, tipo: 3, telefone: '(92)992448445',
  email: 'lucasmachado@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: ddd)
 
-Usuario.create!(nome: 'Hermany', status: 1, tipo: 2, telefone: '(92)992381830',
+Usuario.create!(nome: 'Hermany', status: 0, tipo: 3, telefone: '(92)992381830',
  email: 'hermany@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: ddd)
 
-Usuario.create!(nome: 'Danilo', status: 1, tipo: 2, telefone: '(92)981765246',
+Usuario.create!(nome: 'Danilo', status: 0, tipo: 3, telefone: '(92)981765246',
  email: 'danilo@4cta.eb.mil.br',password: 'troqueestasenha', cliente: b.first, hierarq: ddd)
 
-Usuario.create!(nome: 'Denys', status: 1, tipo: 2, telefone: '(92)91174322',
+Usuario.create!(nome: 'Denys', status: 0, tipo: 3, telefone: '(92)91174322',
  email: 'denys@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: ddd)
 
-Usuario.create!(nome: 'Edilton Lopes', status: 1, tipo: 2, telefone: '(92)',
+Usuario.create!(nome: 'Edilton Lopes', status: 0, tipo: 3, telefone: '(92)',
  email: 'ediltonlopes@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: ddd)
 
-Usuario.create!(nome: 'Henrique Alves', status: 1, tipo: 2, telefone: '(21)992630391',
+Usuario.create!(nome: 'Henrique Alves', status: 0, tipo: 3, telefone: '(21)992630391',
  email: 'henriquealves@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: ddd)
 
 eee = Hierarq.create! nome: '2º Ten'
-Usuario.create!(nome: 'Renovato', status: 1, tipo: 2, telefone: '(92)991341590',
+Usuario.create!(nome: 'Renovato', status: 0, tipo: 3, telefone: '(92)991341590',
  email: 'renovato@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: eee)
 
-Usuario.create!(nome: 'Marcos Rocha', status: 1, tipo: 2, telefone: '(92)991262978',
+Usuario.create!(nome: 'Marcos Rocha', status: 0, tipo: 3, telefone: '(92)991262978',
  email: 'marcosrocha@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: eee)
 
-Usuario.create!(nome: 'Gonzales ', status: 1, tipo: 2, telefone: '(92)991420521',
+Usuario.create!(nome: 'Gonzales ', status: 0, tipo: 3, telefone: '(92)991420521',
  email: 'gonzales@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: eee)
 
-Usuario.create!(nome: 'Loel', status: 1, tipo: 2, telefone: '(92)993947822',
+Usuario.create!(nome: 'Loel', status: 0, tipo: 3, telefone: '(92)993947822',
  email: 'loel@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: eee)
 
-Usuario.create!(nome: ' Rolim', status: 1, tipo: 2, telefone: '(92)994234935',
+Usuario.create!(nome: ' Rolim', status: 0, tipo: 3, telefone: '(92)994234935',
  email: 'rolim@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: eee)
 
-Usuario.create!(nome: 'Keller', status: 0, tipo: 2, telefone: '(92)981126434',
+Usuario.create!(nome: 'Keller', status: 1, tipo: 1, telefone: '(92)981126434',
  email: 'keller@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: eee)
 
 fff = Hierarq.create! nome: 'Asp Of'
-Usuario.create!(nome: 'Oliveira', status: 1, tipo: 2, telefone: '(92)991281393',
+Usuario.create!(nome: 'Oliveira', status: 0, tipo: 3, telefone: '(92)991281393',
  email: 'aspoliveira@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: fff)
 
-Usuario.create!(nome: 'Hanada', status: 1, tipo: 2, telefone: '(92)984193332',
+Usuario.create!(nome: 'Hanada', status: 0, tipo: 3, telefone: '(92)984193332',
  email: 'hanada@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: fff)
 
 ggg = Hierarq.create! nome: 'ST'
-Usuario.create!(nome: 'Valter', status: 1, tipo: 2, telefone: '(92)981471154',
+Usuario.create!(nome: 'Valter', status: 0, tipo: 3, telefone: '(92)981471154',
  email: 'valter@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: ggg)
 
-Usuario.create!(nome: 'Tadeu', status: 1, tipo: 2, telefone: '(92)999696356',
+Usuario.create!(nome: 'Tadeu', status: 0, tipo: 3, telefone: '(92)999696356',
  email: 'tadeu@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: ggg)
 
-Usuario.create!(nome: 'Lucena', status: 1, tipo: 2, telefone: '(61)981612197',
+Usuario.create!(nome: 'Lucena', status: 0, tipo: 3, telefone: '(61)981612197',
  email: 'lucena@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: ggg)
 
-Usuario.create!(nome: 'Lisboa', status: 1, tipo: 2, telefone: '',
+Usuario.create!(nome: 'Lisboa', status: 0, tipo: 3, telefone: '',
  email: 'lisboa@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: ggg)
 
-Usuario.create!(nome: 'Edirregis', status: 1, tipo: 2, telefone: '(22)997612596',
+Usuario.create!(nome: 'Edirregis', status: 0, tipo: 3, telefone: '(22)997612596',
  email: 'edirregis@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: ggg)
 
-Usuario.create!(nome: 'Cruz', status: 1, tipo: 2, telefone: '(92)991576394',
+Usuario.create!(nome: 'Cruz', status: 0, tipo: 3, telefone: '(92)991576394',
  email: 'cruz@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: ggg)
 
-Usuario.create!(nome: 'Sergio Carlos', status: 1, tipo: 2, telefone: '(92)992687631',
+Usuario.create!(nome: 'Sergio Carlos', status: 0, tipo: 3, telefone: '(92)992687631',
  email: 'sergiocarlos@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: ggg)
 
-Usuario.create!(nome: 'Figueiredo', status: 1, tipo: 2, telefone: '(92)991295713',
+Usuario.create!(nome: 'Figueiredo', status: 0, tipo: 3, telefone: '(92)991295713',
  email: 'figueiredo@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: ggg)
 
 hhh = Hierarq.create! nome: '1º Sgt'
-Usuario.create!(nome: 'Alexandre', status: 1, tipo: 2, telefone: '(92)994153701',
+Usuario.create!(nome: 'Alexandre', status: 0, tipo: 3, telefone: '(92)994153701',
 email: 'alexandre@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: hhh)
 
-Usuario.create!(nome: 'Teixeira', status: 1, tipo: 2, telefone: '(92)996098122',
+Usuario.create!(nome: 'Teixeira', status: 0, tipo: 3, telefone: '(92)996098122',
  email: 'teixeira@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: hhh)
 
-Usuario.create!(nome: 'Fernando', status: 1, tipo: 2, telefone: '(71)993412213',
+Usuario.create!(nome: 'Fernando', status: 0, tipo: 3, telefone: '(71)993412213',
  email: 'fernando@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: hhh)
 
-Usuario.create!(nome: 'Jurandir', status: 1, tipo: 2, telefone: '(92)981143666',
+Usuario.create!(nome: 'Jurandir', status: 0, tipo: 3, telefone: '(92)981143666',
  email: 'jurandir@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: hhh)
 
-Usuario.create!(nome: 'João', status: 1, tipo: 2, telefone: '(32)999009172',
+Usuario.create!(nome: 'João', status: 0, tipo: 3, telefone: '(32)999009172',
  email: 'joao@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: hhh)
 
-Usuario.create!(nome: 'Wagner', status: 1, tipo: 2, telefone: '(92)993845747',
+Usuario.create!(nome: 'Wagner', status: 0, tipo: 3, telefone: '(92)993845747',
  email: 'wagner@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: hhh)
 
-Usuario.create!(nome: 'André Luiz', status: 1, tipo: 2, telefone: '(21)995801250',
+Usuario.create!(nome: 'André Luiz', status: 0, tipo: 3, telefone: '(21)995801250',
  email: 'andreluiz@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: hhh)
 
-Usuario.create!(nome: 'Ângelo', status: 1, tipo: 2, telefone: '(31)991134818',
+Usuario.create!(nome: 'Ângelo', status: 0, tipo: 3, telefone: '(31)991134818',
  email: 'angelo@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: hhh)
 
-Usuario.create!(nome: 'Nascimento', status: 1, tipo: 2, telefone: '(92)993013689',
+Usuario.create!(nome: 'Nascimento', status: 0, tipo: 3, telefone: '(92)993013689',
  email: 'nascimento@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: hhh)
 
-Usuario.create!(nome: 'Leite', status: 1, tipo: 2, telefone: '(81)996050947',
+Usuario.create!(nome: 'Leite', status: 0, tipo: 3, telefone: '(81)996050947',
  email: 'leite@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: hhh)
 
-Usuario.create!(nome: 'Anderson', status: 1, tipo: 2, telefone: '(92)991388959',
+Usuario.create!(nome: 'Anderson', status: 0, tipo: 3, telefone: '(92)991388959',
  email: 'anderson@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: hhh)
 #Usuario.create!(nome: 'Nunes', status: 1, tipo: 2, telefone: '(92)984374240',
 # email: 'nunes@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first)
 
 iii = Hierarq.create! nome: '2º Sgt'
 
-Usuario.create!(nome: 'Fredson', status: 1, tipo: 2, telefone: '(92)993269708',
+Usuario.create!(nome: 'Fredson', status: 0, tipo: 3, telefone: '(92)993269708',
  email: 'fredson@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: iii)
 
-Usuario.create!(nome: 'Pedro', status: 1, tipo: 2, telefone: '(92)992700042',
+Usuario.create!(nome: 'Pedro', status: 0, tipo: 3, telefone: '(92)992700042',
  email: 'pedro@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: iii)
 
-Usuario.create!(nome: 'Chervinski', status: 1, tipo: 2, telefone: '(92)992696050',
+Usuario.create!(nome: 'Chervinski', status: 0, tipo: 3, telefone: '(92)992696050',
  email: 'chervinski@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: iii)
 
-Usuario.create!(nome: 'Gama', status: 1, tipo: 2, telefone: '(92)988050203',
+Usuario.create!(nome: 'Gama', status: 0, tipo: 3, telefone: '(92)988050203',
  email: 'gama@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: iii)
 
-Usuario.create!(nome: 'Da Costa', status: 1, tipo: 2, telefone: '(92)995144199',
+Usuario.create!(nome: 'Da Costa', status: 0, tipo: 3, telefone: '(92)995144199',
  email: 'dacosta@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: iii)
 
-Usuario.create!(nome: 'Emerson', status: 1, tipo: 2, telefone: '(92)999981944',
+Usuario.create!(nome: 'Emerson', status: 0, tipo: 3, telefone: '(92)999981944',
  email: 'emerson@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: iii)
 
- Usuario.create!(nome: 'Nunes', status: 1, tipo: 2, telefone: '(92)984374240',
+ Usuario.create!(nome: 'Nunes', status: 0, tipo: 3, telefone: '(92)984374240',
   email: 'nunes@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: iii)
 
-Usuario.create!(nome: 'Luiz Castro', status: 1, tipo: 2, telefone: '(92)984703079',
+Usuario.create!(nome: 'Luiz Castro', status: 0, tipo: 3, telefone: '(92)984703079',
  email: 'luizcastro@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: iii)
 
-Usuario.create!(nome: 'Alberto', status: 1, tipo: 2, telefone: '(92)993837633',
+Usuario.create!(nome: 'Alberto', status: 0, tipo: 3, telefone: '(92)993837633',
  email: 'alberto@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: iii)
 
-Usuario.create!(nome: 'Sergio', status: 1, tipo: 2, telefone: '(92)988389272',
+Usuario.create!(nome: 'Sergio', status: 0, tipo: 3, telefone: '(92)988389272',
  email: 'sergio@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: iii)
 
-Usuario.create!(nome: 'J Augusto ', status: 1, tipo: 2, telefone: '(92)994249447',
+Usuario.create!(nome: 'J Augusto ', status: 0, tipo: 3, telefone: '(92)994249447',
  email: 'jaugusto@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: iii)
 
 jjj = Hierarq.create! nome: '3º Sgt'
 
-Usuario.create!(nome: 'Raimar', status: 1, tipo: 2, telefone: '(92)999692395',
+Usuario.create!(nome: 'Raimar', status: 0, tipo: 3, telefone: '(92)999692395',
  email: 'raimar@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: jjj)
 
-Usuario.create!(nome: 'Cicero', status: 1, tipo: 2, telefone: '(92)994839153',
+Usuario.create!(nome: 'Cicero', status: 0, tipo: 3, telefone: '(92)994839153',
  email: 'cicero@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: jjj)
 
-Usuario.create!(nome: 'Lopes', status: 1, tipo: 2, telefone: '(92)999624784',
+Usuario.create!(nome: 'Lopes', status: 0, tipo: 3, telefone: '(92)999624784',
  email: 'lopes@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: jjj)
 
-Usuario.create!(nome: 'Cabral', status: 1, tipo: 2, telefone: '(92)994575024',
+Usuario.create!(nome: 'Cabral', status: 0, tipo: 3, telefone: '(92)994575024',
  email: 'cabral@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: jjj)
 
-Usuario.create!(nome: 'Scher', status: 1, tipo: 2, telefone: '(81)996406211',
+Usuario.create!(nome: 'Scher', status: 0, tipo: 3, telefone: '(81)996406211',
  email: 'scher@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: jjj)
 
-Usuario.create!(nome: 'Levi', status: 1, tipo: 2, telefone: '(92)981087688',
+Usuario.create!(nome: 'Levi', status: 0, tipo: 3, telefone: '(92)981087688',
  email: 'levi@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: jjj)
 
 Usuario.create!(nome: 'Rômulo', status: 1, tipo: 2, telefone: '(21)964196890',
  email: 'romulo@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: jjj)
 
-Usuario.create!(nome: 'Paulo Júnior', status: 1, tipo: 2, telefone: '(92)992214690',
+Usuario.create!(nome: 'Paulo Júnior', status: 0, tipo: 3, telefone: '(92)992214690',
  email: 'paulojunior@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: jjj)
 
-Usuario.create!(nome: 'Rodrigues', status: 1, tipo: 2, telefone: '(92)993437640',
+Usuario.create!(nome: 'Rodrigues', status: 0, tipo: 3, telefone: '(92)993437640',
  email: 'rodrigues@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first,hierarq: jjj)
 
-Usuario.create!(nome: 'Matos', status: 1, tipo: 2, telefone: '(92)991415450',
+Usuario.create!(nome: 'Matos', status: 0, tipo: 3, telefone: '(92)991415450',
  email: 'matos@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: jjj)
 
- Usuario.create!(nome: 'Borges', status: 1, tipo: 2, telefone: '(92)991143425',
+ Usuario.create!(nome: 'Borges', status: 0, tipo: 3, telefone: '(92)991143425',
   email: 'borges@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: jjj)
 
-Usuario.create!(nome: 'Magalhães', status: 1, tipo: 2, telefone: '(92)981288726',
+Usuario.create!(nome: 'Magalhães', status: 0, tipo: 3, telefone: '(92)981288726',
  email: 'magalhaes@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: jjj)
 
-Usuario.create!(nome: 'Andrio', status: 1, tipo: 2, telefone: '(92)992659797',
+Usuario.create!(nome: 'Andrio', status: 0, tipo: 3, telefone: '(92)992659797',
  email: 'andrio@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: jjj)
 #Usuario.create!(nome: 'Borges', status: 1, tipo: 2, telefone: '(92)991143425',
 # email: 'borges@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first)
 
-Usuario.create!(nome: 'André Rocha', status: 1, tipo: 2, telefone: '(92)996158370',
+Usuario.create!(nome: 'André Rocha', status: 0, tipo: 3, telefone: '(92)996158370',
  email: 'andrerocha@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: jjj)
 
-Usuario.create!(nome: 'Fontenelle', status: 1, tipo: 2, telefone: '(92)984134535',
+Usuario.create!(nome: 'Fontenelle', status: 0, tipo: 3, telefone: '(92)984134535',
  email: 'fontenelle@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: jjj)
 
 kkk = Hierarq.create! nome: 'Cb'
-Usuario.create!(nome: 'Santana', status: 1, tipo: 2, telefone: '(92)991710186',
+Usuario.create!(nome: 'Santana', status: 0, tipo: 3, telefone: '(92)991710186',
  email: 'santana@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: kkk)
 
-Usuario.create!(nome: 'Gonçalves', status: 1, tipo: 2, telefone: '(92)993251644',
+Usuario.create!(nome: 'Gonçalves', status: 0, tipo: 3, telefone: '(92)993251644',
  email: 'gonçalves@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: kkk)
 
-Usuario.create!(nome: 'Manoel', status: 1, tipo: 2, telefone: '(92)990024084',
+Usuario.create!(nome: 'Manoel', status: 0, tipo: 3, telefone: '(92)990024084',
  email: 'manoel@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: kkk)
 
-Usuario.create!(nome: 'cavalcante', status: 1, tipo: 2, telefone: '(92)992284018',
+Usuario.create!(nome: 'cavalcante', status: 0, tipo: 3, telefone: '(92)992284018',
  email: 'cavalcante@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: kkk)
 
-Usuario.create!(nome: 'Costa', status: 1, tipo: 2, telefone: '(92)994511407',
+Usuario.create!(nome: 'Costa', status: 0, tipo: 3, telefone: '(92)994511407',
  email: 'costa@4cta.eb.mil.br', password: 'troqueestasenha', cliente: b.first, hierarq: kkk)
 
 Hierarq.create! nome: 'Cel'
@@ -742,25 +740,71 @@ Cargo.create! nome: 'Adj Seç de Planejamento e Controle'
 
 Cargo.create! nome: 'Aux Seç de Planejamento e Controle'
 
+FormacaoMil.create! nome: 'IIQ - Com'
+FormacaoMil.create! nome: 'CFC - Com'
+FormacaoMil.create! nome: 'CFST - STT'
+FormacaoMil.create! nome: 'CFOT - OTT'
+FormacaoMil.create! nome: 'EsSA - Com'
+FormacaoMil.create! nome: 'EsFCEx - QCO - Informática'
+FormacaoMil.create! nome: 'EsFCEx - QCO - Administração'
+FormacaoMil.create! nome: 'EsLog - Mnt Com'
+FormacaoMil.create! nome: 'EsLog - Int'
+FormacaoMil.create! nome: 'AMAN - Com'
+FormacaoMil.create! nome: 'IME - Com'
+FormacaoMil.create! nome: 'IME - Comp'
+
+FormacaoAcad.create! nome: 'Médio Incompleto'
+FormacaoAcad.create! nome: 'Médio Completo'
+FormacaoAcad.create! nome: 'Médio Técnico em Redes'
+FormacaoAcad.create! nome: 'Médio Técnico em TI'
+FormacaoAcad.create! nome: 'Graduação em Sistemas de Informação'
+FormacaoAcad.create! nome: 'Graduação em Ciência da Computação'
+FormacaoAcad.create! nome: 'Tecnólogo em Redes de Computadores'
+FormacaoAcad.create! nome: 'Graduação em Engenharia da Computação'
+FormacaoAcad.create! nome: 'Graduação em Engenharia de Comunicações'
+FormacaoAcad.create! nome: 'Graduação em Engenharia Elétrica'
+
+CertTi.create! nome: 'FCP Professional'
+CertTi.create! nome: 'FCP FO'
+CertTi.create! nome: 'FCP Master'
+CertTi.create! nome: 'Data Cabling System'
+CertTi.create! nome: 'FTTx Equipamentos'
+CertTi.create! nome: 'CCNA Routing & Switching'
+CertTi.create! nome: 'CCSI'
+CertTi.create! nome: 'ITIL Foundation'
+CertTi.create! nome: 'ITIL Practitioner'
+CertTi.create! nome: 'ITIL Intermediate'
+CertTi.create! nome: 'ITIL Expert'
+CertTi.create! nome: 'ITIL Master'
+CertTi.create! nome: 'Prince2 Foundation'
+CertTi.create! nome: 'Prince2 Pratictioner'
+CertTi.create! nome: 'PMP - Project Manager Professional'
+
 Encargo.create! nome: 'Ch Seç TI OM'
 Encargo.create! nome: 'Adj Seç TI OM'
 Encargo.create! nome: 'Aux Sec TI OM'
 Encargo.create! nome: 'Fiscal de contrato da OI EBNet 2015 titular'
 
-Habilidade.create! nome: 'Gestão de Sv TI'
-Habilidade.create! nome: 'Gestão de Projetos'
-Habilidade.create! nome: 'TI Adm Púb Fed'
+Habilidade.create! nome: 'Planejamento e Gestão Estratégica de TI'
+Habilidade.create! nome: 'Fundamentos de Governança de TI'
+Habilidade.create! nome: 'Gerenciamento de Serviços de TI'
 Habilidade.create! nome: 'Gestão Estratégica Organizacional'
+Habilidade.create! nome: 'Governança de TI com COBIT'
+Habilidade.create! nome: 'Gerenciamento de Projetos de TI'
 Habilidade.create! nome: 'Arquitetura de redes: desenho, projeto, implantação e entrega'
 Habilidade.create! nome: 'CAD'
-Habilidade.create! nome: 'MAN'
-Habilidade.create! nome: 'WLAN'
-Habilidade.create! nome: 'Telefonia VoIP'
 Habilidade.create! nome: 'LAN'
-Habilidade.create! nome: 'Datacenter'
+Habilidade.create! nome: 'WLAN'
+Habilidade.create! nome: 'MAN'
+Habilidade.create! nome: 'WAN'
+Habilidade.create! nome: 'Elaboração de PDTI'
+Habilidade.create! nome: 'Telefonia VoIP'
+Habilidade.create! nome: 'Planejamento e Contratação de Serviços de TI'
+Habilidade.create! nome: 'Planejamento e Projeto de Infraestrutura de Datacenter'
 Habilidade.create! nome: 'Análise de Sistemas'
 Habilidade.create! nome: 'Administração de Base de Dados'
-Habilidade.create! nome: 'Segurança da Informação'
+Habilidade.create! nome: 'Gestão de Riscos de TI com NBR 31000 e NBR 27005'
+Habilidade.create! nome: 'Gestão de Segurança da Informação com NBR 27001 e NBR 27002'
 Habilidade.create! nome: 'Perícia Forense'
 Habilidade.create! nome: 'Administração de Rede Rádio'
 Habilidade.create! nome: 'Infraestrutura de Rede Rádio'
@@ -780,11 +824,59 @@ Habilidade.create! nome: 'Técnico em Refrigeração'
 Habilidade.create! nome: 'Instalador de Cabeamento Estruturado'
 Habilidade.create! nome: 'Instalador de Cabos em Posteamento'
 Habilidade.create! nome: 'Técnico em Eletrônica'
+Habilidade.create! nome: 'Seleção de Fornecedores de TI'
+Habilidade.create! nome: 'Arquitetura e Protocolos de Rede TCP-IP'
+Habilidade.create! nome: 'Implantação e Administração de Firewall'
+Habilidade.create! nome: 'Implantação e Administração de Proxy'
+Habilidade.create! nome: 'IPv6 Básico'
+Habilidade.create! nome: 'BGP Avançado'
+Habilidade.create! nome: 'MPLS'
+Habilidade.create! nome: 'OSPF Avançado'
+Habilidade.create! nome: 'Tratamento de Incidentes de Segurança'
+Habilidade.create! nome: 'Segurança em Redes sem Fio'
+Habilidade.create! nome: 'Engenharia Reversa de Código Malicioso'
+Habilidade.create! nome: 'Teste de Invasão de Aplicações Web'
+Habilidade.create! nome: 'Hardening em Linux'
+Habilidade.create! nome: 'Formação em Segurança Cibernética'
+Habilidade.create! nome: 'Introdução ao Linux'
+Habilidade.create! nome: 'Administração de Sistemas Linux: Redes e Segurança'
+Habilidade.create! nome: 'Administração de Sistemas Linux:Serviços para Internet'
+Habilidade.create! nome: 'Virtualização de Servidores'
+Habilidade.create! nome: 'Fundamentos de Desenvolvimento de SW'
+Habilidade.create! nome: 'Desenvolvimento de SW -  Interfaces Gráficas e Bancos de Dados'
+Habilidade.create! nome: 'Desenvolvimento de SW - Aplicações Web'
+Habilidade.create! nome: 'Desenvolvimento de SW - Frameworks e Aplicações Corporativas'
+Habilidade.create! nome: 'Modelagem de Banco de Dados'
+Habilidade.create! nome: 'Administração de Banco de Dados'
+Habilidade.create! nome: 'Python'
+Habilidade.create! nome: 'Django'
+Habilidade.create! nome: 'Ruby on Rails'
+Habilidade.create! nome: 'MySQL'
+Habilidade.create! nome: 'PostgreSQL'
+Habilidade.create! nome: 'Java'
+Habilidade.create! nome: 'Javascript'
+Habilidade.create! nome: 'Administração de Videoconferência'
+Habilidade.create! nome: 'VoIP'
+Habilidade.create! nome: 'Asterisk'
+Habilidade.create! nome: 'Fundamentos de IoT'
+Habilidade.create! nome: 'Big Data e Análise de dados'
+Habilidade.create! nome: 'Ciência de Dados'
 Habilidade.create! nome: 'Administração de LAN (Seç TI)'
 Habilidade.create! nome: 'Instalação de LAN (Seç TI)'
 Habilidade.create! nome: 'Implantação de LAN (Seç TI)'
 Habilidade.create! nome: 'Aquisições para LAN (Seç TI)'
 Habilidade.create! nome: 'Implantar e operar os sistemas de informação da OM (Seç TI)'
+
+Idioma.create! nome: 'Inglês nível 1'
+Idioma.create! nome: 'Inglês nível 2'
+Idioma.create! nome: 'Inglês nível 3'
+Idioma.create! nome: 'Inglês nível 4'
+Idioma.create! nome: 'Inglês nível 5'
+Idioma.create! nome: 'Espanhol nível 1'
+Idioma.create! nome: 'Espanhol nível 2'
+Idioma.create! nome: 'Espanhol nível 3'
+Idioma.create! nome: 'Espanhol nível 4'
+Idioma.create! nome: 'Espanhol nível 5'
 
 #resta o campana criar os "elementos indisponíveis"
 Parado.create! nome: 'Serviço de EBNet Lote 1'
