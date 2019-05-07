@@ -23,6 +23,7 @@ class Ability
         can :dashboard
         can :read, :all
         can :manage, Usuario
+        can :manage, Talento
         can :manage, FormacaoMil
         can :manage, FormacaoAcad
         can :manage, CertTi

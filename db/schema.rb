@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_26_194814) do
+ActiveRecord::Schema.define(version: 2019_05_07_195453) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -225,6 +225,13 @@ ActiveRecord::Schema.define(version: 2018_11_26_194814) do
     t.text "descricao"
   end
 
+  create_table "habilidades_talentos", id: false, force: :cascade do |t|
+    t.integer "habilidade_id", null: false
+    t.integer "talento_id", null: false
+    t.index ["habilidade_id"], name: "index_habilidades_talentos_on_habilidade_id"
+    t.index ["talento_id"], name: "index_habilidades_talentos_on_talento_id"
+  end
+
   create_table "habilidades_usuarios", id: false, force: :cascade do |t|
     t.integer "habilidade_id", null: false
     t.integer "usuario_id", null: false
@@ -363,6 +370,23 @@ ActiveRecord::Schema.define(version: 2018_11_26_194814) do
     t.string "nome"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "talentos", force: :cascade do |t|
+    t.string "nome"
+    t.string "email"
+    t.string "telefone"
+    t.text "observacoes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "formacao_mil_id"
+    t.integer "formacao_acad_id"
+    t.integer "cliente_id"
+    t.integer "hierarq_id"
+    t.index ["cliente_id"], name: "index_talentos_on_cliente_id"
+    t.index ["formacao_acad_id"], name: "index_talentos_on_formacao_acad_id"
+    t.index ["formacao_mil_id"], name: "index_talentos_on_formacao_mil_id"
+    t.index ["hierarq_id"], name: "index_talentos_on_hierarq_id"
   end
 
   create_table "usuarios", force: :cascade do |t|

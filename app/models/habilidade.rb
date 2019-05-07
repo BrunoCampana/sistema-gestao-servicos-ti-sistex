@@ -1,6 +1,7 @@
 class Habilidade < ApplicationRecord
   include RailsAdminCharts
 
+  has_and_belongs_to_many :talentos
   has_and_belongs_to_many :usuarios
   has_and_belongs_to_many :cargos
 

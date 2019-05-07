@@ -4,6 +4,7 @@ class Cliente < ApplicationRecord
   belongs_to :cidade
   has_many :vots
   has_many :usuarios
+  has_many :talentos
   has_and_belongs_to_many :indisponibilidades
   has_one :requisicao_link_proprio
   has_one :pacotes_servico

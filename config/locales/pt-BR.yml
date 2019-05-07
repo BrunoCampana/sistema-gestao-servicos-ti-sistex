@@ -24,6 +24,9 @@ pt-BR:
         other: "%{count} horas"
   activerecord:
     models:
+      talento:
+        one: 'Banco de Talentos'
+        other: 'Banco de Talentos'
       ans_ti:
         one: 'ANS'
         other:  'ANSs'
@@ -103,7 +106,15 @@ pt-BR:
         one: 'Idioma que fala'
         other: 'Idiomas que fala'
     attributes:
-      idiomar:
+      talento:
+        nome: 'Nome do Militar'
+        hierarq: 'Grau hierárquico'
+        cliente: 'OM a que pertence'
+        email: 'Email'
+        telefone: 'Telefone'
+        habilidades: 'Habilidades que possui'
+        observacoes: 'Observações'
+      idioma:
         nome: 'Descrição'
       participou_proj:
         nome: 'Descrição'
@@ -182,7 +193,7 @@ pt-BR:
         associado: 'Associado a(o)'
         vots: 'VALTIs que participou'
         cargos: 'Cargo(s) que ocupa'
-        habilidades: 'Habilidades e cursos que possui'
+        habilidades: 'Habilidade(s) que possui'
         curso_externos: 'Atividades de capacitação externas que participou'
         encargos: 'Encargos que possui'
         instruendos: 'Estágios internos em que foi instruendo'
@@ -382,6 +393,10 @@ pt-BR:
         title: "Histórico para %{model_label} '%{object_label}'"
         menu: "Histórico"
         breadcrumb: "Histórico"
+      pdf:
+        title: "Download de arquivo formato PDF"
+        menu: "PDF"
+        breadcrumb: "Download de arquivo formato PDF"  
     form:
       cancel: "Cancelar"
       basic_info: "Informação Básica"

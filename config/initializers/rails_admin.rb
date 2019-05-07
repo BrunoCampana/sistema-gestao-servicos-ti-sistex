@@ -305,6 +305,19 @@ RailsAdmin.config do |config|
     end
   end
 
+  config.model Talento do
+    parent CursoMinistrado
+    weight (-1.9)
+    list do
+      configure :created_at do
+        hide
+      end
+      configure :updated_at do
+        hide
+      end
+    end
+  end
+
   config.model CursoExterno do
     weight (-1)
     list do
