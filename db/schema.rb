@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_07_195453) do
+ActiveRecord::Schema.define(version: 2019_05_08_124721) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -40,6 +40,21 @@ ActiveRecord::Schema.define(version: 2019_05_07_195453) do
     t.integer "servico_id"
     t.index ["cliente_id"], name: "index_ans_tis_on_cliente_id"
     t.index ["servico_id"], name: "index_ans_tis_on_servico_id"
+  end
+
+  create_table "armarios", force: :cascade do |t|
+    t.string "nome"
+    t.string "modelo"
+    t.string "fabricante"
+    t.text "descricao"
+    t.text "configuracao"
+    t.integer "dimensao"
+    t.string "diagrama"
+    t.string "responsavel"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "sleqp_id"
+    t.index ["sleqp_id"], name: "index_armarios_on_sleqp_id"
   end
 
   create_table "capacidades", force: :cascade do |t|
@@ -188,6 +203,20 @@ ActiveRecord::Schema.define(version: 2019_05_07_195453) do
     t.index ["usuario_id"], name: "index_encargos_usuarios_on_usuario_id"
   end
 
+  create_table "equipamentos", force: :cascade do |t|
+    t.string "nome"
+    t.string "fabricante"
+    t.string "modelo"
+    t.text "descricao"
+    t.text "configuracao"
+    t.string "responsavel"
+    t.integer "tipo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "sleqp_id"
+    t.index ["sleqp_id"], name: "index_equipamentos_on_sleqp_id"
+  end
+
   create_table "formacao_acads", force: :cascade do |t|
     t.string "nome"
     t.datetime "created_at", null: false
@@ -237,6 +266,21 @@ ActiveRecord::Schema.define(version: 2019_05_07_195453) do
     t.integer "usuario_id", null: false
     t.index ["habilidade_id"], name: "index_habilidades_usuarios_on_habilidade_id"
     t.index ["usuario_id"], name: "index_habilidades_usuarios_on_usuario_id"
+  end
+
+  create_table "hardwares", force: :cascade do |t|
+    t.string "nome"
+    t.string "modelo"
+    t.string "fabricante"
+    t.string "descricao"
+    t.text "configuracao"
+    t.integer "tipo"
+    t.string "responsavel"
+    t.integer "dimensao"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "armario_id"
+    t.index ["armario_id"], name: "index_hardwares_on_armario_id"
   end
 
   create_table "hierarqs", force: :cascade do |t|
@@ -308,6 +352,16 @@ ActiveRecord::Schema.define(version: 2019_05_07_195453) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "mudancas", force: :cascade do |t|
+    t.string "nome"
+    t.text "descricao"
+    t.string "executor"
+    t.string "autorizador"
+    t.integer "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "pacotes_servicos", force: :cascade do |t|
     t.integer "intranet"
     t.integer "internet"
@@ -348,6 +402,16 @@ ActiveRecord::Schema.define(version: 2019_05_07_195453) do
     t.index ["usuario_id"], name: "index_participou_projs_on_usuario_id"
   end
 
+  create_table "redes", force: :cascade do |t|
+    t.string "nome"
+    t.text "descricao"
+    t.string "responsavel"
+    t.text "configuracao"
+    t.string "diagrama"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "requisicao_link_proprios", force: :cascade do |t|
     t.integer "parecer_cta"
     t.integer "parecer_citex"
@@ -370,6 +434,33 @@ ActiveRecord::Schema.define(version: 2019_05_07_195453) do
     t.string "nome"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "sleqps", force: :cascade do |t|
+    t.string "nome"
+    t.text "descricao"
+    t.string "responsavel"
+    t.text "configuracao"
+    t.string "local"
+    t.string "diagrama"
+    t.float "dimensao"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "rede_id"
+    t.index ["rede_id"], name: "index_sleqps_on_rede_id"
+  end
+
+  create_table "softwares", force: :cascade do |t|
+    t.string "nome"
+    t.string "modelo"
+    t.string "fabricante"
+    t.string "descricao"
+    t.text "configuracao"
+    t.integer "tipo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "hardware_id"
+    t.index ["hardware_id"], name: "index_softwares_on_hardware_id"
   end
 
   create_table "talentos", force: :cascade do |t|
@@ -449,6 +540,17 @@ ActiveRecord::Schema.define(version: 2019_05_07_195453) do
     t.integer "cliente_id"
     t.string "relatorio"
     t.index ["cliente_id"], name: "index_vots_on_cliente_id"
+  end
+
+  create_table "workstations", force: :cascade do |t|
+    t.string "nome"
+    t.string "modelo"
+    t.string "fabricante"
+    t.text "configuracao"
+    t.integer "tipo"
+    t.string "responsavel"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

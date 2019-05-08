@@ -24,12 +24,36 @@ pt-BR:
         other: "%{count} horas"
   activerecord:
     models:
+      equipamento:
+        one: 'Equipamento'
+        other: 'Equipamentos'
+      workstation:
+        one: 'Estação de Trabalho'
+        other: 'Estações de Trabalho'
+      software:
+        one: 'Software'
+        other: 'Softwares'
+      hardware:
+        one: 'Hardware'
+        other: 'Hardwares'
+      armario:
+        one: 'Rack'
+        other: 'Racks'
+      sleqp:
+        one: 'Sala de Equipamentos'
+        other: 'Salas de Equipamentos'
+      rede:
+        one: 'Rede'
+        other: 'Redes'
+      mudanca:
+        one: 'Mudança'
+        other: 'Mudanças'
       talento:
         one: 'Banco de Talentos'
         other: 'Banco de Talentos'
       ans_ti:
         one: 'ANS'
-        other:  'ANSs'
+        other: 'ANSs'
       servico:
         one: 'Serviço de TI prestado'
         other: 'Serviços de TI prestados'
@@ -106,6 +130,69 @@ pt-BR:
         one: 'Idioma que fala'
         other: 'Idiomas que fala'
     attributes:
+      mudanca:
+        nome: 'Nome'
+        descricao: 'Descrição'
+        executor: 'Executor da mudança'
+        autorizador: 'Autorizador da mudança'
+        status: 'Status da mudança'
+      rede:
+        nome: 'Nome'
+        descricao: 'Descrição'
+        responsavel: 'Responsável'
+        configuracao: 'Configuração'
+        diagrama: 'Diagrama'
+        sleqps: 'Salas de Equipamentos que compõe a rede'
+      sleqp:
+        nome: 'Nome'
+        descricao: 'Descrição'
+        responsavel: 'Responsável'
+        configuracao: 'Configuração'
+        diagrama: 'Diagrama'
+        local: 'Localização da sala'
+        dimensao: 'Dimensão (m2)'
+        armarios: 'Racks da sala'
+        equipamentos: 'Equipamentos'
+      armario:
+        modelo: 'Modelo'
+        fabricante: 'Fabricante'
+        descricao: 'Descrição'
+        configuracao: 'Configuração'
+        diagrama: 'Diagrama de face'
+        dimensao: 'Dimensão (em Us)'
+        responsavel: 'Responsável'
+        hardwares: 'Hardwares contidos no Rack'
+      hardware:
+        nome: 'Nome'
+        modelo: 'Modelo'
+        fabricante: 'Fabricante'
+        descricao: 'Descrição'
+        configuracao: 'Configuração'
+        responsavel: 'Responsável'
+        tipo: 'Tipo'
+        dimensao: 'Dimensão (em Us)'
+        softwares: 'Softwares instalados'
+      software:
+        nome: 'Nome'
+        modelo: 'Modelo'
+        fabricante: 'Fabricante'
+        descricao: 'Descrição'
+        configuracao: 'Configuração'
+        tipo: 'Tipo'
+      workstation:
+        nome: 'Nome'
+        fabricante: 'Fabricante'
+        configuracao: 'Configuração'
+        responsavel: 'Responsável'
+        tipo: 'Tipo'
+      equipamento:
+        nome: 'Nome'
+        modelo: 'Modelo'
+        fabricante: 'Fabricante'
+        descricao: 'Descrição'
+        configuracao: 'Configuração'
+        responsavel: 'Responsável'
+        tipo: 'Tipo'
       talento:
         nome: 'Nome do Militar'
         hierarq: 'Grau hierárquico'
@@ -396,7 +483,7 @@ pt-BR:
       pdf:
         title: "Download de arquivo formato PDF"
         menu: "PDF"
-        breadcrumb: "Download de arquivo formato PDF"  
+        breadcrumb: "Download de arquivo formato PDF"
     form:
       cancel: "Cancelar"
       basic_info: "Informação Básica"

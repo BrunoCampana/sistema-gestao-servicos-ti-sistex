@@ -330,6 +330,83 @@ RailsAdmin.config do |config|
     end
   end
 
+  config.model Rede do
+    weight (-0.9)
+    list do
+      configure :created_at do
+        hide
+      end
+      configure :updated_at do
+        hide
+      end
+    end
+  end
+
+  config.model Sleqp do
+    parent Rede
+    weight (-0.8)
+    list do
+      configure :created_at do
+        hide
+      end
+      configure :updated_at do
+        hide
+      end
+    end
+  end
+
+  config.model Hardware do
+    parent Rede
+    weight (-0.7)
+    list do
+      configure :created_at do
+        hide
+      end
+      configure :updated_at do
+        hide
+      end
+    end
+  end
+
+  config.model Equipamento do
+    parent Rede
+    weight (-0.6)
+    list do
+      configure :created_at do
+        hide
+      end
+      configure :updated_at do
+        hide
+      end
+    end
+  end
+
+  config.model Mudanca do
+    parent Rede
+    weight (-0.5)
+    list do
+      configure :created_at do
+        hide
+      end
+      configure :updated_at do
+        hide
+      end
+    end
+  end
+
+  config.model Workstation do
+    parent Rede
+    weight (-0.4)
+    list do
+      configure :created_at do
+        hide
+      end
+      configure :updated_at do
+        hide
+      end
+    end
+  end
+
   config.main_app_name = ["Gestão de Serviços de TI SISTEX", "4º CTA"]
 
   config.navigation_static_links = {
