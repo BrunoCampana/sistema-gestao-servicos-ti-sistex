@@ -24,6 +24,9 @@ pt-BR:
         other: "%{count} horas"
   activerecord:
     models:
+      vm:
+        one: 'Máquina Virtual'
+        other: 'Máquinas Virtuais'
       equipamento:
         one: 'Equipamento'
         other: 'Equipamentos'
@@ -40,8 +43,8 @@ pt-BR:
         one: 'Rack'
         other: 'Racks'
       sleqp:
-        one: 'Sala de Equipamentos'
-        other: 'Salas de Equipamentos'
+        one: 'Site'
+        other: 'Sites'
       rede:
         one: 'Rede'
         other: 'Redes'
@@ -103,8 +106,8 @@ pt-BR:
         one: 'Usuário'
         other: 'Usuários'
       vot:
-        one: 'VALTI'
-        other: 'VALTIs'
+        one: 'VOT'
+        other: 'VOTs'
       hierarq:
         one: 'Grau hierárquico'
         other: 'Graus hierárquicos'
@@ -130,6 +133,14 @@ pt-BR:
         one: 'Idioma que fala'
         other: 'Idiomas que fala'
     attributes:
+      vm:
+        nome: 'Nome'
+        os: 'SO (com versão)'
+        hwvirtual: 'HW virtual'
+        descricao: 'Descrição'
+        servicos: 'Serviços da VM'
+        ip: 'IP'
+        dono: 'Dono dos serviços executados na VM'  
       mudanca:
         nome: 'Nome'
         descricao: 'Descrição'
@@ -271,7 +282,10 @@ pt-BR:
         usuarios: 'Usuários que a possuem'
         cargos: 'Cargos que exigem esta habilidade'
       usuario:
-        nome: 'Nome'
+        nome: 'Nome de Guerra'
+        nome_completo: 'Nome Completo'
+        idtmil: 'Identidade Militar'
+        cpf: 'CPF'
         status: 'Status do usuário'
         tipo: 'Perfil de acesso do usuário'
         observacoes: 'Observações'
@@ -311,7 +325,11 @@ pt-BR:
         usuarios: 'Usuários que possui'
         requisicao_link_proprio: 'Requisição de link próprio realizada'
         pacotes_servico: 'Pacote de serviços'
+        nome_ch_sec_ti: 'Nome do Ch Seç TI'
+        nome_cmt_om: 'Nome Cmt OM'
+        cel_cmt_om: 'Celular Cmt OM'
       requisicao_link_proprio:
+        descricao: 'Descrição'
         cliente_id: 'OM requerente'
         parecer_cta: 'Parecer do 4º CTA'
         parecer_citex: 'Parecer do CITEx'

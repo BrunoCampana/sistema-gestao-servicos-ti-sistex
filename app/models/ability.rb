@@ -9,52 +9,115 @@ class Ability
       elsif usuario.tipo == 'SecGer'
         can :access, :rails_admin
         can :dashboard
-        can :read, :all
-        #can :edit, Usuario, email: usuario.email
-        can :manage, PacotesServico
+        can :read, Usuario
+        can :read, CertTi
+        can :read, Habilidade
+        can :manage, Cliente
         can :manage, RequisicaoLinkProprio
+        can :manage, PacotesServico
+        can :manage, Vot
+        can :manage, Servico
         can :manage, AnsTi
+        can :manage, Indisponibilidade
+        can :manage, Parado
+        can :manage, Motivo
         can :manage, Capacidade
         can :manage, Fornecedor
-        can :manage, Vot
-        can :manage, Indisponibilidade
+        can :read, CursoMinistrado
+        can :read, Talento
+        can :read, CursoExterno
+        can :manage, Rede
+        can :manage, Sleqp
+        can :manage, Armario
+        can :manage, Hardware
+        can :manage, Software
+        can :manage, Equipamento
+        can :manage, Mudanca
+        can :read, Workstation
       elsif usuario.tipo == 'SecCpc'
         can :access, :rails_admin
         can :dashboard
-        can :read, :all
         can :manage, Usuario
-        can :manage, Talento
         can :manage, FormacaoMil
-        can :manage, FormacaoAcad
         can :manage, CertTi
+        can :manage, FormacaoAcad
         can :manage, Curso
         can :manage, CargoExercido
         can :manage, ParticipouProj
         can :manage, Idioma
-        can :manage, CursoExterno
-        can :manage, CursoMinistrado
-        can :manage, Vot
-        can :manage, Indisponibilidade
+        can :manage, Cargo
         can :manage, Habilidade
-      elsif usuario.tipo == 'DTDO'
+        can :manage, Encargo
+        can :read, Cliente
+        can :read, RequisicaoLinkProprio
+        can :read, PacotesServico
+        can :read, Vot
+        can :read, Servico
+        can :read, AnsTi
+        can :read, Indisponibilidade
+        can :read, Capacidade
+        can :read, Fornecedor
+        can :manage, CursoMinistrado
+        can :manage, Talento
+        can :manage, CursoExterno
+        can :read, Rede
+        can :read, Workstation
+      elsif usuario.tipo == 'DO'
         can :access, :rails_admin
         can :dashboard
-        can :read, :all
-        #can :edit, Usuario, email: usuario.email
+        can :read, Usuario
+        can :read, CertTi
+        can :read, Habilidade
+        can :manage, Cliente
+        can :read, RequisicaoLinkProprio
+        can :read, PacotesServico
         can :manage, Vot
+        can :read, Servico
+        can :read, AnsTi
         can :manage, Indisponibilidade
-      elsif usuario.tipo == 'SecTICliente'
-        #can :edit, Usuario, email: usuario.email
-        can :read, Cidade
-        can :read, Cliente, nome_ch_sec_info: usuario.nome
-        can :update, Cliente, nome_ch_sec_info: usuario.nome
-        can :create, Indisponibilidade
-        can :read, Indisponibilidade, cliente_id: usuario.cliente.cliente_id
-        can :read, PacotesServico, cliente_id: usuario.cliente.cliente_id
-        can :read, RequisicaoLinkProprio, cliente_id: usuario.cliente.cliente_id
-        can :read, Usuario, usuario_id: usuario_id
-        can :update, Usuario, usuario_id: usuario_id
-        can :read, Vot
+        can :read, Parado
+        can :read, Motivo
+        can :manage, Capacidade
+        can :read, Fornecedor
+        can :read, CursoMinistrado
+        can :read, Talento
+        can :read, CursoExterno
+        can :manage, Rede
+        can :manage, Sleqp
+        can :manage, Armario
+        can :manage, Hardware
+        can :manage, Software
+        can :manage, Equipamento
+        can :manage, Mudanca
+        can :read, Workstation
+      elsif usuario.tipo == 'Outros'
+        can :access, :rails_admin
+        can :dashboard
+        can :read, Usuario
+        can :read, CertTi
+        can :read, Habilidade
+        can :read, Cliente
+        can :read, RequisicaoLinkProprio
+        can :read, PacotesServico
+        can :manage, Vot
+        can :read, Servico
+        can :read, AnsTi
+        can :read, Indisponibilidade
+        can :read, Parado
+        can :read, Motivo
+        can :read, Capacidade
+        can :read, Fornecedor
+        can :read, CursoMinistrado
+        can :read, Talento
+        can :read, CursoExterno
+        can :read, Rede
+        can :read, Sleqp
+        can :read, Armario
+        can :read, Hardware
+        can :read, Software
+        can :read, Equipamento
+        can :manage, Mudanca
+        can :read, Workstation
       end
     end
   end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_08_124721) do
+ActiveRecord::Schema.define(version: 2019_07_04_194014) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -129,6 +129,9 @@ ActiveRecord::Schema.define(version: 2019_05_08_124721) do
     t.datetime "updated_at", null: false
     t.string "inventario"
     t.integer "cidade_id"
+    t.string "nome_ch_sec_ti"
+    t.string "nome_cmt_om"
+    t.string "cel_cmt_om"
     t.index ["cidade_id"], name: "index_clientes_on_cidade_id"
   end
 
@@ -427,6 +430,7 @@ ActiveRecord::Schema.define(version: 2019_05_08_124721) do
     t.datetime "updated_at", null: false
     t.integer "cliente_id"
     t.string "parecer"
+    t.string "descricao"
     t.index ["cliente_id"], name: "index_requisicao_link_proprios_on_cliente_id"
   end
 
@@ -503,6 +507,9 @@ ActiveRecord::Schema.define(version: 2019_05_08_124721) do
     t.integer "hierarq_id"
     t.integer "formacao_mil_id"
     t.integer "formacao_acad_id"
+    t.string "nome_completo"
+    t.string "idtmil"
+    t.string "cpf"
     t.index ["cliente_id"], name: "index_usuarios_on_cliente_id"
     t.index ["email"], name: "index_usuarios_on_email", unique: true
     t.index ["formacao_acad_id"], name: "index_usuarios_on_formacao_acad_id"
@@ -526,6 +533,18 @@ ActiveRecord::Schema.define(version: 2019_05_08_124721) do
     t.text "object", limit: 1073741823
     t.datetime "created_at"
     t.index ["item_type", "item_id"], name: "index_versions_on_item_type_and_item_id"
+  end
+
+  create_table "vms", force: :cascade do |t|
+    t.string "nome"
+    t.string "os"
+    t.string "hwvirtual"
+    t.text "descricao"
+    t.text "servicos"
+    t.string "ip"
+    t.string "dono"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "vots", force: :cascade do |t|

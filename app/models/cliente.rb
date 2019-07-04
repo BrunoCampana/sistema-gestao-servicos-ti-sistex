@@ -6,7 +6,7 @@ class Cliente < ApplicationRecord
   has_many :usuarios
   has_many :talentos
   has_and_belongs_to_many :indisponibilidades
-  has_one :requisicao_link_proprio
+  has_many :requisicao_link_proprio
   has_one :pacotes_servico
   mount_uploader :inventario, ArquivoUploader
 

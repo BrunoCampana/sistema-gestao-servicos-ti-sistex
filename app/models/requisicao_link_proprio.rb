@@ -11,6 +11,10 @@ class RequisicaoLinkProprio < ApplicationRecord
     Cliente.group(:possui_link_proprio).count.to_a
   end
 
+  def name
+    descricao
+  end
+
   def self.chart_type
     'pie'
   end

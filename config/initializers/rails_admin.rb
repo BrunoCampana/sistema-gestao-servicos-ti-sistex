@@ -355,9 +355,48 @@ RailsAdmin.config do |config|
     end
   end
 
+  config.model Armario do
+    parent Rede
+    weight (-0.75)
+    list do
+      configure :created_at do
+        hide
+      end
+      configure :updated_at do
+        hide
+      end
+    end
+  end
+
   config.model Hardware do
     parent Rede
     weight (-0.7)
+    list do
+      configure :created_at do
+        hide
+      end
+      configure :updated_at do
+        hide
+      end
+    end
+  end
+
+  config.model Vm do
+    parent Rede
+    weight (-0.66)
+    list do
+      configure :created_at do
+        hide
+      end
+      configure :updated_at do
+        hide
+      end
+    end
+  end
+
+  config.model Software do
+    parent Rede
+    weight (-0.65)
     list do
       configure :created_at do
         hide
@@ -410,15 +449,8 @@ RailsAdmin.config do |config|
   config.main_app_name = ["Gestão de Serviços de TI SISTEX", "4º CTA"]
 
   config.navigation_static_links = {
-  'Vá para o OTRS' => 'http://10.78.4.187/otrs/',
-
-  'Vá para o SPED' => 'http://sped.4cta.eb.mil.br/sped/administracao/sessao/eb/logon.jsp',
-
-  'Vá para a Intranet' => 'http://intranet.4cta.eb.mil.br/',
 
   'Vá para Wiki do CTA' => 'http://10.78.4.233:8081',
-
-  'Vá para Pesquisas de Satisfação' => 'http://10.78.4.233:80'
   }
 
   config.navigation_static_label = "Links Úteis"
