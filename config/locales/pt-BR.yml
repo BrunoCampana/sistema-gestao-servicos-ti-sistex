@@ -140,7 +140,7 @@ pt-BR:
         descricao: 'Descrição'
         servicos: 'Serviços da VM'
         ip: 'IP'
-        dono: 'Dono dos serviços executados na VM'  
+        dono: 'Dono dos serviços executados na VM'
       mudanca:
         nome: 'Nome'
         descricao: 'Descrição'
@@ -212,6 +212,7 @@ pt-BR:
         telefone: 'Telefone'
         habilidades: 'Habilidades que possui'
         observacoes: 'Observações'
+        curso_ministrados: 'Cursos que participou no CTA'
       idioma:
         nome: 'Descrição'
       participou_proj:
@@ -266,6 +267,7 @@ pt-BR:
         inicio: 'Início'
         termino: 'Término'
         pladis: 'Pladis'
+        talentos: 'Militares de outras OMs inscritos'
       cidade:
         nome: 'Nome da cidade'
         clientes: 'OMs da guarnição'

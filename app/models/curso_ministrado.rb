@@ -6,6 +6,7 @@ class CursoMinistrado < ApplicationRecord
   enum modalidade: [:Distância, :Presencial]
   mount_uploader :pladis, ArquivoUploader
   enum tipo_cpc: [:Estágio, :Curso, :Instrução_de_Quadros, :Visitação, :Conferência, :Congresso]
+  has_and_belongs_to_many :talentos
   def name
     nome
   end
