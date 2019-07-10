@@ -233,6 +233,7 @@ pt-BR:
         titulo: 'Título do ANS'
         descricao: 'Descrição do ANS'
         vigencia: 'Vigência do ANS'
+        contrato: 'Arquivo do Contrato'
       hierarq:
         nome: 'Nome'
         usuarios: 'Usuários que possuem o grau hierárquico'
