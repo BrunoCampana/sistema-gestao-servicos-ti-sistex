@@ -229,7 +229,10 @@ pt-BR:
         nome: 'Nome'
       ans_ti:
         cliente: 'Cliente'
-        servico: 'Serviço'
+        servico: 'Serviços'
+        titulo: 'Título do ANS'
+        descricao: 'Descrição do ANS'
+        vigencia: 'Vigência do ANS'
       hierarq:
         nome: 'Nome'
         usuarios: 'Usuários que possuem o grau hierárquico'

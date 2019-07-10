@@ -1,4 +1,4 @@
 class AnsTi < ApplicationRecord
   belongs_to :cliente
-  belongs_to :servico
+  has_and_belongs_to_many :servicos
 end
