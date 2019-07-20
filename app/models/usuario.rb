@@ -28,4 +28,7 @@ class Usuario < ApplicationRecord
     nome
   end
 
+  def active_for_authentication?
+    super && status == "Ativo"
+  end
 end

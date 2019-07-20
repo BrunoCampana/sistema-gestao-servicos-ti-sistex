@@ -29,6 +29,9 @@
                             </div>
                             <div class="actions text-center" >
                               <%= f.submit "Entrar", :class => 'btn btn-default login-popup-btn' %>
+                              <%- flash.each do |name, msg| -%>
+                                <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
+                              <%- end -%>
                             </div>
                             <!--<button type="submit" class="btn btn-default login-popup-btn" name="submit" value="1">Login</button>-->
                         <!--</form>-->

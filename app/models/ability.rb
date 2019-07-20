@@ -83,6 +83,9 @@ class Ability
         can [:create, :read, :update, :export], Vot
         can [:update, :read], [Cliente, Motivo, Parado, Servico, Usuario]
       end
+    else
+      can :access, :rails_admin
+      can :dashboard  
     end
   end
 end

@@ -3,9 +3,14 @@ RailsAdmin.config do |config|
   require Rails.root.join('lib', 'rails_admin', 'rails_admin_pdf.rb')
   RailsAdmin::Config::Actions.register(RailsAdmin::Config::Actions::Pdf)
 
+  config.compact_show_view = false
+  #config.sidescroll = true
+  
   config.model Usuario do
     weight (-15)
     list do
+      sort_by :hierarq_id
+      sort_reverse false
       configure :last_sign_in_ip do
         hide
       end
@@ -447,13 +452,13 @@ RailsAdmin.config do |config|
   end
 
   config.main_app_name = ["Gestão de Serviços de TI SISTEX", "4º CTA"]
+  #
+  #config.navigation_static_links = {
+  #
+  #'Vá para Wiki do CTA' => 'http://10.78.4.233:8081',
+  #}
 
-  config.navigation_static_links = {
-
-  'Vá para Wiki do CTA' => 'http://10.78.4.233:8081',
-  }
-
-  config.navigation_static_label = "Links Úteis"
+  #config.navigation_static_label = "Links Úteis"
 
   ### Popular gems integration
 
