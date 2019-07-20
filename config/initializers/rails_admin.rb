@@ -5,7 +5,7 @@ RailsAdmin.config do |config|
 
   config.compact_show_view = false
   #config.sidescroll = true
-  
+
   config.model Usuario do
     weight (-15)
     list do
