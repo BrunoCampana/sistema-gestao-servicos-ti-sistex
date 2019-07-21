@@ -11,19 +11,19 @@ class Ability
         can :access, :rails_admin
         can [:manage, :export], [Usuario, FormacaoMil, CertTi, FormacaoAcad, Curso, CargoExercido, ParticipouProj, Idioma, Cargo, Habilidade, Encargo, CursoMinistrado, Talento, CursoExterno]
         can :update, [Cliente, Hierarq]
-        can [:read, :export], [Cliente, RequisicaoLinkProprio, PacotesServico, Vot, Servico, AnsTi, Indisponibilidade, Capacidade, Fornecedor, Rede, Workstation]
+        can [:read, :export], [Hierarq, Cliente, RequisicaoLinkProprio, PacotesServico, Vot, Servico, AnsTi, Indisponibilidade, Capacidade, Fornecedor, Rede, Workstation]
       elsif usuario.tipo == 'SecGer'
         can :access, :rails_admin
+        can :update, Usuario, :id => usuario.id
         can [:read, :export], [Usuario, CursoMinistrado, Talento, CursoExterno, Workstation, Vm]
         can [:manage, :export], [Cliente, RequisicaoLinkProprio, PacotesServico, Vot, Servico, AnsTi, Indisponibilidade, Capacidade, Fornecedor, Rede, Sleqp, Armario, Hardware, Software, Equipamento, Mudanca]
-        can [:update], [Cidade, Parado, Motivo, Usuario]
+        can [:update, :read], [Cidade, Parado, Motivo]
       elsif usuario.tipo == 'ChDT'
         can :access, :rails_admin
         can :update, Usuario, :id => usuario.id
-        can [:read, :export], [AnsTi, Armario, Capacidade, Cidade, Cliente, CursoExterno, CursoMinistrado, Equipamento, Fornecedor, Hardware, PacotesServico, RequisicaoLinkProprio, Servico, Sleqp, Software, Talento, Usuario, Vm, Workstation, Rede]
+        can [:read, :export], [AnsTi, Armario, Capacidade, Cidade, Cliente, CursoExterno, CursoMinistrado, Equipamento, Fornecedor, Hardware, PacotesServico, RequisicaoLinkProprio, Servico, Sleqp, Software, Talento, Usuario, Vm, Workstation, Rede, Parado, Servico, Motivo]
         can :manage, Mudanca
         can [:create, :update, :read, :export], [Vot, Indisponibilidade]
-        can :update, [Cliente, Usuario, Parado, Motivo, Servico]
       elsif usuario.tipo == 'SecLogTI'
         can :access, :rails_admin
         can :update, Usuario, :id => usuario.id
@@ -32,9 +32,8 @@ class Ability
       elsif usuario.tipo == 'SecProj'
         can :access, :rails_admin
         can :update, Usuario, :id => usuario.id
-        can [:read, :export], [AnsTi, Armario, Capacidade, Cidade, Cliente, CursoExterno, CursoMinistrado, Equipamento, Fornecedor, Hardware, PacotesServico, RequisicaoLinkProprio, Servico, Sleqp, Software, Talento, Usuario, Vm, Workstation, Rede]
+        can [:read, :export], [AnsTi, Armario, Capacidade, Cidade, Cliente, CursoExterno, CursoMinistrado, Equipamento, Fornecedor, Hardware, PacotesServico, RequisicaoLinkProprio, Servico, Sleqp, Software, Talento, Usuario, Vm, Workstation, Rede, Motivo, Parado]
         can [:create, :read, :update, :export], [Indisponibilidade, Vot]
-        can :update, [Cliente, Usuario, Parado, Motivo, Servico]
         can [:read, :create, :update, :export], Mudanca
       elsif usuario.tipo == 'SPC'
         can :access, :rails_admin
@@ -44,11 +43,10 @@ class Ability
       elsif usuario.tipo == 'SSI'
         can :access, :rails_admin
         can :update, Usuario, :id => usuario.id
-        can [:read, :export], [AnsTi, Armario, Capacidade, Cidade, Cliente, CursoExterno, CursoMinistrado, Equipamento, Hardware, Indisponibilidade, PacotesServico, Rede, RequisicaoLinkProprio, Servico, Sleqp, Software, Talento, Usuario, Vm, Workstation]
+        can [:read, :export], [AnsTi, Armario, Capacidade, Cidade, Cliente, CursoExterno, CursoMinistrado, Equipamento, Hardware, Indisponibilidade, PacotesServico, Rede, RequisicaoLinkProprio, Servico, Sleqp, Software, Talento, Usuario, Vm, Workstation, Parado, Motivo]
         can [:read, :create, :update, :export], Mudanca
         can [:update, :read, :export], Fornecedor
         can [:update, :read, :export, :create], [Indisponibilidade, Vot]
-        can :update, [Parado, Motivo, Servico, Cliente, Usuario]
       elsif usuario.tipo == 'Chefia'
         can :access, :rails_admin
         can :update, Usuario, :id => usuario.id
@@ -65,11 +63,11 @@ class Ability
         can [:manage, :export], Workstation
       elsif usuario.tipo == 'DO'
         can :access, :rails_admin
-        can :update, Usuario, :usuario_id => usuario.id
-        can [:read, :export], [AnsTi, Cidade, CursoExterno, CursoMinistrado, PacotesServico, RequisicaoLinkProprio, Talento, Workstation, Cliente, Servico, Usuario]
+        can :update, Usuario, :id => usuario.id
+        can [:read, :export], [AnsTi, Cidade, CursoExterno, CursoMinistrado, PacotesServico, RequisicaoLinkProprio, Talento, Workstation, Cliente, Servico, Usuario, Motivo, Parado]
         can [:manage, :export], [Armario, Capacidade, Equipamento, Fornecedor, Hardware, Indisponibilidade, Mudanca, Rede, Sleqp, Software, Vm]
         can [:create, :read, :update, :export], Vot
-        can [:update, :read], [Cliente, Motivo, Parado, Servico, Usuario]
+        can :update, [Cliente]
       end
     else
       can :access, :rails_admin

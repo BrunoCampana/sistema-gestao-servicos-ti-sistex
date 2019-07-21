@@ -10,9 +10,43 @@ RailsAdmin.config do |config|
     weight (-15)
     edit do
       field :nome
+      field :nome_completo
+      field :hierarq
+      field :telefone
+      field :email
+      field :cliente
+      field :password do
+        visible do
+          bindings[:view]._current_user.tipo.include?("Admin") || bindings[:view]._current_user.tipo.include?("SecCpc")
+        end
+      end
+      field :password_confirmation do
+        visible do
+          bindings[:view]._current_user.tipo.include?("Admin") ||           bindings[:view]._current_user.tipo.include?("SecCpc")
+        end
+      end
+      field :observacoes
+      field :associado
+      field :formacao_mil
+      field :formacao_acad
+      field :idtmil
+      field :cpf
+      field :cargos
+      field :encargos
+      field :CargoExercidos
+      field :ParticipouProjs
+      field :idiomas
+      field :cert_tis
+      field :cursos
+      field :habilidades
       field :tipo do
         visible do
-          #bindings[:view]._current_user.tipo.include?(:Admin)
+          bindings[:view]._current_user.tipo.include?("Admin")
+        end
+      end
+      field :status do
+        visible do
+          bindings[:view]._current_user.tipo.include?("Admin")
         end
       end
     end

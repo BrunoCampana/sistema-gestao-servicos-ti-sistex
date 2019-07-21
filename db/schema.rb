@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_10_194440) do
+ActiveRecord::Schema.define(version: 2019_07_21_074203) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -257,6 +257,8 @@ ActiveRecord::Schema.define(version: 2019_07_10_194440) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "contrato"
+    t.string "preposto"
+    t.string "contato"
   end
 
   create_table "fornecedors_servicos", id: false, force: :cascade do |t|
@@ -447,6 +449,9 @@ ActiveRecord::Schema.define(version: 2019_07_10_194440) do
     t.integer "cliente_id"
     t.string "parecer"
     t.string "descricao"
+    t.string "origem_recurso"
+    t.date "inicio_parecer"
+    t.date "validade_parecer"
     t.index ["cliente_id"], name: "index_requisicao_link_proprios_on_cliente_id"
   end
 

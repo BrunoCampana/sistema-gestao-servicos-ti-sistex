@@ -100,8 +100,8 @@ pt-BR:
         one: 'Pacote de Serviços de TI'
         other: 'Pacotes de Serviços de TI'
       requisicao_link_proprio:
-        one: 'Requisição de link próprio de cliente'
-        other: 'Requicições de link próprio de clientes'
+        one: 'Link contratado pela OM'
+        other: 'Links contratados pelas OMs'
       usuario:
         one: 'Usuário'
         other: 'Usuários'
@@ -330,9 +330,9 @@ pt-BR:
         celular_ctt_adj: 'Celular do Adj 1 Seç Info'
         anotacoes: 'Anotações'
         inventario: 'Inventário de TI da OM'
-        vots: 'VALTIs recebidas'
+        vots: 'VOTs recebidas'
         usuarios: 'Usuários que possui'
-        requisicao_link_proprio: 'Requisição de link próprio realizada'
+        requisicao_link_proprio: 'Link contratado pela OM ou requisições'
         pacotes_servico: 'Pacote de serviços'
         nome_ch_sec_ti: 'Nome do Ch Seç TI'
         nome_cmt_om: 'Nome Cmt OM'
