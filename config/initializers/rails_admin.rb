@@ -15,16 +15,8 @@ RailsAdmin.config do |config|
       field :telefone
       field :email
       field :cliente
-      field :password do
-        visible do
-          bindings[:view]._current_user.tipo.include?("Admin") || bindings[:view]._current_user.tipo.include?("SecCpc")
-        end
-      end
-      field :password_confirmation do
-        visible do
-          bindings[:view]._current_user.tipo.include?("Admin") ||           bindings[:view]._current_user.tipo.include?("SecCpc")
-        end
-      end
+      field :password
+      field :password_confirmation
       field :observacoes
       field :associado
       field :formacao_mil
@@ -629,3 +621,14 @@ RailsAdmin.config do |config|
   end
 end
 #I added a teste comment
+
+
+=begin
+visible do
+  bindings[:view]._current_user.tipo.include?("Admin") || bindings[:view]._current_user.tipo.include?("SecCpc") || bindings[:view]._current_user.id
+end
+do
+  visible do
+    bindings[:view]._current_user.tipo.include?("Admin") ||           bindings[:view]._current_user.tipo.include?("SecCpc") || bindings[:view]._current_user.id
+  end
+=end
