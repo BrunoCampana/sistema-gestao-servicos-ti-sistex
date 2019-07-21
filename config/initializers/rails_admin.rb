@@ -55,6 +55,13 @@ RailsAdmin.config do |config|
       end
     end
     show do
+      field :nome
+      field :nome_completo
+      field :hierarq
+      field :telefone
+      field :email
+      field :cliente
+      include_all_fields
       configure :reset_password_sent_at do
         hide
       end
@@ -224,6 +231,17 @@ RailsAdmin.config do |config|
 
   config.model Cliente do
     weight (-11)
+    show do
+      field :nome
+      field :cidade
+      field :telefone_ctt_om
+      field :nome_ch_sec_ti
+      field :email
+      field :nome_cmt_om
+      field :cel_cmt_om
+      field :requisicao_link_proprio
+      include_all_fields
+    end
     list do
       field :id
       field :nome
@@ -254,6 +272,19 @@ RailsAdmin.config do |config|
   config.model RequisicaoLinkProprio do
     parent Cliente
     weight (-9)
+    show do
+      field :cliente
+      field :descricao
+      field :possui_link_proprio
+      field :data_inicio_contrato
+      field :data_termino_contrato
+      field :parecer_cta
+      field :parecer_citex
+      field :inicio_parecer
+      field :validade_parecer
+      field :valor_mensal
+      include_all_fields
+    end
     list do
       field :id
       field :cliente
@@ -267,18 +298,33 @@ RailsAdmin.config do |config|
   config.model PacotesServico do
     parent Cliente
     weight (-8)
+    show do
+      field :cliente
+      field :servicos
+      field :velocidade_intranet
+      field :velocidade_internet
+      field :contrato
+      include_all_fields
+    end
     list do
       field :id
       field :cliente
       field :velocidade_intranet
       field :velocidade_internet
-      field :servico
+      field :servicos
     end
   end
 
   config.model Vot do
     parent Cliente
     weight (-7)
+    show do
+      field :cliente
+      field :data_inicio
+      field :data_termino
+      field :descricao
+      include_all_fields
+    end
     list do
       field :id
       field :cliente
@@ -322,6 +368,13 @@ RailsAdmin.config do |config|
   config.model Indisponibilidade do
     parent Servico
     weight (-4)
+    show do
+      field :clientes
+      field :inicio
+      field :termino
+      field :servicos
+      include_all_fields
+    end
     list do
       configure :created_at do
         hide
@@ -542,6 +595,11 @@ RailsAdmin.config do |config|
     parent Rede
     weight (-0.4)
     list do
+      field :id
+      field :nome
+      field :responsavel
+      field :modelo
+      field :fabricante
       configure :created_at do
         hide
       end

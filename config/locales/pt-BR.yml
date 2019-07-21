@@ -218,21 +218,28 @@ pt-BR:
         curso_ministrados: 'Cursos que participou no CTA'
       idioma:
         nome: 'Descrição'
+        usuarios: 'Militares do CTA com esse nível de idioma'
       participou_proj:
         nome: 'Descrição'
+        usuarios: 'Militares do CTA que já participaram desse projeto'
       cargo_exercido:
         nome: 'Nome'
+        usuarios: 'Militares do CTA que já exerceram o cargo'
       curso:
         nome: 'Nome'
+        usuarios: 'Militares do CTA que fizeram esse curso'
       cert_ti:
         nome: 'Nome'
+        usuarios: 'Militares do CTA que possuem essa certificação'
       formacao_mil:
         nome: 'Nome'
+        usuarios: 'Militares do CTA que possuem essa formação'
       formacao_acad:
         nome: 'Nome'
+        usuarios: 'Militares do CTA que possuem essa formação'
       ans_ti:
         cliente: 'Cliente'
-        servico: 'Serviços'
+        servicos: 'Serviços previstos no ANS'
         titulo: 'Título do ANS'
         descricao: 'Descrição do ANS'
         vigencia: 'Vigência do ANS'
@@ -240,6 +247,7 @@ pt-BR:
       hierarq:
         nome: 'Nome'
         usuarios: 'Usuários que possuem o grau hierárquico'
+        talentos: 'Militares de outras OMs que fizeram curso no CTA'
       servico:
         nome: 'Nome'
         pacotes_servico: 'Serviço provido nos seguintes pacotes'
@@ -247,6 +255,7 @@ pt-BR:
         indisponibilidades: 'Eventos de indisponibilidade do serviço'
         capacidades: 'Capacidades do serviço'
         ans_tis: 'ANSs relacionados ao serviço'
+        pacotes_servico: 'Pacotes que incluem este serviço'
       parado:
         nome: 'Elemento gerador de indisponibilidade'
         indisponibilidades: 'Eventos em que o elemento falhou'
@@ -284,12 +293,13 @@ pt-BR:
         habilidades: 'Habilidades e cursos exigidas(os) para o cargo'
       encargo:
         nome: 'Nome do encargo'
-        usuarios: 'Usuários'
+        usuarios: 'Militare(s) que ocupa(m) o encargo'
       habilidade:
         nome: 'Nome da habilidade ou curso'
         descricao: 'Descrição'
         usuarios: 'Usuários que a possuem'
         cargos: 'Cargos que exigem esta habilidade'
+        talentos: 'Militares de outras OMs que possuem essa habilidade'
       usuario:
         nome: 'Nome de Guerra'
         nome_completo: 'Nome Completo'
@@ -337,12 +347,13 @@ pt-BR:
         nome_ch_sec_ti: 'Nome do Ch Seç TI'
         nome_cmt_om: 'Nome Cmt OM'
         cel_cmt_om: 'Celular Cmt OM'
+        talentos: 'Militares da OM que já fizeram curso no CTA'
       requisicao_link_proprio:
         descricao: 'Descrição'
         cliente_id: 'OM requerente'
         parecer_cta: 'Parecer do 4º CTA'
         parecer_citex: 'Parecer do CITEx'
-        status: 'status'
+        status: 'Situação atual da requisição de link próprio'
         possui_link_proprio: 'OM possui atualmente link próprio?'
         velocidade: 'Caso positivo, velocidade (Mbps)'
         prestador_sv: 'Empresa que presta o Sv'
@@ -390,12 +401,12 @@ pt-BR:
         remuneracao: 'Remuneração'
         pagamentos_realizados: 'Pagamentos já realizados?'
         relatorio: 'Relatório da VOT'
-        usuarios: 'Usuários'
+        usuarios: 'Militares participantes da VOT'
       pacotes_servico:
         intranet: 'Intranet'
         internet: 'Internet'
-        velocidade_intranet: 'Velocidade Lote 1 (Mbps)'
-        velocidade_internet: 'Velocidade Lote 2 (Mbps)'
+        velocidade_intranet: 'Velocidade EBNet (Mbps)'
+        velocidade_internet: 'Velocidade Internet (Mbps)'
         tipo_banda: 'Tipo de banda'
         meio_de_acesso: 'Meio de acesso'
         tipo_link: 'Tipo de link'
