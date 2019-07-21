@@ -153,7 +153,7 @@ pt-BR:
         responsavel: 'Responsável'
         configuracao: 'Configuração'
         diagrama: 'Diagrama'
-        sleqps: 'Salas de Equipamentos que compõe a rede'
+        sleqp: 'Salas de Equipamentos que compõe a rede'
       sleqp:
         nome: 'Nome'
         descricao: 'Descrição'
@@ -173,6 +173,7 @@ pt-BR:
         dimensao: 'Dimensão (em Us)'
         responsavel: 'Responsável'
         hardwares: 'Hardwares contidos no Rack'
+        sleqp: 'Site de localização do Rack'
       hardware:
         nome: 'Nome'
         modelo: 'Modelo'
@@ -183,6 +184,7 @@ pt-BR:
         tipo: 'Tipo'
         dimensao: 'Dimensão (em Us)'
         softwares: 'Softwares instalados'
+        armario: 'Rack de localização do Hardware'
       software:
         nome: 'Nome'
         modelo: 'Modelo'
@@ -204,6 +206,7 @@ pt-BR:
         configuracao: 'Configuração'
         responsavel: 'Responsável'
         tipo: 'Tipo'
+        sleqp: 'Site de localização'
       talento:
         nome: 'Nome do Militar'
         hierarq: 'Grau hierárquico'
@@ -298,7 +301,7 @@ pt-BR:
         telefone: 'Telefone'
         hierarq: 'Grau hierárquico'
         associado: 'Associado a(o)'
-        vots: 'VALTIs que participou'
+        vots: 'VOT que participou'
         cargos: 'Cargo(s) que ocupa'
         habilidades: 'Habilidade(s) que possui'
         curso_externos: 'Atividades de capacitação externas que participou'
@@ -348,6 +351,9 @@ pt-BR:
         data_termino_contrato: 'Data término do contrato'
         valor_mensal: 'Valor mensal (R$)'
         parecer: 'Pareceres Técnicos emitidos'
+        origem_recurso: 'Oridem do recurso'
+        inicio_parecer: 'Início do parecer'
+        validade_parecer: 'Término da vigência do parecer'
       fornecedor:
         nome_fornecedor: 'Nome do fornecedor'
         descricao_recurso: 'Descrição do recurso fornecido'
@@ -356,6 +362,8 @@ pt-BR:
         termino_contrato: 'Término do contrato'
         contrato: 'Contrato vigente'
         servicos: 'Serviços relacionados com fornecedor'
+        preposto: 'Contato com contratada'
+        contato: 'Telefone e email de contato'
       capacidade:
         nome_recurso: 'Nome do recurso'
         total_recurso: 'Total do recurso'
@@ -381,7 +389,7 @@ pt-BR:
         descricao: 'Descrição'
         remuneracao: 'Remuneração'
         pagamentos_realizados: 'Pagamentos já realizados?'
-        relatorio: 'Relatório da VALTI'
+        relatorio: 'Relatório da VOT'
         usuarios: 'Usuários'
       pacotes_servico:
         intranet: 'Intranet'

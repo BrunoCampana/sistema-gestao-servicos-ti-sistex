@@ -8,12 +8,27 @@ RailsAdmin.config do |config|
 
   config.model Usuario do
     weight (-15)
+    edit do
+      field :nome
+      field :tipo do
+        visible do
+          #bindings[:view]._current_user.tipo.include?(:Admin)
+        end
+      end
+    end
     list do
       sort_by :hierarq_id
       sort_reverse false
+      field :id
+      field :hierarq
+      field :nome
+      field :email
+      field :telefone
       configure :last_sign_in_ip do
         hide
       end
+    end
+    show do
       configure :reset_password_sent_at do
         hide
       end
@@ -30,6 +45,9 @@ RailsAdmin.config do |config|
         hide
       end
       configure :sign_in_count do
+        hide
+      end
+      configure :last_sign_in_ip do
         hide
       end
     end
@@ -180,6 +198,17 @@ RailsAdmin.config do |config|
 
   config.model Cliente do
     weight (-11)
+    list do
+      field :id
+      field :nome
+      field :cidade
+      field :telefone_ctt_om
+      field :nome_ch_sec_ti
+      field :email
+      field :nome_cmt_om
+      field :cel_cmt_om
+      field :requisicao_link_proprio
+    end
   end
 
   config.model Cidade do
@@ -199,24 +228,49 @@ RailsAdmin.config do |config|
   config.model RequisicaoLinkProprio do
     parent Cliente
     weight (-9)
+    list do
+      field :id
+      field :cliente
+      field :possui_link_proprio
+      field :parecer_cta
+      field :parecer_citex
+      field :descricao
+    end
   end
 
   config.model PacotesServico do
     parent Cliente
     weight (-8)
+    list do
+      field :id
+      field :cliente
+      field :velocidade_intranet
+      field :velocidade_internet
+      field :servico
+    end
   end
 
   config.model Vot do
     parent Cliente
     weight (-7)
     list do
-      include_fields :cliente_id, :data_inicio, :data_termino, :modo_transporte, :descricao, :remuneracao, :pagamentos_realizados, :relatorio
+      field :id
+      field :cliente
+      field :data_inicio
+      field :data_termino
+      field :descricao
+      field :usuarios
     end
   end
 
   config.model Servico do
     weight (-6)
     list do
+      field :id
+      field :nome
+      field :indisponibilidades
+      field :capacidades
+      field :ans_tis
       configure :created_at do
         hide
       end
@@ -296,11 +350,24 @@ RailsAdmin.config do |config|
   config.model Fornecedor do
     parent Servico
     weight (-2.7)
+    list do
+      field :id
+      field :nome_fornecedor
+      field :descricao_recurso
+      field :preposto
+      field :contato
+    end
   end
 
   config.model CursoMinistrado do
     weight (-2)
     list do
+      field :id
+      field :nome
+      field :modalidade
+      field :inicio
+      field :termino
+      field :carga_horaria
       configure :created_at do
         hide
       end
@@ -314,6 +381,13 @@ RailsAdmin.config do |config|
     parent CursoMinistrado
     weight (-1.9)
     list do
+      field :id
+      field :hierarq
+      field :nome
+      field :cliente
+      field :telefone
+      field :email
+      field :observacoes
       configure :created_at do
         hide
       end

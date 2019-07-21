@@ -211,9 +211,6 @@ GEM
       lazy_high_charts (>= 1.4.3)
       rails (>= 3.2)
       rails_admin (> 0)
-    rails_admin_clone (0.0.6)
-      rails (>= 3.2)
-      rails_admin (>= 0.4)
     rails_admin_rollincode (1.2.1)
       rails (>= 4.0, < 6)
     railties (5.2.1)
@@ -305,7 +302,6 @@ DEPENDENCIES
   rails (~> 5.2.1)
   rails_admin
   rails_admin_charts
-  rails_admin_clone
   rails_admin_rollincode (~> 1.0)
   sass-rails (~> 5.0)
   selenium-webdriver
