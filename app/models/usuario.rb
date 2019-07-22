@@ -14,9 +14,8 @@ class Usuario < ApplicationRecord
   has_and_belongs_to_many :habilidades
   enum status: [:Inativo, :Ativo]
   enum tipo: [:Admin, :SecCpc, :SecGer, :ChDT, :SecLogTI, :SecProj, :SPC, :SSI, :Chefia, :Outros, :SecInfo, :DO]
-  enum associado: [:CIRMAM, :ASA, :Nenhum]
   belongs_to :cliente
-  belongs_to :hierarq 
+  belongs_to :hierarq
   has_and_belongs_to_many :vots
   has_and_belongs_to_many :curso_externos
   has_and_belongs_to_many :encargos

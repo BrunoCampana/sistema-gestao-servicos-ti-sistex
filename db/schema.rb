@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_21_074203) do
+ActiveRecord::Schema.define(version: 2019_07_22_144115) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -524,7 +524,6 @@ ActiveRecord::Schema.define(version: 2019_07_21_074203) do
     t.string "current_sign_in_ip"
     t.string "last_sign_in_ip"
     t.integer "cliente_id"
-    t.integer "associado"
     t.integer "hierarq_id"
     t.integer "formacao_mil_id"
     t.integer "formacao_acad_id"
