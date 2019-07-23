@@ -23,6 +23,8 @@ class Usuario < ApplicationRecord
     class_name: 'CursoMinistrado'
   has_and_belongs_to_many :instrutores, join_table: 'instrutors_curso_ministrados',
     class_name: 'CursoMinistrado'
+  has_and_belongs_to_many :fisc_titular, join_table: 'fornecedors_usuarios', class_name: 'Fornecedor'
+  has_and_belongs_to_many :fisc_subst, join_table: 'fornecedors_usuarios', class_name: 'Fornecedor'
   def name
     nome
   end

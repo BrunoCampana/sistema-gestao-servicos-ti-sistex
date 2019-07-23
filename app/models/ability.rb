@@ -37,8 +37,8 @@ class Ability
       elsif usuario.tipo == 'SPC'
         can :access, :rails_admin
         can :update, Usuario, :id => usuario.id
-        can [:read, :export], [Hierarq, FormacaoMil, FormacaoAcad, AnsTi, Armario, Capacidade, Cidade, Cliente, CursoExterno, CursoMinistrado, Equipamento, Fornecedor, Hardware, Indisponibilidade, PacotesServico, Rede, RequisicaoLinkProprio, Servico, Sleqp, Software, Talento, Usuario, Vm, Vot, Workstation]
-        can [:read, :create, :update, :export], Mudanca
+        can [:read, :export], [Hierarq, FormacaoMil, FormacaoAcad, AnsTi, Armario, Capacidade, Cidade, Cliente, CursoExterno, CursoMinistrado, Equipamento, Hardware, Indisponibilidade, PacotesServico, Rede, RequisicaoLinkProprio, Servico, Sleqp, Software, Talento, Usuario, Vm, Vot, Workstation]
+        can [:read, :create, :update, :export], [Mudanca, Fornecedor]
       elsif usuario.tipo == 'SSI'
         can :access, :rails_admin
         can :update, Usuario, :id => usuario.id
