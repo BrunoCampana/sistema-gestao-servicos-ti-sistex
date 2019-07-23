@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_23_180020) do
+ActiveRecord::Schema.define(version: 2019_07_23_195751) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -236,6 +236,20 @@ ActiveRecord::Schema.define(version: 2019_07_23_180020) do
     t.index ["sleqp_id"], name: "index_equipamentos_on_sleqp_id"
   end
 
+  create_table "fisc_substs_fornecedors", force: :cascade do |t|
+    t.integer "usuario_id"
+    t.integer "fornecedor_id"
+    t.index ["fornecedor_id"], name: "index_fisc_substs_fornecedors_on_fornecedor_id"
+    t.index ["usuario_id"], name: "index_fisc_substs_fornecedors_on_usuario_id"
+  end
+
+  create_table "fisc_titulars_fornecedors", force: :cascade do |t|
+    t.integer "usuario_id"
+    t.integer "fornecedor_id"
+    t.index ["fornecedor_id"], name: "index_fisc_titulars_fornecedors_on_fornecedor_id"
+    t.index ["usuario_id"], name: "index_fisc_titulars_fornecedors_on_usuario_id"
+  end
+
   create_table "formacao_acads", force: :cascade do |t|
     t.string "nome"
     t.datetime "created_at", null: false
@@ -269,13 +283,6 @@ ActiveRecord::Schema.define(version: 2019_07_23_180020) do
     t.integer "fornecedor_id", null: false
     t.index ["fornecedor_id"], name: "index_fornecedors_servicos_on_fornecedor_id"
     t.index ["servico_id"], name: "index_fornecedors_servicos_on_servico_id"
-  end
-
-  create_table "fornecedors_usuarios", id: false, force: :cascade do |t|
-    t.integer "fornecedor_id", null: false
-    t.integer "usuario_id", null: false
-    t.index ["fornecedor_id"], name: "index_fornecedors_usuarios_on_fornecedor_id"
-    t.index ["usuario_id"], name: "index_fornecedors_usuarios_on_usuario_id"
   end
 
   create_table "habilidades", force: :cascade do |t|

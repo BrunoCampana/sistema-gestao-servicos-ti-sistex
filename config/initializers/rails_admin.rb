@@ -18,7 +18,6 @@ RailsAdmin.config do |config|
       field :password
       field :password_confirmation
       field :observacoes
-      field :associado
       field :formacao_mil
       field :formacao_acad
       field :idtmil
@@ -434,7 +433,8 @@ RailsAdmin.config do |config|
       field :nome_fornecedor
       field :descricao_recurso
       field :preposto
-      field :contato
+      field :fisc_titulars
+      field :tels_ctt
     end
   end
 
