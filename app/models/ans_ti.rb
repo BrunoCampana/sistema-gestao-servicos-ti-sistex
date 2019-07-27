@@ -1,5 +1,6 @@
 class AnsTi < ApplicationRecord
   belongs_to :cliente
+  belongs_to :pacotes_servico
   has_and_belongs_to_many :servicos
 
   def name

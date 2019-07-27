@@ -299,10 +299,19 @@ RailsAdmin.config do |config|
     weight (-8)
     show do
       field :cliente
-      field :servicos
       field :velocidade_intranet
       field :velocidade_internet
-      field :contrato
+      field :meio_de_acesso
+      field :tipo_link
+      field :tipo_banda
+      field :qtd_partilham
+      field :latencia
+      field :jitter
+      field :disponibilidade
+      field :link_proprio
+      field :ramal_ritex
+      field :ramal_voip
+      field :servicos
       include_all_fields
     end
     list do
@@ -310,6 +319,8 @@ RailsAdmin.config do |config|
       field :cliente
       field :velocidade_intranet
       field :velocidade_internet
+      field :ramal_ritex
+      field :ramal_voip
       field :servicos
     end
   end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_23_195751) do
+ActiveRecord::Schema.define(version: 2019_07_27_050010) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -41,7 +41,9 @@ ActiveRecord::Schema.define(version: 2019_07_23_195751) do
     t.text "descricao"
     t.string "vigencia"
     t.string "contrato"
+    t.integer "pacotes_servico_id"
     t.index ["cliente_id"], name: "index_ans_tis_on_cliente_id"
+    t.index ["pacotes_servico_id"], name: "index_ans_tis_on_pacotes_servico_id"
   end
 
   create_table "ans_tis_servicos", id: false, force: :cascade do |t|
@@ -401,8 +403,6 @@ ActiveRecord::Schema.define(version: 2019_07_23_195751) do
   end
 
   create_table "pacotes_servicos", force: :cascade do |t|
-    t.integer "intranet"
-    t.integer "internet"
     t.string "velocidade_intranet"
     t.integer "velocidade_internet"
     t.integer "tipo_banda"
@@ -415,7 +415,11 @@ ActiveRecord::Schema.define(version: 2019_07_23_195751) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "cliente_id"
-    t.string "contrato"
+    t.integer "qtd_partilham"
+    t.text "obs_dados"
+    t.integer "ramal_ritex"
+    t.integer "ramal_voip"
+    t.text "obs_tel"
     t.index ["cliente_id"], name: "index_pacotes_servicos_on_cliente_id"
   end
 

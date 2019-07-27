@@ -244,6 +244,7 @@ pt-BR:
         descricao: 'Descrição do ANS'
         vigencia: 'Vigência do ANS'
         contrato: 'Arquivo do Contrato'
+        pacotes_servico: 'Pacote Serviço relacionado ao ANS'
       hierarq:
         nome: 'Nome'
         usuarios: 'Usuários que possuem o grau hierárquico'
@@ -409,11 +410,10 @@ pt-BR:
         relatorio: 'Relatório da VOT'
         usuarios: 'Militares participantes da VOT'
       pacotes_servico:
-        intranet: 'Intranet'
-        internet: 'Internet'
         velocidade_intranet: 'Velocidade EBNet (Mbps)'
         velocidade_internet: 'Velocidade Internet (Mbps)'
         tipo_banda: 'Tipo de banda'
+        qtd_partilham: 'Qtd OMs que partilham os links de dados'
         meio_de_acesso: 'Meio de acesso'
         tipo_link: 'Tipo de link'
         link_proprio: 'OM possui link próprio?'
@@ -421,7 +421,11 @@ pt-BR:
         jitter: 'Jitter (ms)'
         disponibilidade: 'Disponibilidade (%)'
         servicos: 'Serviços incluídos no pacote'
-        contrato: 'Contrato de ANS relacionado ao pacote'
+        ramal_ritex: 'Qtd de ramais convencionais'
+        ramal_voip: 'Qtd de ramais VoIP'
+        obs_tel: 'Observações do serviço de telefonia'
+        obs_dados: 'Observações do serviço de dados'
+        ans_tis: 'Acordos de Nível de Serviços relacionados ao pacote'
       errors:
         models:
           usuario:
