@@ -5,8 +5,8 @@ class CursoExterno < ApplicationRecord
   mount_uploader :certificado_conclusao, ArquivoUploader
   enum curso_concluido: [:Não, :Sim]
   enum conclusao_checada: [:Pendente, :Checada]
-  enum tipo_cpc: [:Estágio_Interno, :MOOC, :Instrução_de_Quadros, :ICN, :EECN, :Mestrado,
-  :Doutorado, :Especialização, :PCENA, :PVANA, :Visitação, :Conferência, :Congresso]
+  enum tipo_cpc: ["Estágio interno", "MOOC", "Instrução de Quadros", "ICN", "EECN", "Mestrado",
+  "Doutorado", "Especialização", "PCENA", "PVANA", "Visitação", "Conferência", "Congresso"]
   def name
     nome
   end

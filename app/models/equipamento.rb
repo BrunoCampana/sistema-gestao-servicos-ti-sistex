@@ -2,5 +2,5 @@ class Equipamento < ApplicationRecord
   def name
     nome
   end
-  enum tipo: [:ArCond_Split, :ArCond_DC, :Subestacao_Energia, :Gerador, :UPS, :Camera, :PatchPanel, :DVR, :DIO, :Cassete_HDX, :Outros]
+  enum tipo: ["Ar Condicionado Split", "Ar Condicionado próprio de DC", "Subestação de Energia", "Gerador", "UPS", "Câmera", "Patch Panel", "DVR", "DIO", "Cassete HDX", "Outros"]
 end

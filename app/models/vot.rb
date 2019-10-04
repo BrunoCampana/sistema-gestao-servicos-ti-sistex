@@ -5,7 +5,7 @@ class Vot < ApplicationRecord
   belongs_to :cliente
   has_and_belongs_to_many :usuarios
   enum modo_transporte: [:Aéreo, :Fluvial, :Rodoviário]
-  enum pagamentos_realizados: [:Não, :Com_erros, :Alguns, :Sim]
+  enum pagamentos_realizados: ["Não", "Com erros", "Alguns", "Sim"]
 
   def self.graph_data(since = 365.days.ago)
     Vot.group(:cliente).count.to_a

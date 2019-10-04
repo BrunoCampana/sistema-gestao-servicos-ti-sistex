@@ -4,5 +4,5 @@ class Hardware < ApplicationRecord
   end
   belongs_to :armario
   has_many :softwares
-  enum tipo: [:Servidor, :Storage, :Firewall, :Roteador, :Switch, :Access_Point, :OLT, :ONU, :MuxDemux, :Transponder]
+  enum tipo: ["Servidor", "Storage", "Firewall", "Roteador", "Switch", "Gateway", "Central Telefônica", "Access Point", "OLT", "ONU", "Mux Demux", "Transponder"]
 end

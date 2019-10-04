@@ -13,6 +13,6 @@ class Indisponibilidade < ApplicationRecord
     'pie'
   end
 
-  enum tipo: [:Serviço, :Subsistema]
+  enum tipo: [:Serviço, :Subssistema]
 
 end

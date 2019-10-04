@@ -1,6 +1,6 @@
 class Cliente < ApplicationRecord
 
-  enum possui_od: [:Não, :Sim]
+  enum possui_od: ["Não", "Sim"]
   belongs_to :cidade
   has_many :vots
   has_many :usuarios
