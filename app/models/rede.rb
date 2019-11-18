@@ -4,4 +4,5 @@ class Rede < ApplicationRecord
     nome
   end
   mount_uploader :diagrama, ArquivoUploader
+  has_paper_trail
 end

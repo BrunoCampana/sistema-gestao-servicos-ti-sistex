@@ -35,8 +35,7 @@ gem 'rails_admin_rollincode', '~> 1.0'
 gem 'prawn-rails'
 #gem 'gruff'
 
-gem 'paper_trail'
-gem 'rails_admin_charts'
+#gem 'rails_admin_charts'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
@@ -60,7 +59,7 @@ group :development do
 end
 
 group :production do
-  gem 'passenger'
+  #gem 'passenger'
 end
 
 
@@ -78,3 +77,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #group :production do
 #  gem 'mysql2', '~> 0.4.0'
 #end
+
+gem 'dotenv-rails'
+gem 'paper_trail'
+gem 'paper_trail-association_tracking'

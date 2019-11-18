@@ -1,8 +1,8 @@
 Rails.application.configure do
 
   config.i18n.enforce_available_locales = false
-  config.i18n.available_locales = ["pt-BR"]
-  config.i18n.default_locale = :'pt-BR'
+  config.i18n.available_locales = ["en"]
+  config.i18n.default_locale = :'en'
 
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -44,7 +44,7 @@ Rails.application.configure do
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
 
   # Store uploaded files on the local file system (see config/storage.yml for options)
-  config.active_storage.service = :local
+  #config.active_storage.service = :local
 
   # Mount Action Cable outside main process or domain
   # config.action_cable.mount_path = nil
@@ -56,7 +56,7 @@ Rails.application.configure do
 
   # Use the lowest log level to ensure availability of diagnostic information
   # when problems arise.
-  config.log_level = :debug
+  config.log_level = :fatal
 
   # Prepend all log lines with the following tags.
   config.log_tags = [ :request_id ]

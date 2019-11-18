@@ -5,4 +5,5 @@ class Armario < ApplicationRecord
   belongs_to :sleqp
   has_many :hardwares
   mount_uploader :diagrama, ArquivoUploader
+  has_paper_trail
 end

@@ -10,7 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_27_050010) do
+ActiveRecord::Schema.define(version: 2019_11_18_043231) do
+
+  create_table "acessos", force: :cascade do |t|
+    t.string "nome"
+    t.integer "status"
+    t.integer "tipo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer "sign_in_count", default: 0, null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string "current_sign_in_ip"
+    t.string "last_sign_in_ip"
+    t.index ["email"], name: "index_acessos_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_acessos_on_reset_password_token", unique: true
+  end
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -70,8 +90,8 @@ ActiveRecord::Schema.define(version: 2019_07_27_050010) do
 
   create_table "capacidades", force: :cascade do |t|
     t.string "nome_recurso"
-    t.string "total_recurso"
-    t.string "empregado"
+    t.float "total_recurso"
+    t.float "empregado"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -81,14 +101,6 @@ ActiveRecord::Schema.define(version: 2019_07_27_050010) do
     t.integer "capacidade_id", null: false
     t.index ["capacidade_id"], name: "index_capacidades_servicos_on_capacidade_id"
     t.index ["servico_id"], name: "index_capacidades_servicos_on_servico_id"
-  end
-
-  create_table "cargo_exercidos", force: :cascade do |t|
-    t.string "nome"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "usuario_id"
-    t.index ["usuario_id"], name: "index_cargo_exercidos_on_usuario_id"
   end
 
   create_table "cargos", force: :cascade do |t|
@@ -130,7 +142,6 @@ ActiveRecord::Schema.define(version: 2019_07_27_050010) do
     t.string "endereco"
     t.string "subordinacao"
     t.string "uasg"
-    t.integer "possui_od"
     t.text "missao_fim_om"
     t.string "efetivo"
     t.string "telefone_ctt_om"
@@ -143,6 +154,10 @@ ActiveRecord::Schema.define(version: 2019_07_27_050010) do
     t.string "nome_ch_sec_ti"
     t.string "nome_cmt_om"
     t.string "cel_cmt_om"
+    t.integer "tipo", default: 0
+    t.boolean "possui_posto_radio", default: false
+    t.text "descricao_posto_radio"
+    t.integer "qtd_operadores_radio"
     t.index ["cidade_id"], name: "index_clientes_on_cidade_id"
   end
 
@@ -258,10 +273,38 @@ ActiveRecord::Schema.define(version: 2019_07_27_050010) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "formacao_acads_talentos", id: false, force: :cascade do |t|
+    t.integer "formacao_acad_id", null: false
+    t.integer "talento_id", null: false
+    t.index ["formacao_acad_id"], name: "index_formacao_acads_talentos_on_formacao_acad_id"
+    t.index ["talento_id"], name: "index_formacao_acads_talentos_on_talento_id"
+  end
+
+  create_table "formacao_acads_usuarios", id: false, force: :cascade do |t|
+    t.integer "formacao_acad_id", null: false
+    t.integer "usuario_id", null: false
+    t.index ["formacao_acad_id"], name: "index_formacao_acads_usuarios_on_formacao_acad_id"
+    t.index ["usuario_id"], name: "index_formacao_acads_usuarios_on_usuario_id"
+  end
+
   create_table "formacao_mils", force: :cascade do |t|
     t.string "nome"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "formacao_mils_talentos", id: false, force: :cascade do |t|
+    t.integer "formacao_mil_id", null: false
+    t.integer "talento_id", null: false
+    t.index ["formacao_mil_id"], name: "index_formacao_mils_talentos_on_formacao_mil_id"
+    t.index ["talento_id"], name: "index_formacao_mils_talentos_on_talento_id"
+  end
+
+  create_table "formacao_mils_usuarios", id: false, force: :cascade do |t|
+    t.integer "formacao_mil_id", null: false
+    t.integer "usuario_id", null: false
+    t.index ["formacao_mil_id"], name: "index_formacao_mils_usuarios_on_formacao_mil_id"
+    t.index ["usuario_id"], name: "index_formacao_mils_usuarios_on_usuario_id"
   end
 
   create_table "fornecedors", force: :cascade do |t|
@@ -408,8 +451,8 @@ ActiveRecord::Schema.define(version: 2019_07_27_050010) do
     t.integer "tipo_banda"
     t.integer "meio_de_acesso"
     t.integer "tipo_link"
-    t.string "latencia"
-    t.string "jitter"
+    t.float "latencia"
+    t.float "jitter"
     t.string "disponibilidade"
     t.integer "link_proprio"
     t.datetime "created_at", null: false
@@ -434,14 +477,6 @@ ActiveRecord::Schema.define(version: 2019_07_27_050010) do
     t.string "nome"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "participou_projs", force: :cascade do |t|
-    t.string "nome"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "usuario_id"
-    t.index ["usuario_id"], name: "index_participou_projs_on_usuario_id"
   end
 
   create_table "redes", force: :cascade do |t|
@@ -472,7 +507,6 @@ ActiveRecord::Schema.define(version: 2019_07_27_050010) do
     t.string "descricao"
     t.string "origem_recurso"
     t.date "inicio_parecer"
-    t.date "validade_parecer"
     t.index ["cliente_id"], name: "index_requisicao_link_proprios_on_cliente_id"
   end
 
@@ -516,47 +550,31 @@ ActiveRecord::Schema.define(version: 2019_07_27_050010) do
     t.text "observacoes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "formacao_mil_id"
-    t.integer "formacao_acad_id"
     t.integer "cliente_id"
     t.integer "hierarq_id"
     t.index ["cliente_id"], name: "index_talentos_on_cliente_id"
-    t.index ["formacao_acad_id"], name: "index_talentos_on_formacao_acad_id"
-    t.index ["formacao_mil_id"], name: "index_talentos_on_formacao_mil_id"
     t.index ["hierarq_id"], name: "index_talentos_on_hierarq_id"
   end
 
   create_table "usuarios", force: :cascade do |t|
     t.string "nome"
-    t.integer "status"
-    t.integer "tipo"
     t.text "observacoes"
     t.string "telefone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer "sign_in_count", default: 0, null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string "current_sign_in_ip"
-    t.string "last_sign_in_ip"
     t.integer "cliente_id"
     t.integer "hierarq_id"
-    t.integer "formacao_mil_id"
-    t.integer "formacao_acad_id"
     t.string "nome_completo"
     t.string "idtmil"
     t.string "cpf"
+    t.text "cargos_exercidos"
+    t.text "projetos_que_participou"
+    t.integer "situacao", default: 1
     t.index ["cliente_id"], name: "index_usuarios_on_cliente_id"
     t.index ["email"], name: "index_usuarios_on_email", unique: true
-    t.index ["formacao_acad_id"], name: "index_usuarios_on_formacao_acad_id"
-    t.index ["formacao_mil_id"], name: "index_usuarios_on_formacao_mil_id"
     t.index ["hierarq_id"], name: "index_usuarios_on_hierarq_id"
-    t.index ["reset_password_token"], name: "index_usuarios_on_reset_password_token", unique: true
   end
 
   create_table "usuarios_vots", id: false, force: :cascade do |t|
@@ -566,6 +584,14 @@ ActiveRecord::Schema.define(version: 2019_07_27_050010) do
     t.index ["vot_id"], name: "index_usuarios_vots_on_vot_id"
   end
 
+  create_table "version_associations", force: :cascade do |t|
+    t.integer "version_id"
+    t.string "foreign_key_name", null: false
+    t.integer "foreign_key_id"
+    t.index ["foreign_key_name", "foreign_key_id"], name: "index_version_associations_on_foreign_key"
+    t.index ["version_id"], name: "index_version_associations_on_version_id"
+  end
+
   create_table "versions", force: :cascade do |t|
     t.string "item_type", null: false
     t.integer "item_id", null: false
@@ -573,7 +599,9 @@ ActiveRecord::Schema.define(version: 2019_07_27_050010) do
     t.string "whodunnit"
     t.text "object", limit: 1073741823
     t.datetime "created_at"
+    t.integer "transaction_id"
     t.index ["item_type", "item_id"], name: "index_versions_on_item_type_and_item_id"
+    t.index ["transaction_id"], name: "index_versions_on_transaction_id"
   end
 
   create_table "vms", force: :cascade do |t|
@@ -599,7 +627,19 @@ ActiveRecord::Schema.define(version: 2019_07_27_050010) do
     t.datetime "updated_at", null: false
     t.integer "cliente_id"
     t.string "relatorio"
+    t.string "titulo"
     t.index ["cliente_id"], name: "index_vots_on_cliente_id"
+  end
+
+  create_table "vpns", force: :cascade do |t|
+    t.string "dono_da_conta"
+    t.text "motivo_da_conta"
+    t.text "caracteristicas"
+    t.string "termo_responsabilidade"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "pacotes_servico_id"
+    t.index ["pacotes_servico_id"], name: "index_vpns_on_pacotes_servico_id"
   end
 
   create_table "workstations", force: :cascade do |t|

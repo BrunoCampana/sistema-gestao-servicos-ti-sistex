@@ -24,6 +24,12 @@ pt-BR:
         other: "%{count} horas"
   activerecord:
     models:
+      vpn:
+        one: 'Conta VPN'
+        other: 'Contas de VPN'
+      acesso:
+        one: 'Usuário'
+        other: 'Usuários'
       vm:
         one: 'Máquina Virtual'
         other: 'Máquinas Virtuais'
@@ -67,14 +73,14 @@ pt-BR:
         one: 'Atividade Capacitação Externa'
         other: 'Atividades Capacitação Externa'
       curso_ministrado:
-        one: 'Atividades Capacitação Interna CTA'
-        other: 'Atividades Capacitação Interna CTA'
+        one: 'Atividades Capacitação Interna do CT/CTA'
+        other: 'Atividades Capacitação Interna CT/CTA'
       capacidade:
         one: 'Capacidade do Sv TI'
         other: 'Capacidade dos Sv TI'
       cargo:
-        one: 'Cargo do CTA'
-        other: 'Cargos do CTA'
+        one: 'Cargo do CT/CTA'
+        other: 'Cargos do CT/CTA'
       cidade:
         one: 'Cidade da OM cliente'
         other: 'Cidades das OMs clientes'
@@ -82,8 +88,8 @@ pt-BR:
         one: 'OM Cliente'
         other: 'OMs Clientes'
       encargo:
-        one: 'Encargo técnico do CTA'
-        other: 'Encargos técnicos do CTA'
+        one: 'Encargo técnico do CT/CTA'
+        other: 'Encargos técnicos do CT/CTA'
       fornecedor:
         one: 'Fornecedor'
         other: 'Fornecedores'
@@ -103,8 +109,8 @@ pt-BR:
         one: 'Link contratado pela OM'
         other: 'Links contratados pelas OMs'
       usuario:
-        one: 'Usuário'
-        other: 'Usuários'
+        one: 'Perfil Profissional'
+        other: 'Perfis Profissionais'
       vot:
         one: 'VOT'
         other: 'VOTs'
@@ -123,16 +129,22 @@ pt-BR:
       curso:
         one: 'Curso Realizado'
         other: 'Cursos Realizados'
-      cargo_exercido:
-        one: 'Cargo Exercido'
-        other: 'Cargos Exercidos'
-      participou_proj:
-        one: 'Projeto que participou'
-        other: 'Projetos que participou'
       idioma:
         one: 'Idioma que fala'
         other: 'Idiomas que fala'
     attributes:
+      vpn:
+        dono_da_conta: 'Usuário da conta'
+        motivo_da_conta: 'Justificativa de criação da conta'
+        caracteristicas: 'Características da conta'
+        cliente: 'OM da conta'
+        termo_responsabilidade: 'Termo de Responsabilidade assinado pelo usuário'
+      acesso:
+        nome: 'Nome de Guerra'
+        email: 'Email'
+        senha: 'Senha'
+        status: 'Status do usuário'
+        tipo: 'Perfil de acesso'
       vm:
         nome: 'Nome'
         os: 'SO (com versão)'
@@ -215,16 +227,10 @@ pt-BR:
         telefone: 'Telefone'
         habilidades: 'Habilidades que possui'
         observacoes: 'Observações'
-        curso_ministrados: 'Cursos que participou no CTA'
+        curso_ministrados: 'Cursos que participou no CT/CTA'
       idioma:
         nome: 'Descrição'
         usuarios: 'Militares do CTA com esse nível de idioma'
-      participou_proj:
-        nome: 'Descrição'
-        usuarios: 'Militares do CTA que já participaram desse projeto'
-      cargo_exercido:
-        nome: 'Nome'
-        usuarios: 'Militares do CTA que já exerceram o cargo'
       curso:
         nome: 'Nome'
         usuarios: 'Militares do CTA que fizeram esse curso'
@@ -248,11 +254,11 @@ pt-BR:
       hierarq:
         nome: 'Nome'
         usuarios: 'Usuários que possuem o grau hierárquico'
-        talentos: 'Militares de outras OMs que fizeram curso no CTA'
+        talentos: 'Militares de outras OMs que fizeram curso no CT/CTA'
       servico:
         nome: 'Nome'
         pacotes_servico: 'Serviço provido nos seguintes pacotes'
-        fornecedors: 'Fornecedores do CTA relacionados ao serviço'
+        fornecedors: 'Fornecedores do CT/CTA relacionados ao serviço'
         indisponibilidades: 'Eventos de indisponibilidade do serviço'
         capacidades: 'Capacidades do serviço'
         ans_tis: 'ANSs relacionados ao serviço'
@@ -273,7 +279,7 @@ pt-BR:
         conclusao_checada: 'Certificado de conclusão checado?'
         custo: 'Custo (R$)'
         org_aplicadora: 'Organização aplicadora'
-        usuarios: 'Usuários'
+        usuarios: 'Profissionais'
       curso_ministrado:
         nome: 'Nome do curso'
         tipo_cpc: 'Tipo de capacitação'
@@ -306,8 +312,6 @@ pt-BR:
         nome_completo: 'Nome Completo'
         idtmil: 'Identidade Militar'
         cpf: 'CPF'
-        status: 'Status do usuário'
-        tipo: 'Perfil de acesso do usuário'
         observacoes: 'Observações'
         telefone: 'Telefone'
         hierarq: 'Grau hierárquico'
@@ -326,12 +330,15 @@ pt-BR:
         ParticipouProjs: 'Projetos de engenharia e/ou TI que participou'
         fisc_titulars: 'Contratos em que é Fiscal Titular'
         fisc_substs: 'Contratos em que é Fiscal Substituto'
+        cargos_exercidos: 'Cargos que exerceu (no EB e em outras organizações)'
+        projetos_que_participou: 'Projetos de TI que participou'
+        situacao: 'Situação'
       cliente:
         nome: 'Nome'
         endereco: 'Endereço'
         subordinacao: 'Subordinação'
         uasg: 'UASG'
-        possui_od: 'OM possui OD?'
+        tipo: 'Tipo'
         missao_fim_om: 'Missão fim da OM'
         efetivo: 'Efetivo de Of e Sgts'
         nome_ch_sec_info: 'Nome Ch Seç Info'
@@ -343,17 +350,20 @@ pt-BR:
         anotacoes: 'Anotações'
         inventario: 'Inventário de TI da OM'
         vots: 'VOTs recebidas'
-        usuarios: 'Usuários que possui'
+        usuarios: 'Profissionais que possui'
         requisicao_link_proprio: 'Link contratado pela OM ou requisições'
         pacotes_servico: 'Pacote de serviços'
         nome_ch_sec_ti: 'Nome do Ch Seç TI'
         nome_cmt_om: 'Nome Cmt OM'
-        cel_cmt_om: 'Celular Cmt OM'
-        talentos: 'Militares da OM que já fizeram curso no CTA'
+        cel_cmt_om: 'Telefone do Cmt OM'
+        talentos: 'Militares da OM que já fizeram curso no CT/CTA'
+        possui_posto_radio: 'Possui Posto Rádio da Rede Rádio-Fixa do EB?'
+        descricao_posto_radio: 'Descrição do Posto Rádio'
+        qtd_operadores_radio: 'Quantidade de operadores fixos (diariamente)'
       requisicao_link_proprio:
         descricao: 'Descrição'
         cliente_id: 'OM requerente'
-        parecer_cta: 'Parecer do 4º CTA'
+        parecer_cta: 'Parecer do CT/CTA'
         parecer_citex: 'Parecer do CITEx'
         status: 'Situação atual da requisição de link próprio'
         possui_link_proprio: 'OM possui atualmente link próprio?'
@@ -400,6 +410,7 @@ pt-BR:
         nome: 'Motivo da indisponibilidade'
         indisponibilidades: 'Eventos de indisponibilidade causados por esse motivo'
       vot:
+        titulo: 'Título da VOT'
         cliente_id: 'OM cliente apoiada'
         data_inicio: 'Data de início'
         data_termino: 'Data de término'

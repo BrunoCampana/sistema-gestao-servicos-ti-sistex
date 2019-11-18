@@ -3,4 +3,5 @@ class Capacidade < ApplicationRecord
   def name
     nome_recurso
   end
+  has_paper_trail
 end

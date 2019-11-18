@@ -8,4 +8,5 @@ class AnsTi < ApplicationRecord
   end
 
   mount_uploader :contrato, ArquivoUploader
+  has_paper_trail
 end
