@@ -7,6 +7,8 @@ class Ability
       if acesso.tipo == 'Admin'
         can :manage, :all
         can :export, :all
+        can :import, :all
+        can :nestable, [Rede, Sleqp, Armario, Hardware, Software, Equipamento]
       elsif acesso.tipo == 'SecCpc'
         can :access, :rails_admin
         can [:manage, :export], [Usuario, FormacaoMil, CertTi, FormacaoAcad, Curso, Idioma, Cargo, Habilidade, Encargo, CursoMinistrado, Talento, CursoExterno, Acesso]

@@ -1108,10 +1108,9 @@ RailsAdmin.config do |config|
     pdf do
       only Cliente
     end
-
-    ## With an audit adapter, you can add:
-    #history_index
-    #history_show
+    clone
+    import
+    charts
   end
 end
 #I added a teste comment

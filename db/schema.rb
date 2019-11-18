@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_18_043231) do
+ActiveRecord::Schema.define(version: 2019_11_18_055057) do
 
   create_table "acessos", force: :cascade do |t|
     t.string "nome"
@@ -477,6 +477,20 @@ ActiveRecord::Schema.define(version: 2019_11_18_043231) do
     t.string "nome"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "rails_admin_settings", force: :cascade do |t|
+    t.boolean "enabled", default: true
+    t.string "kind", default: "string", null: false
+    t.string "ns", default: "main"
+    t.string "key", null: false
+    t.text "raw"
+    t.string "label"
+    t.string "file"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["key"], name: "index_rails_admin_settings_on_key"
+    t.index ["ns", "key"], name: "index_rails_admin_settings_on_ns_and_key", unique: true
   end
 
   create_table "redes", force: :cascade do |t|

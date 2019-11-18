@@ -26,7 +26,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem 'rails_admin_clone'
 gem 'rails_admin'
 gem 'devise', '~> 4.3'
 gem 'cancancan', '~> 1.15.0'
@@ -35,7 +35,7 @@ gem 'rails_admin_rollincode', '~> 1.0'
 gem 'prawn-rails'
 #gem 'gruff'
 
-#gem 'rails_admin_charts'
+gem 'rails_admin_charts'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
@@ -81,3 +81,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'dotenv-rails'
 gem 'paper_trail'
 gem 'paper_trail-association_tracking'
+gem 'rails_admin_settings'
+gem "rails_admin_import", "~> 2.2"
