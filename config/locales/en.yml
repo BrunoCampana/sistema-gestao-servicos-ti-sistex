@@ -1,34 +1,3 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
   datetime:
     distance_in_words:
@@ -176,6 +145,15 @@ en:
         senha: 'Senha'
         status: 'Status do usuário'
         tipo: 'Perfil de acesso'
+        created_at: 'Data-hora de criação do usuário'
+        updated_at: 'Data-hora da última atualização do usuário'
+        sign_in_count: 'Quantidade de acessos ao sistema'
+        current_sign_in_at: 'Acesso atual em'
+        last_sign_in_at: 'Último acesso em'
+        current_sign_in_ip: 'IP do acesso atual'
+        last_sign_in_ip: 'IP do último acesso'
+        failed_attempts: 'Tentativas de acesso falhas (erro de senha)'
+        locked_at: 'Data-hora em que perfil foi bloqueado (apenas o último que ocorreu)'
       vm:
         nome: 'Nome'
         os: 'SO (com versão)'
@@ -579,6 +557,14 @@ en:
         title: "Download de arquivo formato PDF"
         menu: "PDF"
         breadcrumb: "Download de arquivo formato PDF"
+      import:
+        title: "Importar novos registros"
+        menu: "Importar"
+        breadcrumb: "Importar"
+      clone:
+        title: "Clonar registro"
+        menu: "Clonar registro"
+        breadcrumb: "Clonar registro"
     form:
       cancel: "Cancelar"
       basic_info: "Informação Básica"

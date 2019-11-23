@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_18_055057) do
+ActiveRecord::Schema.define(version: 2019_11_23_175358) do
 
   create_table "acessos", force: :cascade do |t|
     t.string "nome"
@@ -28,8 +28,12 @@ ActiveRecord::Schema.define(version: 2019_11_18_055057) do
     t.datetime "last_sign_in_at"
     t.string "current_sign_in_ip"
     t.string "last_sign_in_ip"
+    t.integer "failed_attempts", default: 0, null: false
+    t.string "unlock_token"
+    t.datetime "locked_at"
     t.index ["email"], name: "index_acessos_on_email", unique: true
     t.index ["reset_password_token"], name: "index_acessos_on_reset_password_token", unique: true
+    t.index ["unlock_token"], name: "index_acessos_on_unlock_token", unique: true
   end
 
   create_table "active_storage_attachments", force: :cascade do |t|
@@ -577,7 +581,6 @@ ActiveRecord::Schema.define(version: 2019_11_18_055057) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "email", default: "", null: false
-    t.datetime "remember_created_at"
     t.integer "cliente_id"
     t.integer "hierarq_id"
     t.string "nome_completo"
@@ -587,7 +590,6 @@ ActiveRecord::Schema.define(version: 2019_11_18_055057) do
     t.text "projetos_que_participou"
     t.integer "situacao", default: 1
     t.index ["cliente_id"], name: "index_usuarios_on_cliente_id"
-    t.index ["email"], name: "index_usuarios_on_email", unique: true
     t.index ["hierarq_id"], name: "index_usuarios_on_hierarq_id"
   end
 

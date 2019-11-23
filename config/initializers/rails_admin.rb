@@ -1106,15 +1106,13 @@ RailsAdmin.config do |config|
     delete
     show_in_app
     pdf do
-      only Cliente
+      only ['Usuario', 'Cliente', 'Cidade', 'Vot']
     end
     clone
     import
     charts
   end
 end
-#I added a teste comment
-
 
 =begin
 visible do
