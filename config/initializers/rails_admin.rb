@@ -17,6 +17,7 @@ RailsAdmin.config do |config|
       field :nome_completo do
         help  'Insira o nome completo apenas com letras maiúsculas. Ex: STEPHEN HAWKING'
       end
+      field :situacao
       field :telefone do
         help 'Insira somente os 2 digitos do DDD e os 9 dígitos do número. Ex: 929881132200'
       end
@@ -70,6 +71,7 @@ RailsAdmin.config do |config|
       field :id
       field :hierarq
       field :nome
+      field :situacao
       field :email
       field :telefone
     end
@@ -77,6 +79,7 @@ RailsAdmin.config do |config|
       field :nome
       field :nome_completo
       field :hierarq
+      field :situacao
       field :telefone
       field :email
       field :cliente
