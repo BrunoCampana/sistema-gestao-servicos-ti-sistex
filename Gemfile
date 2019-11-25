@@ -83,3 +83,5 @@ gem 'paper_trail'
 gem 'paper_trail-association_tracking'
 gem 'rails_admin_settings'
 gem "rails_admin_import", "~> 2.2"
+
+gem 'therubyracer',  platforms: :ruby
