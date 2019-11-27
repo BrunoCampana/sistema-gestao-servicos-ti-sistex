@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_23_175358) do
+ActiveRecord::Schema.define(version: 2019_11_27_210416) do
 
   create_table "acessos", force: :cascade do |t|
     t.string "nome"
@@ -111,8 +111,6 @@ ActiveRecord::Schema.define(version: 2019_11_23_175358) do
     t.string "nome"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "usuario_id"
-    t.index ["usuario_id"], name: "index_cargos_on_usuario_id"
   end
 
   create_table "cargos_habilidades", id: false, force: :cascade do |t|
@@ -120,6 +118,13 @@ ActiveRecord::Schema.define(version: 2019_11_23_175358) do
     t.integer "cargo_id", null: false
     t.index ["habilidade_id"], name: "index_cargos_habilidades_on_habilidade_id"
     t.index [nil], name: "index_cargos_habilidades_on_usuario_id"
+  end
+
+  create_table "cargos_usuarios", id: false, force: :cascade do |t|
+    t.integer "cargo_id", null: false
+    t.integer "usuario_id", null: false
+    t.index ["cargo_id"], name: "index_cargos_usuarios_on_cargo_id"
+    t.index ["usuario_id"], name: "index_cargos_usuarios_on_usuario_id"
   end
 
   create_table "cert_tis", force: :cascade do |t|

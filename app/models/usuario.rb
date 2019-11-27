@@ -3,7 +3,7 @@ class Usuario < ApplicationRecord
   belongs_to :hierarq
   belongs_to :cliente
   has_and_belongs_to_many :idiomas
-  has_many :cargos
+  has_and_belongs_to_many :cargos
   has_and_belongs_to_many :habilidades
   has_and_belongs_to_many :formacao_mil
   has_and_belongs_to_many :formacao_acad

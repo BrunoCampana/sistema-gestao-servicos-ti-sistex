@@ -80,12 +80,12 @@ module RailsAdmin
                       data += [["#{variable_name}","#{@value}"]]
                     end
                   end
-                  if @object.formacao_mils.count > 0
+                  if @object.formacao_mil.count > 0
                     variable_name = "Formação(ões) Militar(es)"
                     value = ""
-                    counter = @object.formacao_mils.count + 1
+                    counter = @object.formacao_mil.count + 1
                     counting = 1
-                    @object.formacao_mils.each do |var|
+                    @object.formacao_mil.each do |var|
                       if counting == 1
                       value += "#{var.name}"
                       counting += 1
@@ -96,12 +96,12 @@ module RailsAdmin
                     end
                     data += [["#{variable_name}","#{value}"]]
                   end
-                  if @object.formacao_acads.count > 0
+                  if @object.formacao_acad.count > 0
                     variable_name = "Formação(ões) Acadêmica(s)"
                     value = ""
-                    counter = @object.formacao_acads.count + 1
+                    counter = @object.formacao_acad.count + 1
                     counting = 1
-                    @object.formacao_acads.each do |var|
+                    @object.formacao_acad.each do |var|
                       if counting == 1
                       value += "#{var.name}"
                       counting += 1
@@ -381,10 +381,10 @@ module RailsAdmin
                 elsif type_report == "Vot"
                   needs_table = true
                   needs_text = false
-                  @name = @object.id
+                  @name = @object.name
                   subject = "Relatório da Vot \##{@name}"
                   data = []
-                  header = [["Número da VOT", "#{@name}"]]
+                  header = [["Título da VOT", "#{@name}"]]
                   data += header
                   if @object.cliente
                     variable_name = "Cliente"

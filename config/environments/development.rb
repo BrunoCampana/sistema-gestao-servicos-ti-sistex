@@ -15,8 +15,12 @@ Rails.application.configure do
   config.eager_load = true
 
   # Show full error reports.
+  # Ligar e desligar sempre que for desenvolver:
   config.consider_all_requests_local = false
-  config.log_level = :fatal
+  config.log_level = :fatal #:debug
+  config.action_mailer.raise_delivery_errors = false
+  config.assets.debug = true
+  config.action_view.raise_on_missing_translations = false
 
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
@@ -37,7 +41,6 @@ Rails.application.configure do
   config.active_storage.service = :local
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = true
 
   config.action_mailer.perform_caching = true
 
@@ -53,13 +56,11 @@ Rails.application.configure do
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
-  config.assets.debug = true
 
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
   # Raises error for missing translations
-  config.action_view.raise_on_missing_translations = true
 
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.

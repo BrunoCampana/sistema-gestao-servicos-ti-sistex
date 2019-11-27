@@ -66,7 +66,7 @@ RailsAdmin.config do |config|
       end
     end
     list do
-      sort_by :hierarq_id
+      sort_by :nome
       sort_reverse true
       field :id
       field :hierarq
@@ -96,6 +96,7 @@ RailsAdmin.config do |config|
       end
     end
     list do
+      sort_by :id
       sort_reverse false
       configure :created_at do
         hide
@@ -110,6 +111,8 @@ RailsAdmin.config do |config|
     parent Usuario
     weight (-14.8)
     list do
+      sort_by :nome
+      sort_reverse true
       configure :created_at do
         hide
       end
@@ -128,7 +131,8 @@ RailsAdmin.config do |config|
     parent Usuario
     weight (-14.75)
     list do
-      sort_reverse false
+      sort_by :nome
+      sort_reverse true
       configure :created_at do
         hide
       end
@@ -147,7 +151,8 @@ RailsAdmin.config do |config|
     parent Usuario
     weight (-14.7)
     list do
-      sort_reverse false
+      sort_by :nome
+      sort_reverse true
       configure :created_at do
         hide
       end
@@ -166,6 +171,8 @@ RailsAdmin.config do |config|
     parent Usuario
     weight (-14.6)
     list do
+      sort_by :nome
+      sort_reverse true
       configure :created_at do
         hide
       end
@@ -184,6 +191,7 @@ RailsAdmin.config do |config|
     parent Usuario
     weight (-14.3)
     list do
+      sort_by :nome
       sort_reverse false
       configure :created_at do
         hide
@@ -203,7 +211,8 @@ RailsAdmin.config do |config|
     parent Usuario
     weight (-14)
     list do
-      sort_reverse false
+      sort_by :nome
+      sort_reverse true
       configure :created_at do
         hide
       end
@@ -222,7 +231,8 @@ RailsAdmin.config do |config|
     parent Usuario
     weight (-12)
     list do
-      sort_reverse false
+      sort_by :nome
+      sort_reverse true
       configure :created_at do
         hide
       end
@@ -241,6 +251,7 @@ RailsAdmin.config do |config|
     parent Usuario
     weight (-11.9)
     list do
+      sort_by :nome
       sort_reverse false
       configure :created_at do
         hide
@@ -260,6 +271,7 @@ RailsAdmin.config do |config|
     navigation_label 'Capacitação de TI'
     weight (-11.8)
     list do
+      sort_by :nome
       sort_reverse true
       field :id
       field :nome
@@ -299,6 +311,8 @@ RailsAdmin.config do |config|
     parent CursoMinistrado
     weight (-11.7)
     list do
+      sort_by :nome
+      sort_reverse true
       field :id
       field :hierarq
       field :nome
@@ -383,7 +397,8 @@ RailsAdmin.config do |config|
     navigation_label 'Tudo sobre OMs Clientes'
     weight (-11)
     list do
-      sort_reverse false
+      sort_by :nome
+      sort_reverse true
       field :id
       field :nome
       field :cidade
@@ -393,7 +408,7 @@ RailsAdmin.config do |config|
     end
     edit do
       field :nome do
-        help 'Insira o nome da OM por extenso. Ex: Instituto Militar de Engenharia'
+        help 'Insira o nome da OM abreviado. Ex: 1º BCom Sl'
       end
       field :cidade do
         help 'Selecione a cidade onde encontra-se a OM.'
@@ -462,6 +477,7 @@ RailsAdmin.config do |config|
     parent Cliente
     weight (-10)
     list do
+      sort_by :nome
       sort_reverse true
       configure :created_at do
         hide
@@ -554,7 +570,8 @@ RailsAdmin.config do |config|
     parent Cliente
     weight (-9)
     list do
-      sort_reverse false
+      sort_by :cliente_id
+      sort_reverse true
       field :id
       field :cliente
       field :velocidade_intranet
@@ -695,7 +712,8 @@ RailsAdmin.config do |config|
     navigation_label 'Serviços de TI'
     weight (-6)
     list do
-      sort_reverse false
+      sort_by :nome
+      sort_reverse true
       field :id
       field :nome
       configure :created_at do
@@ -716,6 +734,7 @@ RailsAdmin.config do |config|
     parent Servico
     weight (-5)
     list do
+      sort_by :titulo
       sort_reverse true
       field :cliente
       field :titulo
@@ -874,6 +893,7 @@ RailsAdmin.config do |config|
     parent Servico
     weight (-2.7)
     list do
+      sort_by :nome_fornecedor
       sort_reverse true
       field :id
       field :nome_fornecedor
@@ -1037,6 +1057,48 @@ RailsAdmin.config do |config|
     navigation_label 'Administração do App'
     weight (0)
     exclude_fields :reset_password_token, :unlock_token
+    list do
+      sort_by :nome
+      sort_reverse true
+      field :id
+      field :nome
+      field :status
+      field :tipo
+      field :email
+      field :last_sign_in_at
+    end
+    show do
+      field :nome
+      field :status
+      field :tipo
+      field :email
+      field :created_at
+      field :updated_at
+      field :sign_in_count
+      field :current_sign_in_at
+      field :last_sign_in_at
+      field :current_sign_in_ip
+      field :last_sign_in_ip
+      field :failed_attempts
+      field :locked_at
+      field :reset_password_sent_at
+    end
+    edit do
+      field :nome
+      field :status do
+        visible do
+          bindings[:view]._current_user.tipo.include?("Admin")
+        end
+      end
+      field :tipo do
+        visible do
+          bindings[:view]._current_user.tipo.include?("Admin")
+        end
+      end
+      field :email
+      include_all_fields
+      exclude_fields :created_at, :updated_at, :reset_password_sent_at, :remember_created_at, :sign_in_count, :current_sign_in_at, :last_sign_in_at, :current_sign_in_ip, :last_sign_in_ip, :failed_attempts, :locked_at, :unlock_token, :reset_password_token
+    end
   end
 
   config.excluded_models = ["ActiveStorage", "Attachment", "Blob"]

@@ -563,8 +563,8 @@ en:
         breadcrumb: "Importar"
       clone:
         title: "Clonar registro"
-        menu: "Clonar registro"
-        breadcrumb: "Clonar registro"
+        menu: "Clonar"
+        breadcrumb: "Clonar"
     form:
       cancel: "Cancelar"
       basic_info: "Informação Básica"

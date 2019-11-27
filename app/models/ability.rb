@@ -14,28 +14,34 @@ class Ability
         can [:manage, :export], [Usuario, FormacaoMil, CertTi, FormacaoAcad, Curso, Idioma, Cargo, Habilidade, Encargo, CursoMinistrado, Talento, CursoExterno, Acesso]
         can :update, [Cliente, Hierarq]
         can [:read, :export], [Hierarq, Cliente, RequisicaoLinkProprio, PacotesServico, Vot, Servico, AnsTi, Indisponibilidade, Capacidade, Fornecedor, Rede, Workstation, VPN]
+        can :update, Acesso, :id => acesso.id
       elsif acesso.tipo == 'SecGer'
         can :access, :rails_admin
         can [:read, :export], [Usuario, Hierarq, FormacaoMil, FormacaoAcad, CursoMinistrado, Talento, CursoExterno, Workstation, Vm, Vpn]
         can [:manage, :export], [Cliente, RequisicaoLinkProprio, PacotesServico, Vot, Servico, AnsTi, Indisponibilidade, Capacidade, Fornecedor, Rede, Sleqp, Armario, Hardware, Software, Equipamento, Mudanca]
         can [:update, :read], [Cidade, Parado, Motivo]
+        can :update, Acesso, :id => acesso.id
       elsif acesso.tipo == 'ChDT'
         can :access, :rails_admin
         can [:read, :export], [Hierarq, FormacaoMil, CertTi, FormacaoAcad, Curso, Cargo, Habilidade, AnsTi, Armario, Capacidade, Cidade, Cliente, CursoExterno, CursoMinistrado, Equipamento, Fornecedor, Hardware, PacotesServico, RequisicaoLinkProprio, Servico, Sleqp, Software, Talento, Usuario, Vm, Workstation, Rede, Parado, Servico, Motivo, Vpn]
         can :manage, Mudanca
         can [:create, :update, :read, :export], [Vot, Indisponibilidade]
+        can :update, Acesso, :id => acesso.id
       elsif acesso.tipo == 'SecLogTI'
         can :access, :rails_admin
         can [:read, :export], [Hierarq, FormacaoMil, FormacaoAcad, AnsTi, Armario, Capacidade, Cidade, Cliente, CursoExterno, CursoMinistrado, Equipamento, Fornecedor, Hardware, PacotesServico, RequisicaoLinkProprio, Servico, Sleqp, Software, Talento, Usuario, Vm, Workstation, Indisponibilidade, Mudanca, Rede, Vot, Vpn]
         can :create, Mudanca
+        can :update, Acesso, :id => acesso.id
       elsif acesso.tipo == 'SecProj'
         can :access, :rails_admin
         can [:read, :export], [Hierarq, FormacaoMil, FormacaoAcad, AnsTi, Armario, Capacidade, Cidade, Cliente, CursoExterno, CursoMinistrado, Equipamento, Fornecedor, Hardware, PacotesServico, RequisicaoLinkProprio, Servico, Sleqp, Software, Talento, Usuario, Vm, Workstation, Rede, Motivo, Parado, Vpn]
         can [:create, :read, :update, :export], [Indisponibilidade, Vot]
+        can :update, Acesso, :id => acesso.id
       elsif acesso.tipo == 'SPC'
         can :access, :rails_admin
         can [:read, :export], [Hierarq, FormacaoMil, FormacaoAcad, AnsTi, Armario, Capacidade, Cidade, Cliente, CursoExterno, CursoMinistrado, Equipamento, Hardware, Indisponibilidade, PacotesServico, Rede, RequisicaoLinkProprio, Servico, Sleqp, Software, Talento, Usuario, Vm, Vot, Workstation, Vpn]
         can [:read, :create, :update, :export], [Mudanca, Fornecedor]
+        can :update, Acesso, :id => acesso.id
       elsif acesso.tipo == 'SSI'
         can :access, :rails_admin
         can :manage, Vpn
@@ -43,23 +49,28 @@ class Ability
         can [:read, :create, :update, :export], Mudanca
         can [:update, :read, :export], Fornecedor
         can [:update, :read, :export, :create], [Indisponibilidade, Vot]
+        can :update, Acesso, :id => acesso.id
       elsif acesso.tipo == 'Chefia'
         can :access, :rails_admin
         can [:read, :export], [Hierarq, FormacaoMil, CertTi, FormacaoAcad, Curso, Cargo, Habilidade, AnsTi, Armario, Capacidade, Cidade, Cliente, CursoExterno, Fornecedor, CursoMinistrado, Equipamento, Hardware, Indisponibilidade, PacotesServico, Rede, RequisicaoLinkProprio, Servico, Sleqp, Software, Talento, Usuario, Vm, Vot, Workstation, Vpn]
         can [:manage, :export], Mudanca
+        can :update, Acesso, :id => acesso.id
       elsif acesso.tipo == 'Outros'
         can :access, :rails_admin
         can [:read, :export], [Hierarq, FormacaoMil, FormacaoAcad, AnsTi, Armario, Capacidade, Cidade, Cliente, CursoExterno, Fornecedor, CursoMinistrado, Equipamento, Hardware, Indisponibilidade, PacotesServico, Rede, RequisicaoLinkProprio, Servico, Sleqp, Software, Talento, Usuario, Vot, Workstation, Mudanca]
+        can :update, Acesso, :id => acesso.id
       elsif acesso.tipo == 'SecInfo'
         can :access, :rails_admin
         can [:read, :export], [Cliente, Hierarq, FormacaoMil, FormacaoAcad, CursoExterno, CursoMinistrado, Equipamento, Fornecedor, Talento, Usuario, Vm, Vot]
         can [:manage, :export], Workstation
+        can :update, Acesso, :id => acesso.id
       elsif acesso.tipo == 'DO'
         can :access, :rails_admin
         can [:read, :export], [Hierarq, FormacaoMil, FormacaoAcad, AnsTi, Cidade, CursoExterno, CursoMinistrado, PacotesServico, RequisicaoLinkProprio, Talento, Workstation, Cliente, Servico, Usuario, Motivo, Parado, Vpn]
         can [:manage, :export], [Armario, Capacidade, Equipamento, Fornecedor, Hardware, Indisponibilidade, Mudanca, Rede, Sleqp, Software, Vm]
         can [:create, :read, :update, :export], Vot
         can :update, [Cliente]
+        can :update, Acesso, :id => acesso.id
       end
     else
       can :access, :rails_admin
