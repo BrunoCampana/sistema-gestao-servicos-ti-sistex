@@ -1,5 +1,3 @@
-
-=begin
 Acesso.create! nome: 'Campana', status: 1, tipo: 0, email: 'campana@4cta.eb.mil.br', password: 'password'
 
 Hierarq.create! nome: 'FC'
@@ -78,8 +76,7 @@ Idioma.create! nome: 'Espanhol: consegue falar frases básicas'
 Idioma.create! nome: 'Espanhol: consegue travar um diálogo'
 Idioma.create! nome: 'Espanhol: consegue escrever frases curtas'
 Idioma.create! nome: 'Espanhol: consegue escrever artigos longos'
-=end
-#=begin
+
 Cargo.create! nome: 'Ch CT/CTA'
 Cargo.create! nome: 'SCh CT/CTA'
 Cargo.create! nome: 'Ch Seç de Planejamento e Controle'
@@ -161,8 +158,7 @@ Cargo.create! nome: 'Aux Seç de Serviços Gerais'
 Cargo.create! nome: 'Ch Seç de Manutenção e Transporte'
 Cargo.create! nome: 'Adj Seç de Manutenção e Transporte'
 Cargo.create! nome: 'Aux Seç de Manutenção e Transporte'
-#=end
-=begin
+
 Habilidade.create! nome: 'Administração de Base de Dados'
 Habilidade.create! nome: 'Administração de Rede Rádio'
 Habilidade.create! nome: 'Administração de Rede Telefônica VoIP'
@@ -394,6 +390,3 @@ Motivo.create! nome: 'Superaquecimento de componente eletrônico'
 Motivo.create! nome: 'Superaquecimento de HW'
 Motivo.create! nome: 'Switch do DC'
 Motivo.create! nome: 'Indeterminado'
-=end
-
-#sdsdsds
