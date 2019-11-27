@@ -1,1 +1,3 @@
 ./tmp/cache/**/*
+
+/db/development.sqlite3
