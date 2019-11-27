@@ -1036,6 +1036,7 @@ RailsAdmin.config do |config|
   config.model Acesso do
     navigation_label 'Administração do App'
     weight (0)
+    exclude_fields :reset_password_token, :unlock_token
   end
 
   config.excluded_models = ["ActiveStorage", "Attachment", "Blob"]
