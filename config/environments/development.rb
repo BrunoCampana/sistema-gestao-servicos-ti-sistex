@@ -19,7 +19,6 @@ Rails.application.configure do
   config.consider_all_requests_local = false
   config.log_level = :fatal #:debug
   config.action_mailer.raise_delivery_errors = false
-  config.assets.debug = true
   config.action_view.raise_on_missing_translations = false
 
   # Enable/disable caching. By default caching is disabled.
@@ -41,6 +40,8 @@ Rails.application.configure do
   config.active_storage.service = :local
 
   # Don't care if the mailer can't send.
+
+  config.assets.debug = true
 
   config.action_mailer.perform_caching = true
 

@@ -918,7 +918,7 @@ RailsAdmin.config do |config|
         help 'Insira a data de término de vigência do contrato.'
       end
       field :contrato
-      field :proposto do
+      field :preposto do
         help 'Insira o nome e cargo do preposto da contratada (preposto é o profissional responsável por prestar assistência ao CT/CTA sobre o contrato, um gerente de conta).'
       end
       field :tels_ctt
