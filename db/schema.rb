@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_27_210416) do
+ActiveRecord::Schema.define(version: 2019_12_02_172843) do
 
   create_table "acessos", force: :cascade do |t|
     t.string "nome"
@@ -455,7 +455,7 @@ ActiveRecord::Schema.define(version: 2019_11_27_210416) do
   end
 
   create_table "pacotes_servicos", force: :cascade do |t|
-    t.string "velocidade_intranet"
+    t.integer "velocidade_intranet"
     t.integer "velocidade_internet"
     t.integer "tipo_banda"
     t.integer "meio_de_acesso"

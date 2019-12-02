@@ -8,4 +8,10 @@ class PacotesServico < ApplicationRecord
   enum meio_de_acesso: ["REME Manaus", "REME Tabatinga", "PP", "REME Porto Velho", "REME São Gabriel da Cachoeira", "REME Boa Vista", "REME Tefé"]
   enum tipo_link: [:Satelital, :Óptico, :Rádio]
   has_paper_trail
+
+  def name
+    if cliente
+      cliente.nome
+    end
+  end
 end

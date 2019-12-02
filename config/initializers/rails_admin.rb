@@ -1161,7 +1161,11 @@ RailsAdmin.config do |config|
   # config.show_gravatar = true
 
   config.actions do
-    dashboard                     # mandatory
+    dashboard do
+      register_instance_option :auditing_versions_limit do
+        10
+      end
+    end                     # mandatory
     index                         # mandatory
     new
     export
