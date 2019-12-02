@@ -505,7 +505,6 @@ RailsAdmin.config do |config|
       field :parecer_cta
       field :parecer_citex
       field :inicio_parecer
-      field :validade_parecer
       field :valor_mensal
       include_all_fields
     end
