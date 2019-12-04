@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_03_161915) do
+ActiveRecord::Schema.define(version: 2019_12_04_203114) do
 
   create_table "acessos", force: :cascade do |t|
     t.string "nome"
@@ -467,7 +467,6 @@ ActiveRecord::Schema.define(version: 2019_12_03_161915) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "cliente_id"
-    t.integer "qtd_partilham"
     t.text "obs_dados"
     t.integer "ramal_ritex"
     t.integer "ramal_voip"
