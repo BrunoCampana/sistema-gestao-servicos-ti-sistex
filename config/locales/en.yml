@@ -124,7 +124,7 @@ en:
         one: 'Formação Acadêmica'
         other: 'Formações Acadêmicas'
       cert_ti:
-        one: 'Certificações de TI'
+        one: 'Certificação de TI'
         other: 'Certificações de TI'
       curso:
         one: 'Curso Realizado'
@@ -317,7 +317,7 @@ en:
         quantas_om?: 'Quantidade de OMs da Guarnição'
       cargo:
         nome: 'Nome do cargo'
-        usuario: 'Usuário que ocupa o cargo'
+        usuarios: 'Usuário que ocupa o cargo'
         habilidades: 'Habilidades e cursos exigidas(os) para o cargo'
       encargo:
         nome: 'Nome do encargo'
@@ -462,6 +462,7 @@ en:
         obs_dados: 'Observações do serviço de dados'
         ans_tis: 'Acordos de Nível de Serviços relacionados ao pacote'
         qtd_vpns: 'Quantidade de contas de VPN ativas em posse de militares da OM Cliente'
+        oms_na_gu: 'QUantidade de OMs que partilham os links de dados'
       errors:
         models:
           usuario:

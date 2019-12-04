@@ -154,6 +154,7 @@ RailsAdmin.config do |config|
     list do
       sort_by :nome
       sort_reverse true
+      exclude_fields :talento
       configure :created_at do
         hide
       end
@@ -275,6 +276,7 @@ RailsAdmin.config do |config|
     list do
       sort_by :nome
       sort_reverse true
+      exclude_fields :descricao, :talentos
       configure :created_at do
         hide
       end
@@ -652,11 +654,12 @@ RailsAdmin.config do |config|
     end
     show do
       field :cliente
+      field :tipo_banda
+      field :meio_de_acesso
       field :velocidade_intranet
       field :velocidade_internet
-      field :meio_de_acesso
       field :tipo_link
-      field :tipo_banda
+      field :oms_na_gu
       field :qtd_partilham
       field :latencia
       field :jitter
