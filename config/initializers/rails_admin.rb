@@ -651,6 +651,8 @@ RailsAdmin.config do |config|
       field :link_proprio
       field :meio_de_acesso
       field :tipo_link
+      field :sipam
+      field :gesac
     end
     show do
       field :cliente
@@ -669,6 +671,8 @@ RailsAdmin.config do |config|
       field :servicos
       field :vpns
       field :qtd_vpns
+      field :sipam
+      field :gesac
       include_all_fields
     end
     edit do
@@ -702,9 +706,6 @@ RailsAdmin.config do |config|
       field :link_proprio do
         help 'Selecione se a OM possui ou não link próprio (fins de controle junto ao CITEx).'
       end
-      field :qtd_partilham do
-        help 'Insira o número que corresponde a quantidade de OMs que partilham o mesmo enlace de dados. Ex: em determinada cidade há 10 OMs todas numa Rede Metropolitana compartilhando dois enlaces (lembre-se que pelotões PE, Pel Com, Cias de Cmdo são contabilizadas como OMs separadas).'
-      end
       field :obs_dados do
         help 'Insira observações que forem relevantes sobre o serviço de dados da OM cliente.'
       end
@@ -719,6 +720,12 @@ RailsAdmin.config do |config|
       end
       field :ans_tis do
         help 'Selecione todos os Acordos de Nível de Serviço que a OM possui assinados com o CT/CTA.'
+      end
+      field :sipam do
+        help 'Selecione se a OM possui link de dados satelital do tipo SIPAM e qual o status do link.'
+      end
+      field :gesac do
+        help 'Selecione se a OM possui link de dados satelital do tipo GESAC e qual o status do link'
       end
     end
   end

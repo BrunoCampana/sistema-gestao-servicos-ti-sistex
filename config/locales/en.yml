@@ -462,6 +462,8 @@ en:
         ans_tis: 'Acordos de Nível de Serviços relacionados ao pacote'
         qtd_vpns: 'Quantidade de contas de VPN ativas em posse de militares da OM Cliente'
         oms_na_gu: 'Quantidade de OMs que partilham os links de dados'
+        sipam: 'Possui link do SIPAM? Qual status?'
+        gesac: 'Possui link do GESAC? Qual status?'
       errors:
         models:
           usuario:

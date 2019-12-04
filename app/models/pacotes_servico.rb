@@ -7,6 +7,8 @@ class PacotesServico < ApplicationRecord
   enum tipo_banda: [:Compartilhada, :Dedicada]
   enum meio_de_acesso: ["REME Manaus", "REME Tabatinga", "PP", "REME Porto Velho", "REME São Gabriel da Cachoeira", "REME Boa Vista", "REME Tefé"]
   enum tipo_link: [:Satelital, :Óptico, :Rádio]
+  enum sipam: ["Não possui", "Ativo", "Inoperante", "Aguardando manutenção", "Aguardando instalação"]
+  enum gesac: [" Não possui ", " Ativo ", " Inoperante ", " Aguardando manutenção ", " Aguardando instalação"]
   has_paper_trail
 
   def name

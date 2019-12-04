@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_04_203114) do
+ActiveRecord::Schema.define(version: 2019_12_04_232910) do
 
   create_table "acessos", force: :cascade do |t|
     t.string "nome"
@@ -471,6 +471,8 @@ ActiveRecord::Schema.define(version: 2019_12_04_203114) do
     t.integer "ramal_ritex"
     t.integer "ramal_voip"
     t.text "obs_tel"
+    t.integer "sipam"
+    t.integer "gesac"
     t.index ["cliente_id"], name: "index_pacotes_servicos_on_cliente_id"
   end
 
