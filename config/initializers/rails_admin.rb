@@ -1185,7 +1185,7 @@ RailsAdmin.config do |config|
 
   config.excluded_models = ["ActiveStorage", "Attachment", "Blob"]
 
-  config.main_app_name = ENV["NOME_SISTEMA_E_OM"]
+  config.main_app_name = ENV["NOME_SISTEMA_E_OM"], ''
   #
   config.navigation_static_links = {
 
