@@ -448,7 +448,6 @@ en:
         velocidade_intranet: 'Velocidade EBNet (Mbps)'
         velocidade_internet: 'Velocidade Internet (Mbps)'
         tipo_banda: 'Tipo de banda'
-        qtd_partilham: 'Qtd OMs que partilham os links de dados'
         meio_de_acesso: 'Meio de acesso'
         tipo_link: 'Tipo de link'
         link_proprio: 'OM possui link próprio?'
@@ -462,7 +461,7 @@ en:
         obs_dados: 'Observações do serviço de dados'
         ans_tis: 'Acordos de Nível de Serviços relacionados ao pacote'
         qtd_vpns: 'Quantidade de contas de VPN ativas em posse de militares da OM Cliente'
-        oms_na_gu: 'QUantidade de OMs que partilham os links de dados'
+        oms_na_gu: 'Quantidade de OMs que partilham os links de dados'
       errors:
         models:
           usuario:
