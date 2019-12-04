@@ -7,6 +7,7 @@ RailsAdmin.config do |config|
   #config.sidescroll = true
 
   config.model Usuario do
+    navigation_icon 'fa fa-id-card'
     navigation_label 'Recursos Humanos do CT/CTA'
     weight (-15)
     edit do
@@ -198,6 +199,7 @@ RailsAdmin.config do |config|
   end
 
   config.model Curso do
+    navigation_icon 'fa fa-star-o'
     parent Usuario
     weight (-14.6)
     list do
@@ -308,6 +310,7 @@ RailsAdmin.config do |config|
   end
 
   config.model CursoMinistrado do
+    navigation_icon 'fa fa-mortar-board'
     navigation_label 'Capacitação de TI'
     weight (-11.8)
     list do
@@ -393,6 +396,7 @@ RailsAdmin.config do |config|
   end
 
   config.model CursoExterno do
+    navigation_icon 'fa fa-graduation-cap'
     navigation_label 'Capacitação de TI'
     weight (-11.6)
     show do
@@ -444,6 +448,7 @@ RailsAdmin.config do |config|
   end
 
   config.model Cliente do
+    navigation_icon 'fa fa-map-signs'
     navigation_label 'Tudo sobre OMs Clientes'
     weight (-11)
     list do
@@ -628,6 +633,7 @@ RailsAdmin.config do |config|
   end
 
   config.model PacotesServico do
+    navigation_icon 'fa fa-cubes'
     parent Cliente
     weight (-9)
     list do
@@ -716,6 +722,7 @@ RailsAdmin.config do |config|
   end
 
   config.model Vot do
+    navigation_icon 'fa fa-plane'
     parent Cliente
     weight (-7)
     list do
@@ -777,6 +784,7 @@ RailsAdmin.config do |config|
   end
 
   config.model Servico do
+    navigation_icon 'fa fa-diamond'
     navigation_label 'Serviços de TI'
     weight (-6)
     show do
@@ -809,6 +817,7 @@ RailsAdmin.config do |config|
   end
 
   config.model AnsTi do
+    navigation_icon 'fa fa-handshake'
     parent Servico
     weight (-5)
     list do
@@ -850,6 +859,7 @@ RailsAdmin.config do |config|
   end
 
   config.model Indisponibilidade do
+    navigation_icon 'fa fa-bomb'
     parent Servico
     weight (-4)
     show do
@@ -964,6 +974,7 @@ RailsAdmin.config do |config|
   end
 
   config.model Fornecedor do
+    navigation_icon 'fa fa-shopping-cart'
     parent Servico
     weight (-2.7)
     list do
@@ -1007,6 +1018,7 @@ RailsAdmin.config do |config|
   end
 
   config.model Rede do
+    navigation_icon 'fa fa-server'
     navigation_label 'Configuração dos Ativos de TI'
     weight (-0.9)
     list do

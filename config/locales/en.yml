@@ -58,8 +58,8 @@ en:
         one: 'Mudança'
         other: 'Mudanças'
       talento:
-        one: 'Banco de Talentos'
-        other: 'Banco de Talentos'
+        one: 'Aluno de OM Cliente'
+        other: 'Alunos de OMs Clientes'
       ans_ti:
         one: 'ANS'
         other: 'ANSs'
