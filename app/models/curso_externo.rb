@@ -7,7 +7,12 @@ class CursoExterno < ApplicationRecord
   enum conclusao_checada: [:Pendente, :Checada]
   enum tipo_cpc: ["Estágio interno", "Curso Online Aberto", "Instrução de Quadros", "ICN", "EECN", "Mestrado",
   "Doutorado", "Especialização", "PCENA", "PVANA", "Visitação", "Conferência", "Congresso"]
+
   def name
     nome
+  end
+
+  def quantos_fizeram?
+    usuarios.count
   end
 end

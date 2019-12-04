@@ -4,4 +4,9 @@ class Hierarq < ApplicationRecord
   def name
     nome
   end
+
+  def qtd_mil
+    usuarios.count
+  end
+  
 end

@@ -239,19 +239,24 @@ en:
         curso_ministrados: 'Cursos que participou no CT/CTA'
       idioma:
         nome: 'Descrição'
-        usuarios: 'Militares do CTA com esse nível de idioma'
+        usuarios: 'Militares do CT/CTA com esse nível de idioma'
       curso:
         nome: 'Nome'
-        usuarios: 'Militares do CTA que fizeram esse curso'
+        usuarios: 'Militares do CT/CTA que fizeram esse curso'
+        quantos_fizeram?: 'Quantidade de militares que fizeram o curso'
       cert_ti:
         nome: 'Nome'
-        usuarios: 'Militares do CTA que possuem essa certificação'
+        usuarios: 'Militares do CT/CTA que possuem essa certificação'
       formacao_mil:
         nome: 'Nome'
         usuarios: 'Militares do CTA que possuem essa formação'
+        talentos: 'Militares de outras OMs que fizeram curso no CT/CTA'
+        quantos_possuem?: 'Quantidade de militares do CT/CTA que possuem'
       formacao_acad:
         nome: 'Nome'
         usuarios: 'Militares do CTA que possuem essa formação'
+        talentos: 'Militares de outras OMs que fizeram curso no CT/CTA'
+        quantos_possuem?: 'Quantidade de militares do CT/CTA que possuem'
       ans_ti:
         cliente: 'Cliente'
         servicos: 'Serviços previstos no ANS'
@@ -264,6 +269,7 @@ en:
         nome: 'Nome'
         usuarios: 'Usuários que possuem o grau hierárquico'
         talentos: 'Militares de outras OMs que fizeram curso no CT/CTA'
+        qtd_mil: 'Quantidade de militares'
       servico:
         nome: 'Nome'
         pacotes_servico: 'Serviço provido nos seguintes pacotes'
@@ -272,6 +278,7 @@ en:
         capacidades: 'Capacidades do serviço'
         ans_tis: 'ANSs relacionados ao serviço'
         pacotes_servico: 'Pacotes que incluem este serviço'
+        qtd_indisponibilidades: 'Quantidade de Indisponibilidades'
       parado:
         nome: 'Elemento gerador de indisponibilidade'
         indisponibilidades: 'Eventos em que o elemento falhou'
@@ -289,6 +296,7 @@ en:
         custo: 'Custo (R$)'
         org_aplicadora: 'Organização aplicadora'
         usuarios: 'Profissionais'
+        quantos_fizeram?: 'Quantidade de militares que realizaram o curso'
       curso_ministrado:
         nome: 'Nome do curso'
         tipo_cpc: 'Tipo de capacitação'
@@ -300,9 +308,13 @@ en:
         termino: 'Término'
         pladis: 'Pladis'
         talentos: 'Militares de outras OMs inscritos'
+        qtd_alunos_internos: 'Quantidade de instruendos do CT/CTA'
+        qtd_alunos_externos: 'Quantidade de instruendos externos ao CT/CTA'
+        qtd_alunos_total: 'Quantidade de instruendos total'
       cidade:
         nome: 'Nome da cidade'
         clientes: 'OMs da guarnição'
+        quantas_om?: 'Quantidade de OMs da Guarnição'
       cargo:
         nome: 'Nome do cargo'
         usuario: 'Usuário que ocupa o cargo'
@@ -313,7 +325,7 @@ en:
       habilidade:
         nome: 'Nome da habilidade ou curso'
         descricao: 'Descrição'
-        usuarios: 'Usuários que a possuem'
+        usuarios: 'Profissionais do CT/CTA que a possuem'
         cargos: 'Cargos que exigem esta habilidade'
         talentos: 'Militares de outras OMs que possuem essa habilidade'
       usuario:
@@ -369,6 +381,8 @@ en:
         possui_posto_radio: 'Possui Posto Rádio da Rede Rádio-Fixa do EB?'
         descricao_posto_radio: 'Descrição do Posto Rádio'
         qtd_operadores_radio: 'Quantidade de operadores fixos (diariamente)'
+        vpns: 'Contas de VPN que OM possui'
+        qtd_indisponibilidades: 'Quantidade de Indisponibilidades sofridas pelo Cliente'
       requisicao_link_proprio:
         descricao: 'Descrição'
         cliente_id: 'OM requerente'
@@ -415,6 +429,7 @@ en:
         parados: 'Elemento(s) causador(es) da indisponibilidade'
         motivos: 'Causa(s) da(s) falha(s) do(s) elemento(s)'
         servicos: 'Serviços interrompidos'
+        qtd_oms: 'Quantidade de OMs afetadas'
       motivo:
         nome: 'Motivo da indisponibilidade'
         indisponibilidades: 'Eventos de indisponibilidade causados por esse motivo'
@@ -446,6 +461,7 @@ en:
         obs_tel: 'Observações do serviço de telefonia'
         obs_dados: 'Observações do serviço de dados'
         ans_tis: 'Acordos de Nível de Serviços relacionados ao pacote'
+        qtd_vpns: 'Quantidade de contas de VPN ativas em posse de militares da OM Cliente'
       errors:
         models:
           usuario:

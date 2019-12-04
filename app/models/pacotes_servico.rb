@@ -14,4 +14,9 @@ class PacotesServico < ApplicationRecord
       cliente.nome
     end
   end
+
+  def qtd_vpns
+    vpns.count
+  end
+  
 end

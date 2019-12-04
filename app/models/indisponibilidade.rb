@@ -13,6 +13,10 @@ class Indisponibilidade < ApplicationRecord
   #  'pie'
   #end
 
+  def qtd_oms
+    clientes.count
+  end
+
   enum tipo: [:Serviço, :Componente]
   has_paper_trail
 end

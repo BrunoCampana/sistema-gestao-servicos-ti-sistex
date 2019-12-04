@@ -5,4 +5,8 @@ class FormacaoAcad < ApplicationRecord
   def name
     nome
   end
+
+  def quantos_possuem?
+    usuarios.count
+  end
 end

@@ -12,4 +12,17 @@ class CursoMinistrado < ApplicationRecord
   def name
     nome
   end
+
+  def qtd_alunos_internos
+    instruendos.count
+  end
+
+  def qtd_alunos_externos
+    talentos.count
+  end
+
+  def qtd_alunos_total
+    instruendos.count + talentos.count
+  end
+
 end

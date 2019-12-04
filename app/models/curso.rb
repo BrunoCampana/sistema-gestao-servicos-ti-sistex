@@ -3,4 +3,9 @@ class Curso < ApplicationRecord
   def name
     nome
   end
+
+  def quantos_fizeram?
+    usuarios.count
+  end
+  
 end

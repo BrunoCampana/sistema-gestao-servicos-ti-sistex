@@ -8,4 +8,8 @@ class Servico < ApplicationRecord
   def name
     nome
   end
+
+  def qtd_indisponibilidades
+    indisponibilidades.count
+  end
 end

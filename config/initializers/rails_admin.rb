@@ -72,7 +72,7 @@ RailsAdmin.config do |config|
       field :hierarq
       field :nome
       field :situacao
-      field :email
+      field :cargos
       field :telefone
     end
     show do
@@ -105,6 +105,16 @@ RailsAdmin.config do |config|
         hide
       end
     end
+    show do
+      include_all_fields
+      field :qtd_mil
+      configure :created_at do
+        hide
+      end
+      configure :updated_at do
+        hide
+      end
+    end
   end
 
   config.model FormacaoMil do
@@ -125,6 +135,16 @@ RailsAdmin.config do |config|
         help 'Antes de cadastrar uma nova Formação Militar, verifique se a mesma já existe na base de dados.'
       end
     end
+    show do
+      include_all_fields
+      configure :created_at do
+        hide
+      end
+      configure :updated_at do
+        hide
+      end
+      field :quantos_possuem?
+    end
   end
 
   config.model FormacaoAcad do
@@ -144,6 +164,16 @@ RailsAdmin.config do |config|
       field :nome do
         help 'Antes de cadastrar uma nova Formação Militar, verifique se a mesma já existe na base de dados.'
       end
+    end
+    show do
+      include_all_fields
+      configure :created_at do
+        hide
+      end
+      configure :updated_at do
+        hide
+      end
+      field :quantos_possuem?
     end
   end
 
@@ -183,6 +213,16 @@ RailsAdmin.config do |config|
     edit do
       field :nome do
         help 'Antes de cadastrar um novo Curso, verifique se o mesmo já existe na base de dados.'
+      end
+    end
+    show do
+      include_all_fields
+      field :quantos_fizeram?
+      configure :created_at do
+        hide
+      end
+      configure :updated_at do
+        hide
       end
     end
   end
@@ -278,12 +318,8 @@ RailsAdmin.config do |config|
       field :inicio
       field :termino
       field :carga_horaria
-      configure :created_at do
-        hide
-      end
-      configure :updated_at do
-        hide
-      end
+      field :modalidade
+      field :tipo_cpc
     end
     edit do
       field :nome do
@@ -305,6 +341,19 @@ RailsAdmin.config do |config|
       field :tipo_cpc
       include_all_fields
     end
+    show do
+      field :nome
+      include_all_fields
+      field :qtd_alunos_internos
+      field :qtd_alunos_externos
+      field :qtd_alunos_total
+      configure :created_at do
+        hide
+      end
+      configure :updated_at do
+        hide
+      end
+    end
   end
 
   config.model Talento do
@@ -319,12 +368,6 @@ RailsAdmin.config do |config|
       field :cliente
       field :telefone
       field :email
-      configure :created_at do
-        hide
-      end
-      configure :updated_at do
-        hide
-      end
     end
     edit do
       field :nome do
@@ -352,14 +395,9 @@ RailsAdmin.config do |config|
   config.model CursoExterno do
     navigation_label 'Capacitação de TI'
     weight (-11.6)
-    list do
-      sort_reverse true
-      field :nome do
-        help 'Ex: Ferramentas de Monitoramento C.A.'
-      end
-      field :modalidade
-      field :inicio
-      field :termino
+    show do
+      field :quantos_fizeram?
+      include_all_fields
       configure :created_at do
         hide
       end
@@ -367,8 +405,20 @@ RailsAdmin.config do |config|
         hide
       end
     end
-    edit do
+    list do
+      sort_reverse true
       field :nome
+      field :modalidade
+      field :inicio
+      field :termino
+      field :curso_concluido
+      field :conclusao_checada
+      field :tipo_cpc
+    end
+    edit do
+      field :nome do
+        help 'Ex: Ferramentas de Monitoramento C.A.'
+      end
       field :modalidade
       field :carga_horaria
       field :descricao do
@@ -469,6 +519,7 @@ RailsAdmin.config do |config|
       field :nome_cmt_om
       field :cel_cmt_om
       field :requisicao_link_proprio
+      field :qtd_indisponibilidades
       include_all_fields
     end
   end
@@ -489,6 +540,16 @@ RailsAdmin.config do |config|
     edit do
       field :nome do
         help 'Insira o nome da cidade e sigla do estado, conforme exemplo a seguir: Rio de Janeiro - RJ.'
+      end
+    end
+    show do
+      include_all_fields
+      field :quantas_om?
+      configure :created_at do
+        hide
+      end
+      configure :updated_at do
+        hide
       end
     end
   end
@@ -516,6 +577,7 @@ RailsAdmin.config do |config|
       field :parecer_cta
       field :parecer_citex
       field :descricao
+      field :enlace
     end
     edit do
       field :cliente do
@@ -577,6 +639,10 @@ RailsAdmin.config do |config|
       field :velocidade_internet
       field :ramal_ritex
       field :ramal_voip
+      field :tipo_banda
+      field :link_proprio
+      field :meio_de_acesso
+      field :tipo_link
     end
     show do
       field :cliente
@@ -594,6 +660,7 @@ RailsAdmin.config do |config|
       field :ramal_voip
       field :servicos
       field :vpns
+      field :qtd_vpns
       include_all_fields
     end
     edit do
@@ -659,6 +726,8 @@ RailsAdmin.config do |config|
       field :data_termino
       field :descricao
       field :usuarios
+      field :modo_transporte
+      field :pagamentos_realizados
     end
     show do
       field :cliente
@@ -710,6 +779,16 @@ RailsAdmin.config do |config|
   config.model Servico do
     navigation_label 'Serviços de TI'
     weight (-6)
+    show do
+      include_all_fields
+      field :qtd_indisponibilidades
+      configure :created_at do
+        hide
+      end
+      configure :updated_at do
+        hide
+      end
+    end
     list do
       sort_by :nome
       sort_reverse true
@@ -778,6 +857,7 @@ RailsAdmin.config do |config|
       field :inicio
       field :termino
       field :servicos
+      field :qtd_oms
       include_all_fields
     end
     list do
@@ -786,12 +866,7 @@ RailsAdmin.config do |config|
       field :clientes
       field :inicio
       field :termino
-      configure :created_at do
-        hide
-      end
-      configure :updated_at do
-        hide
-      end
+      field :tipo
     end
     edit do
       field :servicos do
@@ -900,6 +975,7 @@ RailsAdmin.config do |config|
       field :preposto
       field :fisc_titulars
       field :tels_ctt
+      field :situacao
     end
     edit do
       field :nome_fornecedor do
@@ -1043,12 +1119,7 @@ RailsAdmin.config do |config|
       field :responsavel
       field :modelo
       field :fabricante
-      configure :created_at do
-        hide
-      end
-      configure :updated_at do
-        hide
-      end
+      field :tipo
     end
   end
 

@@ -11,6 +11,10 @@ class Cidade < ApplicationRecord
     nome
   end
 
+  def quantas_om?
+    clientes.count
+  end
+
   #def self.chart_type
   #  'pie'
   #end

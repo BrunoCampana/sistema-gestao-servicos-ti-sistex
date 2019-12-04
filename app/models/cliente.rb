@@ -15,5 +15,10 @@ class Cliente < ApplicationRecord
   def name
     nome
   end
+
+  def qtd_indisponibilidades
+    indisponibilidades.count
+  end
+
   has_paper_trail
 end
