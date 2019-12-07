@@ -1,3 +1,11 @@
 ./tmp/cache/**/*
 
 /db/development.sqlite3
+
+.env
+
+/log/development.log
+
+/tmp/*
+
+/log/*

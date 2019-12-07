@@ -220,7 +220,7 @@ Colaboraram com o desenvolvimento desta ferramenta os tenentes do 5º ano do IME
 
 # Licença
 
-Open Source, conforme licença MIT que consta do projeto.
+Open Source, conforme licença que consta no diretório raiz do projeto.
 
 # Status do Projeto
 
