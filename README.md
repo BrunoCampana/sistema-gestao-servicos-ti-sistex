@@ -224,4 +224,4 @@ Open Source, conforme licença MIT no projeto.
 
 # Status do Projeto
 
-O projeto segue sendo mantido pelo desenvolvedor.
+O projeto segue mantido pelo desenvolvedor.
