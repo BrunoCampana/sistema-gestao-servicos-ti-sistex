@@ -224,4 +224,4 @@ Open Source, conforme licença que consta no diretório raiz do projeto.
 
 # Status do Projeto
 
-O projeto segue mantido pelo desenvolvedor.
+O projeto segue mantido pelo desenvolvedor..
