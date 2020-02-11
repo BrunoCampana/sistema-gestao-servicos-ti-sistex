@@ -94,9 +94,9 @@ $ git clone https://gitlab.com/brunocampana/gsti.git
 
 ```sh
 $ gem install nokogiri
-$ gem install bundler 1.17.1
+$ gem install bundler -v 1.17.1
 $ rbenv rehash
-$ gem install rails 5.2.1
+$ gem install rails -v 5.2.1
 ```
 
 #### Confirme se foram instaladas as versões que precisamos do Rails e Bundler:
